@@ -37,4 +37,170 @@ INSERT INTO employees (emp_id, name, department, salary, age) VALUES
 18. Remove all employees earning less than 40,000.
 19. Remove all employees whose ages lie outside the range 25 to 45.
 20. Remove the two employees with the lowest salaries.
-If you want, I can create 20 more or provide answers for all.
+==========================================================
+
+ ✅ TABLE NAME USED: `employees`
+
+---
+
+ ✅ SOLUTIONS
+
+ 1. Employees earning more than 50,000
+
+```sql
+SELECT * FROM employees
+WHERE salary > 50000;
+```
+
+ 2. IT department and age < 30
+
+```sql
+SELECT * FROM employees
+WHERE department = 'IT' AND age < 30;
+```
+
+ 3. Salary between 40,000 and 60,000
+
+```sql
+SELECT * FROM employees
+WHERE salary BETWEEN 40000 AND 60000;
+```
+
+ 4. Age outside 25 to 35
+
+```sql
+SELECT * FROM employees
+WHERE age NOT BETWEEN 25 AND 35;
+```
+
+ 5. HR employees with salary ≥ 45,000
+
+```sql
+SELECT * FROM employees
+WHERE department = 'HR' AND salary >= 45000;
+```
+
+ 6. Sort employees by salary (high to low)
+
+```sql
+SELECT * FROM employees
+ORDER BY salary DESC;
+```
+
+ 7. Top 3 highest-paid employees
+
+```sql
+SELECT * FROM employees
+ORDER BY salary DESC
+LIMIT 3;
+```
+
+ 8. Skip first 2 rows, get next 2
+
+```sql
+SELECT * FROM employees
+LIMIT 2 OFFSET 2;
+```
+
+ 9. Salary not equal to 50,000
+
+```sql
+SELECT * FROM employees
+WHERE salary <> 50000;
+```
+
+ 10. Youngest 4 employees
+
+```sql
+SELECT * FROM employees
+ORDER BY age ASC
+LIMIT 4;
+```
+
+---
+
+ INSERT QUERIES
+
+ 11. Add employee with salary 45k–55k
+
+```sql
+INSERT INTO employees (emp_id, name, department, salary, age)
+VALUES (101, 'NewEmp1', 'IT', 50000, 27);
+```
+
+ 12. Add employee age not between 20–25
+
+```sql
+INSERT INTO employees (emp_id, name, department, salary, age)
+VALUES (102, 'NewEmp2', 'Sales', 45000, 30);
+```
+
+ 13. Add employee in IT with salary > 60,000
+
+```sql
+INSERT INTO employees (emp_id, name, department, salary, age)
+VALUES (103, 'NewEmp3', 'IT', 65000, 29);
+```
+
+---
+
+ UPDATE QUERIES
+
+ 14. Set salary = 55,000 for Sales department
+
+```sql
+UPDATE employees
+SET salary = 55000
+WHERE department = 'Sales';
+```
+
+ 15. Increase salary by 5,000 for 40k–50k range
+
+```sql
+UPDATE employees
+SET salary = salary + 5000
+WHERE salary BETWEEN 40000 AND 50000;
+```
+
+ 16. Move employees (age > 35 AND salary > 70k) to Management
+
+```sql
+UPDATE employees
+SET department = 'Management'
+WHERE age > 35 AND salary > 70000;
+```
+
+ 17. Update the two oldest employees
+
+```sql
+UPDATE employees
+SET age = age + 1
+ORDER BY age DESC
+LIMIT 2;
+```
+
+---
+
+ DELETE QUERIES
+
+ 18. Remove employees earning < 40,000
+
+```sql
+DELETE FROM employees
+WHERE salary < 40000;
+```
+
+ 19. Remove employees with ages outside 25–45
+
+```sql
+DELETE FROM employees
+WHERE age NOT BETWEEN 25 AND 45;
+```
+
+ 20. Remove the two employees with lowest salaries
+
+```sql
+DELETE FROM employees
+ORDER BY salary ASC
+LIMIT 2;
+```
