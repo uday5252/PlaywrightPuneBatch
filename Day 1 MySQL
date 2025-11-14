@@ -44,6 +44,14 @@ select * from Employees order by FirstName limit 2;
 select * from employees order by ename asc limit 2(offset), 1(limit);
 
 
-
+=====================================================================
+select customer, sum(amount) as totalamount from orders where city = "Mumbai"group by customerhaving totalamount > 40000order by totalamount desclimit 1;
+where ==> group by ==> having ==> order by ==> limit
+where ==> order by ==> limit
+Display all the employees whose salary is greater
+than the average salary of the employees.
+average salary ==> 60,600
+select * from employeeswhere salary > (select avg(salary) from employees);
+sum(), avg(), min(), max(), count()
 
 
