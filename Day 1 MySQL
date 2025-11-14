@@ -20,7 +20,28 @@ where ename='Raju';
 
 delete from employees where ename='Sam';
 
+=======================================
+variations of select command:-
+select * from Products where price > 25;
+select * from Products where price = 25;
+select * from Products where price <> 25;
+<> ==> not equal to ==> ANSI
+select * from Products where price > 25 and price < 40;
+sorting ==> order by
+select * from Products order by Price asc;
+select * from Products order by Price desc;
+select * from Products order by Price; ==> Ascending order
+select * from Customers order by City, CustomerName asc;
 
+select * from Orders where EmployeeID >= 1 and EmployeeID <= 5;
+OR
+select * from Orders where EmployeeID between 4 and 7;
+
+select * from Orders where EmployeeID not between 1 and 5;
+
+select * from Employees order by FirstName limit 2;
+
+select * from employees order by ename asc limit 2(offset), 1(limit);
 
 
 
