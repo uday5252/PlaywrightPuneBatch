@@ -1,0 +1,28 @@
+create database employee_db;
+
+use employee_db;
+
+create table employees(empid int, 
+ename varchar(30), 
+eage int, esal int);
+
+insert into employees values(100, 
+"Raju", 35, 34000);
+insert into employees values(200, 
+"Ramu", 30, 45000);
+insert into employees values(300, 
+"Sam", 45, 80000);
+
+select * from employees;
+
+update employees set esal=40000 
+where ename='Raju';
+
+delete from employees where ename='Sam';
+
+
+
+
+
+
+
