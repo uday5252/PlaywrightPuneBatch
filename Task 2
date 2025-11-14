@@ -1,0 +1,48 @@
+
+
+```sql
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    city VARCHAR(50)
+);
+```
+
+---
+
+ 2. INSERT SAMPLE DATA
+
+```sql
+INSERT INTO employees (emp_id, name, department, salary, city) VALUES
+(1, 'Amit', 'IT', 60000, 'Mumbai'),
+(2, 'Priya', 'HR', 45000, 'Delhi'),
+(3, 'Rohan', 'Finance', 75000, 'Pune'),
+(4, 'Sneha', 'IT', 68000, 'Chennai'),
+(5, 'Karan', 'Sales', 55000, 'Ahmedabad'),
+(6, 'Deepak', 'Finance', 82000, 'Mumbai'),
+(7, 'Neha', 'Sales', 52000, 'Delhi'),
+(8, 'Ankit', 'IT', 72000, 'Pune'),
+(9, 'Manoj', 'HR', 48000, 'Mumbai'),
+(10, 'Isha', 'Finance', 90000, 'Delhi');
+```
+
+
+1️⃣ Find number of employees in each department.
+2️⃣ Find total salary paid per department.
+3️⃣ Show departments where average salary is greater than 60,000.
+4️⃣ Get the maximum salary for each city.
+5️⃣ Get the minimum salary for each department.
+6️⃣ Find number of employees in each city and sort the result in descending order of count.
+7️⃣ Find the top 3 highest salaries.
+8️⃣ Skip the first 2 highest salaries and show the next 3.
+9️⃣ Find the department with the highest total salary.
+🔟 Find the average salary for each city.
+1️⃣1️⃣ Show departments that have more than 2 employees.
+1️⃣2️⃣ Find employees whose salary is greater than the average salary of the company.
+1️⃣3️⃣ Find the city with the minimum average salary.
+1️⃣4️⃣ List 5 employees with the lowest salaries.
+1️⃣5️⃣ Show departments whose total salary is greater than 150,000.
+
+
