@@ -1,0 +1,40 @@
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(30),
+    salary INT,
+    age INT
+);
+
+INSERT INTO employees (emp_id, name, department, salary, age) VALUES
+(1, 'Amit', 'IT', 60000, 28),
+(2, 'Riya', 'HR', 45000, 32),
+(3, 'John', 'Finance', 75000, 40),
+(4, 'Meera', 'IT', 50000, 24),
+(5, 'Sam', 'Sales', 40000, 29),
+(6, 'Kiran', 'Finance', 82000, 38),
+(7, 'Nina', 'HR', 47000, 31),
+(8, 'Vikas', 'Sales', 39000, 26);
+
+
+1. Get all employees earning more than 50,000.
+2. Get employees from the IT department who are younger than 30.
+3. Get employees whose salaries fall within 40,000 to 60,000.
+4. Get employees whose ages fall outside 25 to 35.
+5. Get employees from HR whose salary is at least 45,000.
+6. List all employees sorted by salary from highest to lowest.
+7. Fetch the top 3 highest-paid employees.
+8. Fetch 2 employees starting from the 3rd record in the table.
+9. Get all employees whose salary is not equal to 50,000.
+10. List the youngest 4 employees.
+11. Add a new employee whose salary lies between 45,000 and 55,000.
+12. Add a new employee whose age is outside the range 20 to 25.
+13. Add a new employee in the IT department with salary above 60,000.
+14. Change the salary to 55,000 for all employees in the Sales department.
+15. Increase salary by 5,000 for employees earning between 40,000 and 50,000.
+16. Move employees older than 35 with salaries above 70,000 to the Management department.
+17. Update the details of the two oldest employees.
+18. Remove all employees earning less than 40,000.
+19. Remove all employees whose ages lie outside the range 25 to 45.
+20. Remove the two employees with the lowest salaries.
+If you want, I can create 20 more or provide answers for all.
