@@ -1,0 +1,150 @@
+-- create database employee_db;
+
+-- use employee_db;
+
+-- create table employees(empid int, 
+-- ename varchar(30), 
+-- eage int, esal int);
+
+-- insert into employees values(500, 
+-- "Sam", 35, 34000);
+-- insert into employees values(600, 
+-- "Sammy", 30, 45000);
+-- insert into employees values(700, 
+-- "Cook", 45, 80000);
+
+-- select * from employees;
+
+-- update employees set esal=40000 
+-- where ename='Raju';
+
+-- delete from employees where ename='Sam';
+
+
+
+-- select * from employees where esal != 40000;
+
+
+
+
+-- select * from employees order by ename asc limit 1 
+-- offset 3;
+
+-- select * from employees order by ename asc limit 2, 1;
+
+-- create database student_db;
+-- use student_db;
+
+-- create table students(
+-- rollno int primary key, 
+-- name varchar(40) not null, 
+-- age int not null);
+
+-- select * from students;
+
+-- insert into students values(10, "Raju", 15);
+-- insert into students values(10, "Cook", 13);
+
+
+-- insert into students(rollno, name) values(11, "Ramu");
+-- insert into students(rollno, name) values(12, "John");
+-- insert into students(rollno, age) values(13, 18);
+
+-- select * from students;
+
+create database customer_order_db;
+use customer_order_db;
+
+CREATE TABLE customers (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    p_id INT,
+		foreign key(p_id) references orders(product_id)
+);
+
+CREATE TABLE orders (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50)
+);
+
+INSERT INTO customers (id, name, age, p_id) VALUES
+(1, 'Raju', 30, 200),
+(2, 'Ramu', 35, 100),
+(3, 'Rani', 30, 100),
+(4, 'Sam', 40, 300);
+
+INSERT INTO orders (product_id, product_name) VALUES
+(100, 'Shoes'),
+(200, 'Laptop'),
+(300, 'Makeup Kit'),
+(400, 'Water Bottle');
+
+
+select * from customers;
+select * from orders;
+
+
+
+INSERT INTO customers (id, name, age, p_id) VALUES
+(5, 'Tim', 33, 800);
+
+-- read the data
+-- customername, productname
+
+select name, product_name from customers
+inner join orders on customers.p_id = orders.product_id;
+
+-- select name, product_name from customers
+-- right join orders on customers.p_id = orders.product_id;
+
+-- select name, product_name from customers
+-- left join orders on customers.p_id = orders.product_id;
+
+-- outer join
+
+create view hello as 
+select name, product_name from customers
+left join orders on customers.p_id = orders.product_id
+union
+select name, product_name from customers
+right join orders on customers.p_id = orders.product_id;
+
+
+select * from hello;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
