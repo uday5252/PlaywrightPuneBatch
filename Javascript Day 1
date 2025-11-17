@@ -158,9 +158,154 @@
 // }
 
 
+// I want to store 10 names
+
+// multiple values ==> array ==> [] ==> same type or different type
+// of data / values
+
+// const names = [ "Raju", "Ramu", "Rajesh", 30, true ]
+// console.log(names[0])
+// console.log(names[3])
+
+// write a program to multiply each element in the array by 2 and print it
+
+// if we want to perform same operation on each element in the array
+// then we can use forEach function
+
+// forEach(FUNCTION(expression / arrow function))
+
+// if a variable doesnt hold any value, then its value is undefined
+
+// let username = undefined
+
+// const numbers = [ 10, 20, 30, 40, 50, 60, 70, 80 ]
+
+// numbers.forEach(function(a, b, c)
+// {
+//     console.log(a * 2)
+// })
+
+
+// map() ==> 99.99% same as forEach
+// in forEach() ==> resturn statement is not allowed
+// input array elements count == output array elements count
+
+// const numbers = [ 10, 20, 30, 40, 50 ]
+
+// const result = numbers.map(function(a, b, c)
+// {
+//     if(a > 35)
+//     {
+//         return a * 2
+//     }
+// })
+
+// console.log(result) //[ 80, 90 ]
+
+
+// const numbers = [ 10, 20, 30, 40, 50 ]
+
+// const result = numbers.forEach(function(a, b, c)
+// {
+//     if(a > 35)
+//     {
+//         return a * 2
+//     }
+// })
+
+// console.log(result)
+
+// const numbers = [ 10, 20, 30, 40, 50 ]
+
+// const result = numbers.filter(function(a, b, c)
+// {
+//     if(a > 35)
+//     {
+//         return a * 2
+//     }
+// })
+
+// console.log(result) // [ 40, 50 ]
 
 
 
 
+// input = [ 10, 21, 31, 40, 50, 60 ]
+// output = [ 20, 80, 100, 120 ]
+
+// filter and map
+
+// [ 10, 21, 31, 40, 50, 60 ]
+// [10, 40, 50, 60 ] ==> filter
+// [20, 80, 100, 120 ] ==> map
 
 
+
+
+// const numbers = [ 10, 21, 31, 40, 50, 60 ]
+
+// const result = numbers.filter(function(a)
+// {
+//     if(a % 2 == 0)
+//     {
+//         return a
+//     }    
+// })
+
+// const output = result.map(function(a)
+// {
+//     return a * 2
+// })
+
+// console.log(output)
+
+
+// ===============================
+
+
+// const numbers = [ 10, 21, 31, 40, 50, 60 ]
+
+// const result = numbers.filter(function(a)
+// {
+//     if(a % 2 == 0)
+//     {
+//         return a
+//     }    
+// })
+// .map(function(a)
+// {
+//     return a * 2
+// })
+
+// console.log(result)
+
+// ==============================
+
+// const numbers = [ 10, 21, 31, 40, 50, 60 ]
+// const result = numbers.filter((a) =>a % 2 == 0).map((a) => a * 2)
+// console.log(result)
+
+// ================================================
+
+// Map(5) ==> 5
+// Filter(5) ==> 5 or < 5
+// Reduce(5, 50, 1000) ==> 1
+
+const numbers = [ 10, 20, 30, 40, 50 ]
+
+// a = 150
+// b = undefined
+
+// const output = numbers.reduce(function(a, b)
+// {
+//     return a + b
+// })
+
+// console.log(output)
+
+
+
+// input = [ 10, 20, 30, 40, 50, 60 ]
+// [ 10, 30, 50 ]
+// [ 20, 60, 100 ]
+// output = 180 
