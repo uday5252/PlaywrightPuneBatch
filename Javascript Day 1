@@ -1,6 +1,6 @@
 // console.log("Hello, World!")
 
-// variables ==> store the data ==> numbers, strings, boolean
+// variables ==> store the data ==> numbers, strings, boolean, function
 // in javascript we can create variables in 3 ways
 
 // var, let, const
@@ -39,9 +39,128 @@
 
 // i = 11
 
-for(var i = 0; i < 11; i++)
-{
-    console.log(i)
-}
+// for(var i = 0; i < 11; i++)
+// {
+//     console.log(i)
+// }
 
-console.log(i)
+// console.log(i)
+
+
+// In javascript a function can be created in 3 ways
+// 1) Function Declaration
+// 2) Function Expression
+// 3) Arrow Function
+
+// Function Declaration
+
+// parameters
+// function add(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+// // arguments
+// add(10, 20)
+// add(30, 40)
+// add(50, 60)
+
+
+// function expression
+
+// var add = function(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+// add(100, 200)
+
+// arrow function
+
+// var add = (num1, num2) =>
+// {
+//     console.log(num1 + num2)
+// }
+
+// add(100, 200)
+
+
+// function add(a, b)
+// {
+//     // console.log(a + b)
+//     return a + b //return 30
+// }
+
+// let result = add(10, 20)
+// console.log(result)
+
+
+
+
+
+// var add = function(num1, num2)
+// {
+//     return num1 + num2
+// }
+
+// let output = add(100, 200)
+// console.log(output)
+
+
+
+// var add = (num1, num2) => num1 + num2
+// console.log(add(50, 60))
+
+
+
+// var add = function(num1, num2)
+// {
+//     return num1 + num2
+// }
+
+// let output = add(100, 200)
+// console.log(output)
+
+
+// add(100, 200)
+
+// var add = function(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+
+
+// add(10, 20)
+
+// function add(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+
+// Hoisting
+// Hositing is a mechanism where all the function declarations are automatically moved to the top of the code
+
+
+// add(10, 20)
+
+// function add(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+// add(100, 200)
+
+// var add = (num1, num2) =>
+// {
+//     console.log(num1 + num2)
+// }
+
+
+
+
+
+
+
+
