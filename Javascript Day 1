@@ -1,0 +1,47 @@
+// console.log("Hello, World!")
+
+// variables ==> store the data ==> numbers, strings, boolean
+// in javascript we can create variables in 3 ways
+
+// var, let, const
+
+// 1) create a variable that stores name of a person
+
+// var username = "Raju";
+
+// let username = "Raju";
+// console.log(username)
+
+// const username = "Raju";
+// console.log(username)
+
+
+
+
+// const ==> constant ==> fixed
+// const username = "Raju"
+// username = "Ramu"
+// console.log(username)
+
+
+// var username = "Raju"
+// username = "Ramu"
+// console.log(username)
+
+
+// let username = "Raju"
+// username = "Ramu"
+// console.log(username)
+
+// var is not block scope, its global scope, whereas let is always block scope
+
+// { } ==> block
+
+// i = 11
+
+for(var i = 0; i < 11; i++)
+{
+    console.log(i)
+}
+
+console.log(i)
