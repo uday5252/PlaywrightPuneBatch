@@ -1,0 +1,245 @@
+
+
+ Employees
+
+```
++--------+----------+---------+
+| emp_id | name     | dept_id |
++--------+----------+---------+
+|   1    | Arjun    |   10    |
+|   2    | Meera    |   20    |
+|   3    | Karthik  |   20    |
+|   4    | Latha    |   30    |
+|   5    | Suresh   |  NULL   |
++--------+----------+---------+
+```
+
+ Departments
+
+```
++---------+----------------+
+| dept_id | dept_name      |
++---------+----------------+
+|   10    | HR             |
+|   20    | Finance        |
+|   30    | Marketing      |
+|   40    | Operations     |
++---------+----------------+
+```
+
+-- Create Departments Table
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+-- Create Employees Table
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT
+);
+
+-- Insert Data into Departments
+INSERT INTO departments (dept_id, dept_name) VALUES
+(10, 'HR'),
+(20, 'Finance'),
+(30, 'Marketing'),
+(40, 'Operations');
+
+-- Insert Data into Employees
+INSERT INTO employees (emp_id, name, dept_id) VALUES
+(1, 'Arjun', 10),
+(2, 'Meera', 20),
+(3, 'Karthik', 20),
+(4, 'Latha', 30),
+(5, 'Suresh', NULL);
+
+
+---
+
+ 1️⃣ Question
+
+Display each employee’s name along with the name of the department they belong to.
+
+ Expected Output
+
+```
++----------+-------------+
+| name     | dept_name   |
++----------+-------------+
+| Arjun    | HR          |
+| Meera    | Finance     |
+| Karthik  | Finance     |
+| Latha    | Marketing   |
++----------+-------------+
+```
+
+---
+
+ 2️⃣ Question
+
+Show the names of employees who belong to department id 20 along with the department name.
+
+ Expected Output
+
+```
++----------+-----------+
+| name     | dept_name |
++----------+-----------+
+| Meera    | Finance   |
+| Karthik  | Finance   |
++----------+-----------+
+```
+
+---
+
+ 3️⃣ Question
+
+Display employee names and department names only for employees whose emp_id is greater than 2.
+
+ Expected Output
+
+```
++----------+-------------+
+| name     | dept_name   |
++----------+-------------+
+| Karthik  | Finance     |
+| Latha    | Marketing   |
++----------+-------------+
+```
+
+---
+
+ 4️⃣ Question
+
+Display all employees and the department they belong to.
+If an employee has no department, show NULL for the department name.
+
+ Expected Output
+
+```
++----------+-------------+
+| name     | dept_name   |
++----------+-------------+
+| Arjun    | HR          |
+| Meera    | Finance     |
+| Karthik  | Finance     |
+| Latha    | Marketing   |
+| Suresh   | NULL        |
++----------+-------------+
+```
+
+---
+
+ 5️⃣ Question
+
+Show only the employees who do not belong to any department.
+
+ Expected Output
+
+```
++----------+-------------+
+| name     | dept_name   |
++----------+-------------+
+| Suresh   | NULL        |
++----------+-------------+
+```
+
+---
+
+ 6️⃣ Question
+
+Display all departments along with the names of employees working in them.
+If a department has no employees, show NULL for employee name.
+
+ Expected Output
+
+```
++-------------+----------+
+| dept_name   | name     |
++-------------+----------+
+| HR          | Arjun    |
+| Finance     | Meera    |
+| Finance     | Karthik  |
+| Marketing   | Latha    |
+| Operations  | NULL     |
++-------------+----------+
+```
+
+---
+
+ 7️⃣ Question
+
+Show only the departments that have no employees.
+
+ Expected Output
+
+```
++-------------+
+| dept_name   |
++-------------+
+| Operations  |
++-------------+
+```
+
+---
+
+ 8️⃣ Question
+
+Display all employees and all departments.
+Match them where possible; show unmatched rows from both sides.
+
+ Expected Output
+
+```
++----------+-------------+
+| name     | dept_name   |
++----------+-------------+
+| Arjun    | HR          |
+| Meera    | Finance     |
+| Karthik  | Finance     |
+| Latha    | Marketing   |
+| Suresh   | NULL        |
+| NULL     | Operations  |
++----------+-------------+
+```
+
+---
+
+ 9️⃣ Question
+
+Display employee names with their department names, sorted by department name in ascending order.
+
+ Expected Output
+
+```
++----------+-------------+
+| name     | dept_name   |
++----------+-------------+
+| Arjun    | HR          |
+| Meera    | Finance     |
+| Karthik  | Finance     |
+| Latha    | Marketing   |
++----------+-------------+
+```
+
+---
+
+ 🔟 Question
+
+Show each department name along with how many employees are in that department.
+
+ Expected Output
+
+```
++-------------+-------------------+
+| dept_name   | employee_count    |
++-------------+-------------------+
+| HR          | 1                 |
+| Finance     | 2                 |
+| Marketing   | 1                 |
+| Operations  | 0                 |
++-------------+-------------------+
+```
+
