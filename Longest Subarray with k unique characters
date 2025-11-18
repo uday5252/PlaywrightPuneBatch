@@ -1,0 +1,42 @@
+
+const data = [ 1, 1, 1, 1, 3, 2]
+const k = 2
+let windowLeft = 0
+let maxLength = 0
+let windowRight = 0
+const frequencyMap = new Map() 
+
+// { 4: 1, 1:2, 2: 1}
+
+for(windowRight = 0; 
+    windowRight < data.length; 
+    windowRight++)
+    {
+     if(frequencyMap.has(data[windowRight]))
+        {
+        frequencyMap.set(data[windowRight] , 
+            frequencyMap.get(data[windowRight]) + 1)     
+        }
+        else
+        {
+            frequencyMap.set(data[windowRight], 1)
+        }
+
+        while( frequencyMap.size > k )
+        {
+            // remove old element data
+            let count = frequencyMap.get(data[windowLeft]) - 1
+            // count = 1
+            if(count == 0)
+            {
+                frequencyMap.delete(data[windowLeft])
+            }
+            else{
+                frequencyMap.set(data[windowLeft], count)
+            }
+            windowLeft++
+        }
+
+        maxLength = Math.max(maxLength, windowRight - windowLeft + 1)
+
+    }
