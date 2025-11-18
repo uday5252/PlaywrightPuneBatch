@@ -1,0 +1,68 @@
+var maximumSubarraySum = function(nums, k) {
+
+    // Frequency map to track occurrences of each element in the current window
+    let freq = new Map();
+
+    // Left pointer of the sliding window
+    let left = 0;
+
+    // Current window sum
+    let sum = 0;
+
+    // Maximum sum of any valid window
+    let maxSum = 0;
+
+
+    // Iterate using the right pointer
+    for (let right = 0; right < nums.length; right++) {
+
+        // ---------------------------------------------------------
+        // 1️⃣ EXPAND WINDOW → Add nums[right] to frequency map
+        // ---------------------------------------------------------
+        let current = nums[right];
+        freq.set(current, (freq.get(current) || 0) + 1);
+
+        // Add value to running sum
+        sum += current;
+
+
+
+        // ---------------------------------------------------------
+        // 2️⃣ SHRINK WINDOW → If window size becomes > k
+        // ---------------------------------------------------------
+        while (right - left + 1 > k) {
+
+            let leftValue = nums[left];
+
+            // Reduce frequency of nums[left]
+            freq.set(leftValue, freq.get(leftValue) - 1);
+
+            // Remove from map if freq becomes 0
+            if (freq.get(leftValue) === 0) {
+                freq.delete(leftValue);
+            }
+
+            // Subtract from sum
+            sum -= leftValue;
+
+            // Move left pointer
+            left++;
+        }
+
+
+
+        // ---------------------------------------------------------
+        // 3️⃣ CHECK IF WINDOW OF EXACT SIZE k IS DISTINCT
+        // ---------------------------------------------------------
+        if (right - left + 1 === k) {
+
+            // DISTINCT CHECK → freq.size === k means all are unique
+            if (freq.size === k) {
+                maxSum = Math.max(maxSum, sum);
+            }
+        }
+    }
+
+    // Return the maximum valid distinct-sum window found
+    return maxSum;
+};
