@@ -1,23 +1,18 @@
-const s = "abcabcbb"
+
+const s = "pwwkew"
 let windowLeft = 0
 let maxLength = 0
 const dataSet = new Set()
 
-for(let windowRight = 0; 
-    windowRight < s.length; 
-    windowRight++)
-    {
-        if(!dataSet.has(s[windowRight]))
-        {
-            dataSet.add(s[windowRight])
-        }
-        else
-        {
-            windowLeft++
-        }
+for (let windowRight = 0; windowRight < s.length; windowRight++) {
 
-        maxLength = Math.max(maxLength, windowRight - windowLeft + 1)
+    while (dataSet.has(s[windowRight])) {
+        dataSet.delete(s[windowLeft])
+        windowLeft++
     }
 
+    dataSet.add(s[windowRight])
+    maxLength = Math.max(maxLength, windowRight - windowLeft + 1)
+}
 
-console.log(maxLength)
+console.log(maxLength)  // Output → 3
