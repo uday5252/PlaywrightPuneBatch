@@ -1,0 +1,80 @@
+Question
+
+Find Consecutively Repeated Words (Chat Repetition Detector)
+
+You are given a line of chat text.
+Your task is to detect words that appear twice in a row, i.e., consecutively repeated words.
+
+ Requirements:
+
+* Matching should be case-insensitive
+  (e.g., `Hello hello` is a repetition)
+* Each repeated word should appear in the output only once
+* Output them in the order they first appear
+* If no repeated words exist, output an empty list.
+
+---
+
+ 📝 Sample Inputs and Outputs
+
+ Sample Input 1
+
+```
+I need to to check if IF someone types types twice twice in chat
+```
+
+ Sample Output 1
+
+```
+to
+if
+types
+twice
+```
+
+---
+
+ Sample Input 2
+
+```
+Hello hello world WORLD world
+```
+
+ Sample Output 2
+
+```
+hello
+world
+```
+
+---
+
+ Sample Input 3
+
+```
+This sentence has no repetition at all
+```
+
+ Sample Output 3
+
+```
+(no output)
+```
+
+---
+
+ Sample Input 4
+
+```
+Test test TEST test is repeated multiple times Times TIMES
+```
+
+ Sample Output 4
+
+```
+test
+times
+```
+
+---
+
