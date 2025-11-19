@@ -1,0 +1,73 @@
+// array elements ==> string
+// string ==> array elements
+// "abc" // [ 'a', 'b', 'c' ]
+// const data = [ 10, 20, 30, 40, 50 ] // "1020304050"
+
+// console.log(data.join("")) // string format
+
+// console.log(data.slice(1, 4))
+
+// console.log(data.includes(30))
+// console.log(data.indexOf(30))
+
+// data.reverse()
+// console.log(data)
+
+// data.shift()
+// data.shift()
+// data.shift()
+// data.shift()
+// data.shift()
+
+// console.log(data)
+
+// data.pop()
+// data.pop()
+// data.pop()
+
+// console.log(data)
+
+// data.unshift(60)
+// data.unshift(70)
+// console.log(data)
+
+// data.push(60)
+// console.log(data)
+
+
+
+// strings ==> arrays ==> map ==> set
+
+// let city = "Mumbai is city"
+
+// console.log(city.split(" "))
+// console.log(city.slice(3, 5))
+// console.log(city.charAt(3))
+// console.log(city.indexOf("m"))
+// console.log(city.includes("ba"))
+// console.log(city.toLowerCase())
+// console.log(city.toUpperCase())
+// console.log(city[0])
+
+
+
+// Find the length of the Longest substring without repeating characters
+
+// Input: s = "abcabcbb"
+// Output: 3
+// Explanation: The answer is "abc", with the length of 3.
+
+// Input: s = "bbbbb"
+// Output: 1
+// Explanation: The answer is "b", with the length of 1.
+
+
+
+// const dataSet = new Set()
+// dataSet.add(10)
+// dataSet.add(20)
+// dataSet.add(30)
+// dataSet.add(10)
+// dataSet.add(20)
+
+// console.log(dataSet.has(100))
