@@ -1,0 +1,23 @@
+const s = "abcabcbb"
+let windowLeft = 0
+let maxLength = 0
+const dataSet = new Set()
+
+for(let windowRight = 0; 
+    windowRight < s.length; 
+    windowRight++)
+    {
+        if(!dataSet.has(s[windowRight]))
+        {
+            dataSet.add(s[windowRight])
+        }
+        else
+        {
+            windowLeft++
+        }
+
+        maxLength = Math.max(maxLength, windowRight - windowLeft + 1)
+    }
+
+
+console.log(maxLength)
