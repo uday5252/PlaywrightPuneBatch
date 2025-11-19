@@ -1,0 +1,24 @@
+QUESTION: Replace Every K-th Word with Its Length
+
+You are given:
+
+ A sentence (string)
+ A number k
+
+Your task:
+Replace every k-th word in the sentence with the length (number of characters) of that word.
+
+Word positions start from 1, not 0.
+
+Example:
+If k = 3 → replace 3rd, 6th, 9th, … words.
+
+---
+
+
+Input:
+sentence = "I love coding very much indeed"
+k = 3
+
+Output:
+I love 6 very much 6
