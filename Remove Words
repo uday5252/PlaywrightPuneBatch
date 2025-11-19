@@ -76,3 +76,41 @@ heyyy wooow whaaat ok
 ok
 ```
 
+
+// "hiii oko helllo welcomeee"
+let s = "hiii helllo welcomeee oko"
+let arr = s.split(" ")
+// ['hiIi', 'helllo', 'welcomeee', 'ok']
+const result = []
+
+
+// "hiii oko helllo welcomeee"
+
+for(let i = 0; i < arr.length; i++)
+{
+    let track = false // all are different
+
+    let data = arr[i].toLowerCase()// hiIi ==> hiii
+   
+    // data = "oko"
+    for(let j = 0; j < data.length - 2; j++)
+    {
+        // j = 0 ==> oko
+       
+        if((data[j] == data[j + 1] && data[j] == data[j + 2]) )
+        { 
+            track = true // all are same
+            break
+        }
+        
+    }
+
+    if(track == false)
+    {
+        result.push(data)
+    }
+}
+
+console.log(result)
+
+
