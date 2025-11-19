@@ -1,0 +1,17 @@
+Question: Sort Strings by Last Character
+
+You are given a list of usernames.
+Sort them based on the last character of each username.
+
+If two usernames end with the same last character, keep them in the same order as they originally appeared.
+
+---
+
+ Example 1
+
+Input:
+["alex", "maria", "john", "luca"]
+
+
+Output:
+["maria", "luca", "john", "alex"]
