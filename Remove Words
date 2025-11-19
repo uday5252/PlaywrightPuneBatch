@@ -1,0 +1,78 @@
+Question
+
+You are given a line of text.
+Your task is to remove all words that contain 3 or more consecutive repeating characters.
+
+Examples of words to remove:
+
+ `"heyyy"` → contains `yyy`
+ `"soooo"` → contains `oooo`
+ `"baaad"` → contains `aaa`
+ `"looool"` → contains `ooo`
+
+Words are considered individually and comparison is case-insensitive.
+
+Return only the clean words, in their original order.
+
+If all words are removed, output an empty line.
+
+---
+
+ 
+ Sample Input 1
+
+```
+I am sooo happppy today
+```
+
+ Sample Output 1
+
+```
+I am today
+```
+
+Words removed: `sooo`, `happppy`
+
+---
+
+ Sample Input 2
+
+```
+This message is cleaaan and looool free
+```
+
+ Sample Output 2
+
+```
+This message is and free
+```
+---
+
+ Sample Input 3
+
+```
+No crazy spam here
+```
+
+ Sample Output 3
+
+```
+No crazy spam here
+```
+
+(no words removed)
+
+---
+
+ Sample Input 4
+
+```
+heyyy wooow whaaat ok
+```
+
+ Sample Output 4
+
+```
+ok
+```
+
