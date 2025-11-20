@@ -1,0 +1,226 @@
+Minimum Window Substring (LC 76)**
+
+### **Goal:**
+
+Find the **smallest substring** in `s` that contains **all characters** of `t` (including frequency).
+
+### **Example of what it means:**
+
+If `t = "ABC"` → window must contain at least 1 `'A'`, 1 `'B'`, 1 `'C'`.
+
+### **3 Sample Cases**
+
+---
+
+### **Example 1**
+
+**Input:**
+`s = "ADOBECODEBANC"`
+`t = "ABC"`
+
+**Output:**
+`"BANC"`
+
+**Explanation:**
+The smallest substring containing A, B, C is `"BANC"`.
+
+---
+
+### **Example 2**
+
+**Input:**
+`s = "a"`
+`t = "a"`
+
+**Output:**
+`"a"`
+**Explanation:** exact match of t is found.
+
+---
+
+### **Example 3**
+
+**Input:**
+`s = "a"`
+`t = "aa"`
+
+**Output:**
+`""`
+**Explanation:**
+`t` requires 2 'a', but string has only 1 → impossible.
+
+---
+
+---
+Permutation in String (LC 567)**
+
+### **Goal:**
+
+Check if **any substring** of `s2` is a **permutation** of `s1`.
+
+If `s1 = "ab"` → valid substrings of size 2 are: `"ab"` or `"ba"`.
+
+### **3 Sample Cases**
+
+---
+
+### **Example 1**
+
+**Input:**
+`s1 = "ab"`
+`s2 = "eidbaooo"`
+
+**Output:**
+`true`
+
+**Explanation:**
+Substring `"ba"` exists in s2 → permutation of `"ab"`.
+
+---
+
+### **Example 2**
+
+**Input:**
+`s1 = "abc"`
+`s2 = "bbbca"`
+
+**Output:**
+`true`
+
+**Explanation:**
+Substring `"bca"` is a permutation of `"abc"`.
+
+---
+
+### **Example 3**
+
+**Input:**
+`s1 = "abc"`
+`s2 = "defgh"`
+
+**Output:**
+`false`
+
+**Explanation:**
+No substring of size 3 contains all letters of `"abc"`.
+
+---
+
+---
+
+Longest Repeating Character Replacement (LC 424)**
+
+### **Goal:**
+
+Given `k` replacements allowed, find the **longest substring** where you can turn it into **all the same character**.
+
+### **Idea:**
+
+Window length − most frequent character count ≤ k
+→ means window can be made uniform.
+
+### **3 Sample Cases**
+
+---
+
+### **Example 1**
+
+**Input:**
+`s = "AABABBA"`
+`k = 1`
+
+**Output:**
+`4`
+
+**Explanation:**
+Make `"AABA"` or `"ABBA"` into `"AAAA"` using 1 replacement.
+
+---
+
+### **Example 2**
+
+**Input:**
+`s = "AAAA"`
+`k = 2`
+
+**Output:**
+`4`
+
+**Explanation:**
+Already all same char → entire string.
+
+---
+
+### **Example 3**
+
+**Input:**
+`s = "ABBB"`
+`k = 2`
+
+**Output:**
+`4`
+
+**Explanation:**
+Replace both `A` → `"BBBB"`.
+
+---
+
+---
+
+Binary Subarrays With Sum = K (LC 930)**
+
+### **Goal:**
+
+Given a binary array (only 0s and 1s), count **how many subarrays** have sum = goal.
+
+### **3 Sample Cases**
+
+---
+
+### **Example 1**
+
+**Input:**
+`nums = [1,0,1,0,1]`
+`goal = 2`
+
+**Output:**
+`4`
+
+**Explanation:**
+These subarrays sum to 2:
+
+* `[1,0,1]`
+* `[0,1,0,1]`
+* `[1,0,1]` (different indices)
+* `[1,1]` (first and last 1)
+
+---
+
+### **Example 2**
+
+**Input:**
+`nums = [0,0,0,0]`
+`goal = 0`
+
+**Output:**
+`10`
+
+**Explanation:**
+All possible subarrays have sum 0.
+
+---
+
+### **Example 3**
+
+**Input:**
+`nums = [1,1,1]`
+`goal = 3`
+
+**Output:**
+`1`
+
+**Explanation:**
+Only one subarray: `[1,1,1]`.
+
+---
+
