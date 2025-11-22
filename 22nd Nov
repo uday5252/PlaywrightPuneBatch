@@ -1,0 +1,77 @@
+// let s = "India is a country!"
+// let regex = /India/
+
+// console.log(regex.test(s))
+
+// i(flag) ==> condition
+// i ==> ignore case sensitivity
+
+// let s = "India is a country!"
+// let regex = /india/i
+
+// console.log(regex.test(s))
+
+
+// let s = "India is a country and again India is a country!"
+// let regex = /india/ig
+
+// console.log(s.match(regex).length)
+
+// match() ==> returns an array of matched values
+// will always return the first matched value
+// g ==> global search
+// console.log(regex.test(s))
+
+
+
+// console.log("cat is a A animal".match(/cat/g))
+
+// console.log("ct is a B animal".match(/ca/g))
+
+// console.log("ct is a B animal".match(/[ca]/g))
+
+// console.log("ct is a F anGlKJHKHJimal UYH".match(/[A-Z]/g))
+
+// "cat is 7890 animal" ==> "7890"
+
+// console.log("cat is 7890 animal".match(/[0-9]/g).join(""))
+
+// console.log("cat is 7890 animal".match(/[^0-9]/g))
+
+// Write a Regular Expression to check whether
+// a mobile no is valid or not
+
+// 10 digits  ==> 6 to 9
+// ^ ==> starts with
+// [0-9] ==> \d
+// let mobileNo = "9113239065"
+// let regEx = /^[6-9]\d{9}$/
+// let result = mobileNo.match(regEx)
+// if(result == null)
+// {
+//     console.log("Mobile no is invalid")
+// }
+// else
+// {
+//     console.log("Mobile no is valid")
+// }
+
+
+// console.log("Raju is a good boy".match(/\d/))
+// console.log("Raju is a good 87689 boy".match(/\D/g))
+// console.log("Raju is a good 87689 boy".match(/\d/g))
+// console.log("Raju is a good 87689 boy".match(/\s/g))
+
+
+
+
+
+
+// "Raju is a good boy" ==> ["Raju", "is", "a"]
+
+// console.log("Raju is a good boy".split(" "))
+// console.log("Raju is a good boy".split(/\s/))
+// console.log("Raju is a good boy".split(/\S/))
+// console.log("Raju is a good 87689 boy".match(/\S/g))
+
+// console.log("Raju is a good 87689 boy".match(/\w/g))
