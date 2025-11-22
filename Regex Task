@@ -1,0 +1,94 @@
+1) You must validate phone numbers using Regular Expressions (Regex).
+
+A phone number is VALID only if it matches one of these formats:
+
+1. 1234567890
+2. (123) 456-7890
+3. 123-456-7890
+4. 91 (123) 456-7890
+
+Your program will receive multiple phone numbers as inputs.
+
+You must:
+
+ ✔ Count how many inputs are valid
+
+ ✔ Count how many inputs are invalid
+
+ ✔ Print both counts
+
+  HOW OUTPUT MUST LOOK
+
+
+Valid phone numbers: X
+Invalid phone numbers: Y
+
+
+Where X = number of valid numbers
+and Y = number of invalid numbers
+
+---
+
+#  FULL EXPLANATION WITH SAMPLE INPUTS & OUTPUTS
+
+---
+
+#  Example 1
+ Input:
+
+
+1234567890
+(123) 456-7890
+99999
+
+
+ Explanation:
+
+ 1234567890 → valid (matches format 1)
+ (123) 456-7890 → valid (format 2)
+ 99999 → invalid
+
+ Output:
+
+
+Valid phone numbers: 2
+Invalid phone numbers: 1
+  Example 2
+
+ Input:
+
+
+123-456-7890
+1234567890
+123-45-6789
+
+
+ Explanation:
+
+ 123-456-7890 → valid (format 3)
+ 1234567890 → valid (format 1)
+ 123-45-6789 → invalid
+
+ Output:
+
+
+Valid phone numbers: 2
+Invalid phone numbers: 1
+
+===========================================
+2) .Filename Guardian: Regex-Powered File Check 
+You are building a system that checks file names uploaded by users. 
+Filename Rules: 
+1. It must end with .txt or .csv → else print "Invalid file extension". 
+2. It must contain only letters, numbers, underscores, or dashes before the extension 
+→ else print "Invalid characters in filename". 
+3. It must not exceed 20 characters (excluding extension) → else print "Filename too 
+long". 
+4. It must not start with a digit → else print "Filename must not start with a digit". 
+If all rules pass → print "Valid filename" 
+Input Format 
+A string containing a file name. 
+Sample Input 
+123report.txt 
+Sample Output 
+Filename must not start with a digit
