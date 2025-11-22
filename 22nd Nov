@@ -78,3 +78,139 @@
 
 
 [abc]Matches a single character that is 'a', 'b', or 'c'[^abc]Matches any single character except 'a', 'b', or 'c'[a-zA-Z]Matches a single letter, from lowercase 'a' to 'z' or uppercase 'A' to 'Z'\dMatches any digit (\(0-9\))\DMatches any character that is not a digit\sMatches any whitespace character (like space, tab, newline)\SMatches any character that is not a whitespace character\wMatches any "word" character (alphanumeric and underscore: [a-zA-Z_0-9])
+=====================================================
+// + ==> minimum 1 and max any
+
+// console.log("abaacaaaab".match(/a+/g))
+// console.log("abasababbbbbab".match(/b+/g))
+
+// * ==> min 0 and max any
+
+// console.log("abaacaaaab".match(/a+/g))
+// console.log("abaacaaaab".match(/a*/g))
+
+// ? ==> min 0 and max 1
+// console.log("abaacaaaab".match(/a?/g))
+
+// {n} ==> {5} ==> max 5 times
+// console.log("abaacaaaab".match(/a{3}/g))
+
+
+// console.log("abaacaaab".match(/a{2,4}/g))
+
+// console.log("abaacaaaaaaaaab".match(/a{2,}/g))
+
+// QUANTIFIERS
+// +(1, any)
+// *(0, any)
+// ?(0, 1)
+// {3} ==> compulsory
+// {3,} ==> min 3 max any
+// {3, 5} ==> min 3 and max 5
+
+// . ==> very very dangerous
+
+
+// console.log("cat caaat rat maat".match(/cat/g))
+// console.log("cat caaat rat maat".match(/c.t/g))
+// console.log("cat caaat caat rat maat".match(/c.+t/g))
+// console.log("catt rat caaat caat maat".match(/c.{1,3}t/g))
+
+// console.log("catt rat caaat caat maat".
+//     match(/c.{1,6}t/g))
+
+// console.log("fileatxt".match(/file\.txt/g))
+
+// console.log("abc.txt".
+//     match(/\./g))
+// OR
+// console.log("abc.txt".
+//     match(/[.]/g))
+
+// word boundary ==> \b
+// Before that word(alphabet / number) and after that there should be non word character i.e space
+// 
+
+// console.log("9 abc 9 hello9".match(/\b9\b/g))
+
+// console.log("9 abc 9 hello9 9".match(/\b9\b/g))
+
+
+
+
+// console.log("abc hello9 ".match(/\b9\b/g))
+
+
+
+
+
+
+
+// let s = "Welcome"
+
+// if(s.length < 8)
+// {
+//     console.log("Password is too hsort!")
+// }
+// if(!(/[A-Z]/.test(s)))
+// {
+//     console.log("Must contain an uppercase letter")
+// }
+// if(!(/\d/.test(s)))
+// {
+//     console.log("Must contain a digit")
+// }
+// if(!(/[(!@#$%^&*]/.test(s)))
+// {
+//     console.log("Must contain a special character")
+// }
+// if((/\s/.test(s)))
+// {
+//     console.log("Spaces not allowed")
+// }
+
+
+
+// check whether the website url is valid or not
+// http or https://www.amazon.com or in
+
+// let regEx = /^https?:\/\/www\.[a-zA-Z]+\.(com|in)$/
+// console.log(regEx.test("https//www.amazon.in"))
+
+// 3rd 
+// regex whether the gmail id is valid or not
+
+
+
+
+
+
+
+
+// greedy quantifiers
+// console.log("abaacaaaab".match(/a+/g))
+
+
+
+// lazy quantifiers
+// +?, *?, ??. {}?,..
+console.log("abaacaaaab".match(/a+?/g))
+========================================
+TASK
+
+// regex whether the gmail id is valid or not
+
+8. Product Code Inspector: Regex-Powered Inventory Check 
+You’re validating product codes for a warehouse system. 
+Product Code Rules: 
+1. Must start with two uppercase letters (category code). 
+2. Followed by 4 digits (product ID). 
+3. Optionally, may end with a dash and 2 uppercase letters (region code). 
+4. Anything else → "Invalid product code". 
+If all rules pass → "Valid product code" 
+Input Format 
+A string representing the product code. 
+Sample Input 
+AB1234-NY 
+Sample Output 
+Valid product code 
