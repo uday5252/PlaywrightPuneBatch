@@ -214,3 +214,52 @@ Sample Input
 AB1234-NY 
 Sample Output 
 Valid product code 
+===========================================================
+
+
+// let regEx = /^https?:\/\/www\.[a-zA-Z]+\.(?:com|in)$/;
+// let result = "https://www.amazon.com".match(regEx);
+// console.log(result)
+// (com|in)
+// vs
+// (?:com|in) ==> non capturing group
+// "sooo what issss that"
+// "what that"
+
+
+
+// "sooo" ==> s ==> store it
+
+
+// let s = "sooo what issss that"
+// let data = s.split(/\s/)
+
+// const output = data.filter(function(ele)
+// {
+    // return !ele.match(/([a-z])\1\1/g)
+
+// })
+
+// console.log(output.join(" "))
+
+// 1st c.g ==> \1
+// 2ns c.g ==> \2.....
+
+
+// let date = "2025-05-14"
+
+// let result = date.match(/(\d{4})-(\d{2})-(\d{2})/)
+// console.log(result[1])
+// console.log(result[2])
+// console.log(result[3])
+
+// positive look ahead(?=)
+// we will identify X if Y follows
+
+// let s = "catfood cat catfish"
+// console.log(s.match(/cat(?=food)/g))
+
+// negative look ahead(?!)
+
+// let s = "catfood cat catfish"
+// console.log(s.match(/cat(?!food)/g))
