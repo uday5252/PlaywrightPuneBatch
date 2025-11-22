@@ -75,3 +75,6 @@
 // console.log("Raju is a good 87689 boy".match(/\S/g))
 
 // console.log("Raju is a good 87689 boy".match(/\w/g))
+
+
+[abc]Matches a single character that is 'a', 'b', or 'c'[^abc]Matches any single character except 'a', 'b', or 'c'[a-zA-Z]Matches a single letter, from lowercase 'a' to 'z' or uppercase 'A' to 'Z'\dMatches any digit (\(0-9\))\DMatches any character that is not a digit\sMatches any whitespace character (like space, tab, newline)\SMatches any character that is not a whitespace character\wMatches any "word" character (alphanumeric and underscore: [a-zA-Z_0-9])
