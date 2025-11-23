@@ -1,0 +1,594 @@
+1) You are given an array of numbers
+
+You must:
+
+  Step 1: Check if the array is a palindrome
+
+A palindrome means:
+
+ First element = Last element
+ Second element = Second last
+ And so on…
+
+You must check this using the two-pointer method:
+
+ `left` pointer starts at index 0
+ `right` pointer starts at last index
+ Compare both
+ Move inward
+
+❌ You are not allowed to reverse the array.
+
+---
+
+  🔹 What Should You Return?
+
+  CASE 1: If the array IS a palindrome
+
+👉 Return the sum of all elements.
+
+  CASE 2: If the array is NOT a palindrome
+
+👉 Return the index (0-based) of the first mismatch from the left.
+
+Meaning:
+The first time `arr[left] != arr[right]`, return `left`.
+
+---
+
+  🔹 INPUT–OUTPUT EXAMPLES
+
+  Example 1 (Palindrome)
+
+Input:
+
+```
+[3, 5, 7, 5, 3]
+```
+
+Check:
+
+```
+3 == 3 
+5 == 5 
+7 middle 
+```
+
+Palindrome 
+
+Sum = 3+5+7+5+3 = 23
+
+Output:
+
+```
+23
+```
+
+---
+
+  Example 2 (Not Palindrome — mismatch at index 0)
+
+Input:
+
+```
+[2, 4, 6, 4, 9]
+```
+
+Check:
+
+```
+index 0 vs index 4 → 2 vs 9 ❌ mismatch
+```
+
+First mismatch at index 0
+
+Output:
+
+```
+0
+```
+
+---
+
+  Example 3 (Not Palindrome — mismatch later)
+
+Input:
+
+```
+[4, 2, 6, 3, 4]
+```
+
+Check:
+
+```
+(0,4): 4 vs 4  match
+(1,3): 2 vs 3 ❌ mismatch
+```
+
+First mismatch at index 1
+
+Output:
+
+```
+1
+```
+
+---
+
+  Example 4 (Even-length palindrome)
+
+Input:
+
+```
+[8, 9, 9, 8]
+```
+
+Check:
+
+```
+8 == 8 
+9 == 9 
+```
+
+Palindrome 
+Sum = 8 + 9 + 9 + 8 = 34
+
+Output:
+
+```
+34
+```
+
+---
+
+  Example 5 (Single element)
+
+Input:
+
+```
+[10]
+```
+
+A single element is always a palindrome 
+Sum = 10
+
+Output:
+
+```
+10
+```
+
+---
+
+
+==============================================
+2) You are given a paragraph of text, and your job is to count how many words follow a specific pattern called CVC:
+
+  CVC = Consonant – Vowel – Consonant
+
+That means:
+
+ The word has 3 letters
+ 1st letter = Consonant
+ 2nd letter = Vowel
+ 3rd letter = Consonant
+
+Example of CVC words:
+
+```
+cat → c (consonant), a (vowel), t (consonant)
+pen → p, e, n
+dog → d, o, g
+```
+
+Not CVC:
+
+```
+tea → t (consonant), e (vowel), a (vowel) ❌ ends with vowel
+ice → i (vowel) ❌ starts with vowel
+ship → 4 letters ❌
+```
+
+---
+
+  🔹 What Counts as Vowels?
+
+The question says:
+
+```
+Vowels are: a, e, i, o, u (case-insensitive)
+```
+
+So uppercase also counts:
+
+```
+A, E, I, O, U 
+```
+
+Everything else (letters A–Z except vowels) = consonants
+
+---
+
+  🔹 Rules for a Valid CVC Word
+
+ Must be exactly 3 letters
+ Must start with a consonant
+ Must have a vowel in the middle
+ Must end with a consonant
+ Can be lowercase or uppercase
+❌ No numbers, no symbols, no longer words
+
+---
+
+  🔹 What You Must Do
+
+Write a program that:
+
+ Reads a paragraph
+ Finds all words that match the CVC pattern
+ Counts how many of them exist
+ Use regular expressions (regex)
+
+So the output is a number → the count.
+
+---
+
+  🔹 Example
+
+ Input:
+
+```
+The cat sat on the big red bat.
+```
+
+Words: the, cat, sat, on, the, big, red, bat
+
+CVC words:
+
+ cat 
+ sat 
+ big 
+ red 
+ bat 
+
+Count = 5
+
+ Output:
+
+```
+5
+```
+
+---
+===================================================================================================
+3) You are given a sorted array (numbers are in increasing order).
+Some numbers are repeated (duplicates).
+
+To save space, we want to remove duplicates and keep only one copy of each number.
+
+Since the array is sorted, all duplicates will be next to each other — this makes it easier.
+
+ 🎯 Task:
+
+Write a program that returns the count of unique elements after removing duplicates.
+
+👉 Important:
+We need to return only the count, NOT the modified array.
+
+  Requirement:
+
+Use the Two-Pointer Approach.
+
+---
+
+  Example 1
+
+ 📥 Input:
+
+```
+[1, 1, 2, 2, 2, 3, 4, 4]
+```
+
+ 🔍 Unique elements are:
+
+```
+[1, 2, 3, 4]
+```
+
+ 📤 Output:
+
+```
+4
+```
+
+Because there are 4 unique numbers.
+
+---
+
+  Example 2
+
+ 📥 Input:
+
+```
+[5, 5, 5, 5]
+```
+
+ 🔍 Unique elements:
+
+```
+[5]
+```
+
+ 📤 Output:
+
+```
+1
+```
+
+Only one unique number.
+
+---
+
+  Example 3
+
+ 📥 Input:
+
+```
+[1, 2, 3, 4]
+```
+
+(No duplicates)
+
+ 📤 Output:
+
+```
+4
+```
+
+All are unique.
+
+---
+
+  Example 4
+
+ 📥 Input:
+
+```
+[]
+```
+
+ 📤 Output:
+
+```
+0
+```
+
+No elements → no unique numbers.
+
+---
+
+  What is the Two-Pointer Approach?
+
+We use:
+
+ Pointer i → Tracks position of unique elements
+ Pointer j → Scans through the array
+
+Whenever `arr[j]` is different from `arr[i]`, it means we found a new unique number.
+
+So we move `i` forward and increase our unique count.
+
+ Final unique count = `i + 1`
+====================================================================================
+4) Reverse Only Words with Even Length
+
+  What You are Given:
+
+A sentence with multiple words separated by spaces.
+
+  What You Must Do:
+
+ Check each word.
+ If the word length is even → reverse the word.
+ If the word length is odd → keep it as it is.
+ Keep all spaces and word positions EXACTLY the same.
+
+  Restrictions:
+
+❌ No loops (no `for`, `while`)
+❌ No regex
+ You can only use:
+
+ `.trim()`
+ `.split(" ")`
+ `.map(...)`
+ `.join(" ")`
+ `.length`
+
+  Output:
+
+Return the final transformed sentence.
+
+---
+
+  SIMPLE LOGIC (Step-by-Step)
+
+1️⃣ Split the sentence into words.
+2️⃣ For each word:
+
+ If `word.length % 2 == 0` → reverse it.
+ Else → keep it unchanged.
+  3️⃣ Join the words back into a sentence.
+
+---
+
+  INPUT & OUTPUT EXAMPLES
+
+  Example 1
+
+Input:
+
+```
+"Hello world"
+```
+
+Word lengths:
+
+ Hello → 5 (odd) → keep
+ world → 5 (odd) → keep
+
+Output:
+
+```
+"Hello world"
+```
+
+ No changes.
+
+---
+
+  Example 2
+
+Input:
+
+```
+"Hi John Doe"
+```
+
+Words:
+
+ Hi → 2 (even) → reverse → "iH"
+ John → 4 (even) → reverse → "nhoJ"
+ Doe → 3 (odd) → keep
+
+Output:
+
+```
+"iH nhoJ Doe"
+```
+
+---
+
+  Example 3
+
+Input:
+
+```
+"Time to code"
+```
+
+Words:
+
+ Time → 4 (even) → "emiT"
+ to → 2 (even) → "ot"
+ code → 4 (even) → "edoc"
+
+Output:
+
+```
+"emiT ot edoc"
+```
+
+---
+
+  Example 4 (spaces must stay same!)
+
+Input:
+
+```
+"Play  and fun"
+```
+
+Words:
+
+ Play → 4 (even) → "yalP"
+ and → 3 (odd) → keep
+ fun → 3 (odd) → keep
+
+Output:
+
+```
+"yalP  and fun"
+```
+
+==============================================================================
+5) Match Dates in DD/MM/YYYY or DD-MM-YYYY Format
+
+Question:
+Write a regex that finds all valid dates in a text where the date is:
+
+ Day: 01 to 31
+ Month: 01 to 12
+ Year: 1900–2099
+ Separator can be `/` or `-`
+
+Example Input:
+
+```
+The events are on 05/11/2024, 31-12-2023, and 45/10/2021.
+```
+
+Expected Matches:
+
+```
+05/11/2024
+31-12-2023
+```
+
+(45/10/2021 should NOT match because 45 is not a valid day.)
+
+---
+
+6) Extract Hashtags (Only Valid Words)
+
+Question:
+Write a regex to extract all valid hashtags from a social media post.
+
+Rules:
+
+ Must start with ``
+ Followed by only letters, numbers, or underscores
+ At least 2 characters total (e.g., `a` ❌)
+
+Example Input:
+
+```
+Loving the JavaScript_2025 course! fun !wow 123
+```
+
+Expected Matches:
+
+```
+JavaScript_2025
+fun
+```
+
+(`!wow` and `123` should NOT match because `123` has no letter.)
+
+---
+
+7) Match Words That Start and End With the Same Letter
+
+Question:
+Write a regex to find all words where:
+
+ First and last character are the same (case-insensitive)
+ Minimum length = 2
+
+Example Input:
+
+```
+Wow level noon dad cat pop Apple
+```
+
+Expected Matches:
+
+```
+Wow
+level
+noon
+dad
+pop
+```
+
+(`cat` and `Apple` don’t match.)
