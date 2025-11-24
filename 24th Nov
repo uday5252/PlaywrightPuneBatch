@@ -1,0 +1,123 @@
+
+// Constructor Function
+// function Student(rollno, username, age)
+// {
+//     this.rollno = rollno
+//     this.username = username
+//     this.age = age
+   
+// }
+// Student.prototype.displayDetails = function()
+//     {
+//         console.log(this.rollno)
+//         console.log(this.username)
+//         console.log(this.age)
+//     }
+
+// const studentData1 = new Student(1, "Raju", 15) 
+// const studentData2 = new Student(2, "John", 12)
+// const studentData3 = new Student(3, "Mary", 13)
+
+
+// class
+
+
+// class Student
+// {
+    
+//    constructor(rollno, username, age)
+//     {
+//         this.rollno = rollno
+//         this.username = username
+//         this.age = age
+    
+//     }
+    
+//     // protoype(Function Decalaration)
+//     displayDetails()
+//         {
+//             console.log(this.rollno)
+//             console.log(this.username)
+//             console.log(this.age)
+//         }
+// }
+
+// const studentData1 = new Student(1, "Raju", 15) 
+// const studentData2 = new Student(2, "John", 12)
+// const studentData3 = new Student(3, "Mary", 13)
+
+
+// console.log(studentData1)
+// console.log(studentData2)
+// console.log(studentData3)
+
+// studentData1.displayDetails()
+
+
+// class Employee
+// {
+//     constructor(id, name, age)
+//     {
+//         this.id = id
+//         this.name = name
+//         this.age = age
+//     }
+
+//     company()
+//     {
+//         this.companyName = "ABC Company"
+//         return this.companyName
+//     }
+
+//     displayEmpDetails()
+//     {
+//         console.log(this.id, this.name. this.age)
+//     }
+
+   
+    
+    
+// }
+
+// const emp1 = new Employee(1, "Raju", 30)
+// const emp2 = new Employee(2, "Tim", 31)
+// const emp3 = new Employee(3, "Cook", 33)
+
+// console.log(emp1)
+// console.log(emp2)
+// console.log(emp3)
+
+
+// console.log(emp1.company())
+// console.log(emp2.company())
+// console.log(emp3.company())
+
+
+
+
+
+
+// tyepscript ==> type + java script ==> type
+
+
+class Book
+{
+    static count = 0//3
+
+    constructor(title, cost, author)
+    {
+        this.title = title
+        this.cost = cost 
+        this.author = author
+
+        Book.count++
+    }
+}
+
+
+const b1 = new Book("Java Progg", 300, "Raju")
+const b2 = new Book("Python Progg", 300, "Ramu")
+const b3 = new Book("Python Progg", 300, "John")
+
+
+console.log(Book.count)
