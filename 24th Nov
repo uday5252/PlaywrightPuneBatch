@@ -165,4 +165,34 @@ for(let i = 1; i <= inputCount; i++)
 console.log(Student.getTotalStudent())
 
 
+===========================================
+class BankAccount
+{
+    #accountNumber
+    #accountBalance //private variable
+
+    constructor(accountNumber, accountBalance)
+    {
+        this.accountNumber = accountNumber
+        this.#accountBalance = accountBalance
+    }
+
+    setAccountBalance(recievedBalance)
+    {
+        if(recievedBalance > 0)
+        {
+            this.#accountBalance = recievedBalance
+        }
+    }
+
+    getAccountBalance()
+    {
+        return this.#accountBalance
+    }
+}
+
+const account = new BankAccount(10000001, 2000)
+account.setAccountBalance(-4000)
+
+console.log(account.getAccountBalance())
 
