@@ -1,0 +1,19 @@
+
+const data = ["flower", "flow", "flight"]
+
+let prefix = data[0]
+// prefix = "flower"
+
+for(let i = 1; i < data.length; i++)
+{
+    let next = data[i]
+    // next = "flight"
+    // prefix = "flow"
+    while(!next.startsWith(prefix))
+    {
+       prefix = prefix.substring(0, prefix.length - 1)
+    //    prefix = "fl"
+    }
+}
+
+console.log(prefix)
