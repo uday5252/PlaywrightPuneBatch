@@ -121,3 +121,48 @@ const b3 = new Book("Python Progg", 300, "John")
 
 
 console.log(Book.count)
+================================================================
+
+class Student
+{
+    static totalStudent = 0
+
+    constructor()
+    {
+        Student.totalStudent++
+    }
+
+    static getTotalStudent()
+    {
+        return Student.totalStudent
+    }
+
+}
+
+const info = [ 5, 4, 1, 5, 5, 8, 10 ]
+
+let inputCount = info[0]
+// inputCount = 5
+
+for(let i = 1; i <= inputCount; i++)
+{
+    // i = 1 ==> 2
+    // i = 2 ==> 4
+    // i = 3 ==> 1
+    let noOfStudentJoiningTheCourseToday = info[i] // info[1]
+    // noOfStudentJoiningTheCourseToday = 2
+    for(let j = 0; j < noOfStudentJoiningTheCourseToday; j++)
+    {
+        // j = 0 ==> 1st student
+        // j = 1 ==> 2nd student
+       
+        new Student()
+    }
+    
+
+}
+
+console.log(Student.getTotalStudent())
+
+
+
