@@ -196,3 +196,58 @@ account.setAccountBalance(-4000)
 
 console.log(account.getAccountBalance())
 
+========================================================================
+
+class Wallet
+{
+    #amount = 0 // 100
+
+    addMoney(x)
+    {
+        if(x > 0)
+        {
+            this.#amount = this.#amount + x
+        }
+    }
+
+    spendMoney(x)
+    {
+        if(x > 0 && x <= this.#amount)
+        {
+            this.#amount = this.#amount - x
+        }
+    }
+
+    getAmount()
+    {
+        return this.#amount
+    }
+}
+
+
+
+const data = [ 4, "add 80", "spend 40", "amount", "spend 100" ]
+
+let inputCount = data[0]
+
+const wallet =  new Wallet()
+
+for(let i = 1; i <= inputCount; i++)
+{
+    let info = data[i] // data[1]
+    // info = [ "add 100"]
+    const [ commandAndInput, value ] = info.split(" ")
+ 
+    if(commandAndInput == "add")
+    {
+        wallet.addMoney(parseInt(value))
+    }
+    else if(commandAndInput == "spend")
+    {
+        wallet.spendMoney(parseInt(value))
+    }
+    else if(commandAndInput == "amount")
+    {
+        console.log(wallet.getAmount())
+    }
+}
