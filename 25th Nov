@@ -242,4 +242,351 @@ for(let i = 1; i <= inputCount; i++)
 
 // let apiResponseStatus : [ number, string ]
 // apiResponseStatus = [ 200, "OK"]
+==============================================================
+
+// Object
+
+// type Student = { name: string, age: number, city: string }
+
+// const student1 : Student = { 
+//     name: "Raju",
+//     age: 30,
+//     city: "Mumbai"
+// }
+
+// const student2 : Student = { 
+//     name: "Ramu",
+//     age: 31,
+//     city: "Pune"
+// }
+
+// console.log(student1)
+// console.log(student2)
+
+
+
+
+// interface Student { name: string, age: number, city: string }
+
+// const student1 : Student = { 
+//     name: "Raju",
+//     age: 30,
+//     city: "Mumbai"
+// }
+
+// const student2 : Student = { 
+//     name: "Ramu",
+//     age: 31,
+//     city: "Pune"
+// }
+
+// console.log(student1)
+// console.log(student2)
+
+
+
+
+
+// interface Person
+// {
+//     name: string,
+//     age: number,
+//     city: string
+// }
+
+// const Person : Person = { name: "Mark", age: 20, city: "Pune" }
+
+// interface Employee extends Person
+// {
+//     company: string,
+//     salary: number
+// }
+
+// const employee : Employee = { name: "mark", age: 30, city: "Hyd", company: "ABC",
+//     salary: 50000
+// } 
+
+// console.log(employee)
+
+// ============================================
+
+// type Person = 
+// {
+//     name: string,
+//     age: number,
+//     city: string
+// }
+
+// const Person : Person = { name: "Mark", age: 20, city: "Pune" }
+
+// type Employee extends Person
+// {
+//     company: string,
+//     salary: number
+// }
+
+// const employee : Employee = { name: "mark", age: 30, city: "Hyd", company: "ABC",
+//     salary: 50000
+// } 
+
+// console.log(employee)
+
+// ===========================================================
+
+// Generics(Generally common) ==> <>
+
+// without generics
+
+// function first(arr : number[]) : number
+// {
+//     return arr[0]
+// }
+
+// console.log(first([10, 20, 30, 40]))
+
+// function second(arr : string[]) : string
+// {
+//     return arr[0]
+// }
+
+// console.log(second(["Raju", "Ramu", "Mary"]))
+
+
+// T ==> Type
+// T ==> string
+// T ==> number
+
+
+// function first<T>(arr : T[]) : T
+// {
+//     return arr[0]
+// }
+
+// console.log(first([10, 20, 30, 40]))
+// console.log(first(["Raju", "Ramu", "Mary"]))
+
+// =================================================
+
+
+
+// class NumberContainer
+// {
+//     num : number
+
+//     constructor(num : number)
+//     {
+//         this.num = num
+//     }
+
+//     printNumber()
+//     {
+//         console.log(this.num)
+//     }
+// }
+
+// const n = new NumberContainer(100)
+// n.printNumber()
+
+// class StringContainer
+// {
+//     str : string
+
+//     constructor(str : string)
+//     {
+//         this.str = str
+//     }
+
+//     printString()
+//     {
+//         console.log(this.str)
+//     }
+// }
+
+// const s = new StringContainer("Raju")
+// s.printString()
+
+
+// class NumberAndStringContainer<T>
+// {
+//     value : T
+
+//     constructor(value : T)
+//     {
+//         this.value = value
+//     }
+
+//     printData() : void
+//     {
+//         console.log(this.value)
+//     }
+// }
+
+
+// const n = new NumberAndStringContainer(10)
+// const s = new NumberAndStringContainer("Raju")
+// n.printData()
+// s.printData()
+
+// ========================================================
+// access modifiers
+// private, public, protected
+// javascript ==> #
+// typescript ==> private
+
+
+// class Modifiers
+// {
+//     private a : number = 10
+//     public b : number = 20
+//     protected c : number = 30
+// }
+
+// class First extends Modifiers
+// {
+//     accessData()
+//     {
+//     //    console.log(this.a)
+//        console.log(this.b)
+//       console.log(this.c)
+//     }
+// }
+
+// const f = new First()
+// f.accessData()
+
+// class First
+// {
+//     accessData()
+//     {
+//         const m = new Modifiers()
+//         // console.log(m.a)
+//         console.log(m.b) //ONLY
+//         // console.log(m.c)
+//     }
+// }
+
+
+
+
+// class Student
+// {
+//     static totalStudent : number = 0
+
+//     constructor()
+//     {
+//         Student.totalStudent++
+//     }
+
+//     static getTotalStudent() : number
+//     {
+//         return Student.totalStudent
+//     }
+
+// }
+
+// const info : number[] = [ 5, 4, 1, 5, 5, 8, 10 ]
+
+// let inputCount : number = info[0]
+
+// for(let i : number = 1; i <= inputCount; i++)
+// {
+//     let noOfStudentJoiningTheCourseToday : number = info[i] // info[1]
+    
+//     for(let j : number = 0; j < noOfStudentJoiningTheCourseToday; j++)
+//     {
+//         new Student()
+//     }
+    
+
+// }
+
+// console.log(Student.getTotalStudent())
+
+
+
+
+
+
+
+
+
+// class BankAccount
+// {
+//     accountNumber : number
+//     private accountBalance : number //private variable
+
+//     constructor(accountNumber : number, accountBalance : number)
+//     {
+//         this.accountNumber = accountNumber
+//         this.accountBalance = accountBalance
+//     }
+
+//     setAccountBalance(recievedBalance : number) : void
+//     {
+//         if(recievedBalance > 0)
+//         {
+//             this.accountBalance = recievedBalance
+//         }
+//     }
+
+//     getAccountBalance() : number
+//     {
+//         return this.accountBalance
+//     }
+// }
+
+// const account : BankAccount = new BankAccount(10000001, 2000)
+// account.setAccountBalance(-4000)
+// console.log(account.getAccountBalance())
+
+
+
+
+
+// class Person 
+// {
+//     name : string
+//     age : number
+//     city : string
+
+//     constructor(name : string, age : number, city : string)
+//     {
+//         this.name = name
+//         this.age = age
+//         this.city = city
+//     }
+
+//     displayDetails() : void
+//     {
+//         console.log(`The name is: ${this.name}`)
+//         console.log(`The age is: ${this.age}`)
+//         console.log(`The city is: ${this.city}`)
+//     }
+// }
+
+// class Employee extends Person
+// {
+//     company : string
+//     salary : number
+
+//     constructor(name : string, age : number, city : string, company : string, salary : number)
+//     {
+//         super(name, age, city)
+//         this.salary = salary
+//         this.company = company
+//     }
+
+//     displayEmployeeDetails() : void
+//     {
+//         super.displayDetails()
+//         console.log(`The company of a Employee is: ${this.company}`)
+//         console.log(`The salary of a Employee is: ${this.salary}`)
+//     }
+// }
+
+// const person : Person = new Person("Raju", 30, "Mumbai")
+// person.displayDetails()
+// console.log("=================")
+// const employee : Employee = new Employee("Raju", 30, "Mumbai", "ABC Company", 40000)
+// employee.displayEmployeeDetails()
 
