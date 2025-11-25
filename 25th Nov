@@ -160,3 +160,86 @@ for(let i = 1; i <= inputCount; i++)
         c.sound()
     }
 }
+=================================================
+// let username : String = "Raju"
+// username = 100
+// console.log(username)
+
+// let username : String = "Raju"
+// username = "Mark"
+// console.log(username)
+
+
+// let userage : number = 40
+// userage = true
+// console.log(userage)
+
+// let userage : number = 40
+// console.log(typeof userage)
+
+// any(AVOID)
+// let usercity : any = "Bangalore"
+// usercity = true
+// usercity = 500
+// console.log(usercity)
+
+
+// typescript program ==> conenct to some website in the inetrnet ==> output
+
+// let output : any
+
+
+// let a : any = "Raju"
+// console.log(a.toUpperCase())
+// a = 123
+// console.log(a.toUpperCase())
+
+// let a : unknown = "Raju"
+// console.log(a)
+// a = 340
+// console.log(a)
+
+
+// let a : any = "Raju"
+// console.log(a.toUpperCase())
+
+
+// let a : unknown = "Raju"
+// if(typeof a == "string")
+// {
+//     console.log(a.toUpperCase())
+// }
+
+
+// const data : number[] = [ 10, 20, 30, 40 ]
+// | ==> union operator
+
+// const data : (number | string)[] = [ 10, 20, 30, 40, "Raju", "John" ]
+// data.push("Mark")
+// console.log(data)
+
+// function add(a : number, b : number) : number
+// {
+//     return a + b
+// }
+
+// console.log(add(30, 40))
+
+// function add(a : number, b : number) : number
+// {
+//     return a + b
+// }
+
+// console.log(add(30, 40))
+
+// Fixed Array with Fixed Element ==> Tuples ==> []
+// "Raju" ==> 30
+
+// let data : [string , number] = ["Raju", 100]
+
+// statusCode ==> 200
+// message = Ok
+
+// let apiResponseStatus : [ number, string ]
+// apiResponseStatus = [ 200, "OK"]
+
