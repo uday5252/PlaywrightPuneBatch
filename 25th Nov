@@ -1,0 +1,162 @@
+
+// ===============================================
+
+
+// class First
+// {
+//     constructor()
+//     {
+//         console.log("I am from First class constructor")
+//     }
+
+//     display()
+//     {
+//         console.log("I am from display method")
+//     } 
+// }
+
+// class Second extends First
+// {
+//    constructor()
+//     {
+//         console.log("I am from Second class constructor")
+//         super()
+//     }
+// }
+
+// const s = new Second()
+// s.display()
+
+
+// "I am from Second class constructor
+// "I am from First class constructor
+// I am from display method
+
+// super  ==>  conencts to teh parent class
+
+
+
+// class Person 
+// {
+//     name
+//     age
+//     city
+
+//     constructor(name, age, city)
+//     {
+//         this.name = name
+//         this.age = age
+//         this.city = city
+//     }
+
+//     displayDetails()
+//     {
+//         console.log(`The name is: ${this.name}`)
+//         console.log(`The age is: ${this.age}`)
+//         console.log(`The city is: ${this.city}`)
+//     }
+// }
+
+// class Employee extends Person
+// {
+//     company
+//     salary
+
+//     constructor(name, age, city, company, salary)
+//     {
+//         super(name, age, city)
+//         this.salary = salary
+//         this.company = company
+//     }
+
+//     displayEmployeeDetails()
+//     {
+//         super.displayDetails()
+//         console.log(`The company of a Employee is: ${this.company}`)
+//         console.log(`The salary of a Employee is: ${this.salary}`)
+//     }
+// }
+
+// const person = new Person("Raju", 30, "Mumbai")
+// person.displayDetails()
+// console.log("=================")
+// const employee = new Employee("Raju", 30, "Mumbai", "ABC Company", 40000)
+// employee.displayEmployeeDetails()
+
+
+
+// Method Overiding ==> It is a mechanism where a child class after getting the method from the aprent class it tries to modify that method with it own content / body
+
+// class BankAccount
+// {
+//     deposit(){ }
+//     withdraw(){ }
+// }
+
+// class SavingsAccount extends BankAccount
+// {
+//     deposit(amount)
+//     {
+//         // -----------------------
+//     }
+// }
+
+// class CurrentAccount extends BankAccount
+// {
+//    deposit(amount)
+//    {
+//     // ------------------------
+//    }
+// }
+
+// const s = new SavingsAccount()
+// s.deposit(1000)
+
+
+class Animal
+{
+    sound()
+    {
+        return "Animal makes sound"
+    }
+}
+
+class Lion extends Animal
+{
+    sound()
+    {
+        return "Lion makes sound"
+    }
+}
+
+class Cat extends Animal
+{
+    sound()
+    {
+        return "Cat makes sound"
+    }
+}
+
+
+const data = [ 3, "Animal", "Lion", "Lion" ]
+let inputCount = data[0]
+
+for(let i = 1; i <= inputCount; i++)
+{
+    let className = data[i]
+    if(className == "Animal")
+    {
+        const a = new Animal()
+        a.sound()
+    }
+    else if(className == "Lion")
+    {
+        const l = new Lion()
+        l.sound()
+    }
+    else
+    {
+        const c = new Cat()
+        c.sound()
+    }
+}
