@@ -1,0 +1,686 @@
+
+ 1. Username Validation
+
+Rules:
+
+ Must start with a letter
+ Can contain letters, digits, underscores
+ Length 5–12
+
+Sample Input:
+
+```
+john_99
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z][A-Za-z0-9_]{4,11}$
+```
+
+---
+
+ 2. Strong Word Rule
+
+Rules:
+
+ Only lowercase letters
+ Must contain at least one vowel
+ No digits, no symbols
+
+Sample Input:
+
+```
+strength
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[a-z][aeiou][a-z]$
+```
+
+---
+
+ 3. Product Code
+
+Rules:
+
+ Starts with 3 uppercase letters
+ Followed by 4 digits
+ Ends with -X or -Y
+
+Sample Input:
+
+```
+ABC1234-X
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Z]{3}[0-9]{4}-(X|Y)$
+```
+
+---
+
+ 4. File Extension Matcher
+
+Rules:
+
+ Ends with .jpg, .png, or .gif
+ Letters/digits before extension
+
+Sample Input:
+
+```
+summer2024.png
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z0-9]+\.(jpg|png|gif)$
+```
+
+---
+
+ 5. Student ID Format
+
+Rules:
+
+ Starts with STU-
+ Followed by 3 digits
+ Ends with 2 uppercase letters
+
+Sample Input:
+
+```
+STU-492AB
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^STU-[0-9]{3}[A-Z]{2}$
+```
+
+---
+
+ 6. Match Decimal Numbers
+
+Rules:
+
+ Valid: 123, 123.45, .45, 0.89
+
+Sample Input:
+
+```
+123.45
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[0-9]\.?[0-9]+$
+```
+
+---
+
+ 7. Vehicle Registration Number
+
+Rules:
+
+ Two uppercase letters
+ Two digits
+ Two uppercase letters
+ Four digits
+
+Sample Input:
+
+```
+AP05BZ3781
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$
+```
+
+---
+
+ 8. Password Format
+
+Rules:
+
+ Only letters + digits
+ Must not start with a digit
+ Length 6–10
+
+Sample Input:
+
+```
+A1b2c3
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z][A-Za-z0-9]{5,9}$
+```
+
+---
+
+ 9. Match IP Address (Simple)
+
+Rules:
+
+ Four numbers, 1–3 digits each, separated by dots
+
+Sample Input:
+
+```
+192.168.0.1
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[0-9]{1,3}(\.[0-9]{1,3}){3}$
+```
+
+---
+
+ 10. Coupon Code
+
+Rules:
+
+ 2 uppercase letters - 3 digits - 3 letters (any case)
+
+Sample Input:
+
+```
+AB-123-xyZ
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Z]{2}-[0-9]{3}-[A-Za-z]{3}$
+```
+
+---
+
+ 11. Name Format
+
+Rules:
+
+ Only alphabets
+ Must start uppercase, rest lowercase
+
+Sample Input:
+
+```
+Raju
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Z][a-z]+$
+```
+
+---
+
+ 12. Time Format HH:MM
+
+Rules:
+
+ Hours 00–23
+ Minutes 00–59
+
+Sample Input:
+
+```
+23:45
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$
+```
+
+---
+
+ 13. Simple URL Format
+
+Rules:
+
+ Starts http:// or https://
+ Domain letters/digits
+ Ends with .com
+
+Sample Input:
+
+```
+https://google.com
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^https?:\/\/[A-Za-z0-9]+\.(com)$
+```
+
+---
+
+ 14. PAN Card Format
+
+Rules:
+
+ 5 uppercase letters
+ 4 digits
+ 1 uppercase letter
+
+Sample Input:
+
+```
+ABCDE1234F
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Z]{5}[0-9]{4}[A-Z]$
+```
+
+---
+
+ 15. Address Line Validator
+
+Rules:
+
+ Allowed: letters, digits, spaces, commas, dots
+
+Sample Input:
+
+```
+12, MG Road, Bangalore.
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z0-9 ,\.]+$
+```
+
+---
+
+ 16. Email Validation
+
+Rules:
+
+ Letters, digits, ., _, + allowed before @
+ Must contain @ and domain
+ Ends with 2–4 letter domain
+
+Sample Input:
+
+```
+test123@gmail.com
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z0-9._+]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$
+```
+
+---
+
+ 17. Hexadecimal Color Code
+
+Rules:
+
+ Starts with #
+ 6 hexadecimal digits
+
+Sample Input:
+
+```
+#A1B2C3
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^#[0-9A-Fa-f]{6}$
+```
+
+---
+
+ 18. Twitter Handle
+
+Rules:
+
+ Starts with @
+ Letters, digits, underscores allowed
+ Length 2–16
+
+Sample Input:
+
+```
+@my_handle
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^@[A-Za-z0-9_]{1,15}$
+```
+
+---
+
+ 19. MAC Address
+
+Rules:
+
+ 6 groups of 2 hexadecimal digits
+ Separated by :
+
+Sample Input:
+
+```
+00:1A:2B:3C:4D:5E
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$
+```
+
+---
+
+ 20. Date DD/MM/YYYY
+
+Rules:
+
+ Day 01–31
+ Month 01–12
+ Year 1000–2999
+
+Sample Input:
+
+```
+31/12/2020
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[12][0-9]{3}$
+```
+
+---
+
+ 21. Hexadecimal Number
+
+Rules:
+
+ Starts with 0x or 0X
+ Followed by 1 or more hexadecimal digits
+
+Sample Input:
+
+```
+0x1A3F
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^0[xX][0-9A-Fa-f]+$
+```
+
+---
+
+ 22. Binary Number
+
+Rules:
+
+ Only 0 and 1 allowed
+ Minimum 1 digit
+
+Sample Input:
+
+```
+10101
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[01]+$
+```
+
+---
+
+ 23. Roman Numerals
+
+Rules:
+
+ Valid uppercase Roman numerals up to 3999
+
+Sample Input:
+
+```
+MMXIV
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$
+```
+
+---
+
+ 24. Simple Password
+
+Rules:
+
+ Must contain only letters+digits
+ Length 6–12
+
+Sample Input:
+
+```
+abc12345
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z0-9]{6,12}$
+```
+
+---
+
+ 25. File Name Validation
+
+Rules:
+
+ Only letters, digits, -, _ allowed
+ Must end with .txt, .csv, .log
+
+Sample Input:
+
+```
+data-file_01.csv
+```
+
+Output:
+
+```
+Valid
+```
+
+Regex:
+
+```
+^[A-Za-z0-9_-]+\.(txt|csv|log)$
+```
+
+---
+
+If you want, I can also create a small table with “Input → Output → Regex” for all 25 questions, so you can copy-paste to practice easily.
+
+Do you want me to do that?
