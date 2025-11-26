@@ -1,0 +1,328 @@
+// Asynchronous Javascript
+
+
+// javascript is sigle trheaded language(can run only one task at a time)
+
+// setTimeout ==> JS doesnt execute it ==> setTimeout ==>
+//  WebAPI() ==> take the time consuming task and run them
+
+// console.log("Hi")
+// console.log("Hello")
+// setTimeout(function()
+// {
+//     console.log("Fetch data") // 5 sec
+// }, 5000)
+// console.log("Analyze data")
+
+
+
+
+
+
+// function loadProducts(fun)
+// {
+//     setTimeout(function()
+//     {
+//       console.log("Loading products")
+//       fun()
+//     }, 3000)
+// }
+
+// function loadOffers(fun)
+// {
+//    setTimeout(function()
+//     {
+//         console.log("Loading offers")
+//         fun()
+//     }, 3500)
+// }
+
+// function loadCart()
+// {
+//     setTimeout(function()
+//     {
+//             console.log("Loading cart")
+//     }, 2000)
+// }
+
+// // fun ==> function() { loadProducts() }
+// function loadDashboard(fun)
+// {
+//     setTimeout(function()
+//     {
+//         console.log("Loading dashboard")
+//         fun()
+//     }, 5000)
+//     // 5 sec
+// }
+
+// loadDashboard(function()
+// {
+//     loadProducts(function()
+//     {
+//         loadOffers(function()
+//         {
+//             loadCart()
+//         })  
+//     })
+// })
+
+// loadDashboard()
+// loadProducts()
+// loadOffers()
+// loadCart()
+
+
+
+
+
+// Solution for the callback hell ==> PROMISES
+
+
+
+
+
+
+
+
+// function loadDashboard()
+// {
+
+//     return new Promise(function(resolve)
+//     {
+//         {
+//             setTimeout(function()
+//             {
+//                 console.log("Loading dashboard")
+//                 resolve()
+//             }, 5000)   
+//         }
+//     })
+// }
+
+// function loadProducts()
+// {
+//     return new Promise(function(resolve)
+//     {
+//         setTimeout(function()
+//         {
+//             console.log("Loading products")
+//             resolve()
+//         }, 3000)
+//     })
+// }
+
+// function loadOffers()
+// {
+//     return new Promise(function(resolve)
+//     {
+//                setTimeout(function()
+//                 {
+//                     console.log("Loading offers")
+//                 }, 3500)  
+//     })
+// }
+
+// loadDashboard()
+// .then(loadProducts)
+// .then(loadOffers)
+
+
+
+// function resolve() ==> will automatically call then()
+
+// resolve() ==> inside one object ==> Promise object
+
+// const Promise = {
+//     resolve: function()
+//     {
+            // -----------
+//     }
+//     .................
+// }
+
+
+
+
+// async and await
+
+// synchronous ==> JS can execute only one task at a time
+// asycnrhonous ==> Multiple tasks can be executed at a time
+
+
+// function loadDashboard()
+// {
+
+//     return new Promise(function(resolve)
+//     {
+//         {
+//             setTimeout(function()
+//             {
+//                 console.log("Loading dashboard")
+//                 resolve()
+//             }, 5000)   
+//         }
+//     })
+// }
+
+// function loadProducts()
+// {
+//     return new Promise(function(resolve)
+//     {
+//         setTimeout(function()
+//         {
+//             console.log("Loading products")
+//             resolve()
+//         }, 3000)
+//     })
+// }
+
+// // webapi
+
+// function loadOffers()
+// {
+//     return new Promise(function(resolve)
+//     {
+//                setTimeout(function()
+//                 {
+//                     console.log("Loading offers")
+//                 }, 3500)  
+//     })
+// }
+
+// async function execute()
+// {
+//     await loadDashboard()
+//     await loadProducts()
+//     await loadOffers()
+// }
+
+// execute()
+// console.log("Hello")
+// console.log("Hi")
+
+
+// await ==> it waits until that line is compleetely executed and moves on to the next line
+// async ==> asynchronous, we use async keyword whenever there is asycnrhonous 
+// behaviour in our code(tasks running simulatenously)
+
+
+// let words = [ "apple", "banana", "kiwi", "grape", "orange" ]
+
+// for(let i = 0; i < words.length; i++) // no of passes
+// {
+//     for(let j = 0; j < words.length - 1; j++) // comparing 2 elements
+//     {
+//         let curentWordChar = words[j].substring(words[j].length - 1)
+//         let nextWordChar = words[j + 1].substring(words[j + 1].length - 1) 
+
+//         if(curentWordChar > nextWordChar) //e > a
+//         {
+//            [ words[j + 1], words[j] ]  = [ words[j], words[j + 1]  ]
+//         }
+//     }
+// }
+
+// console.log(words)
+
+// let output = [ "banana", "apple", "grape", "orange", "kiwi" ]
+
+
+// sorting algorithms ==> bubble sort
+
+
+
+// Wrong Output
+
+
+
+// Error handling
+
+// risky code ==>  the code that can give the error / work in a wrong manner
+
+// let a = 10
+// let b = 0
+
+// if(b == 0)
+// {
+//     console.log("Denominator cannot be zero!")
+//     console.log("Hello")
+// }
+// else
+// {
+//     console.log(a / b)
+// }
+
+// ==============================================
+
+// let a = 10
+// let b = 5
+// console.log(a / b)
+
+
+// throw ==> throw keyword is used to throw a message, but it ternimates the program from the next line onwards
+
+// any message we want to throw, give that message to the Error class
+// constructor
+
+// class Error
+// {
+//     message
+//     name
+//     constructor(errorMessage)
+//     {
+//         this.message = errorMessage
+//         // this.message = "Insufficient balance"
+//         // this.name = "----"
+//     }
+// }
+
+
+// withdraw(amount)
+// {
+//     if(amount > totalBalance)
+//     {
+//         throw  new Error("Insufficient balance")
+//         console.log("Insufficient balance")
+        
+//     }
+// }
+
+
+// erro to handle ==> catch()
+// any code can throw the erro, if that code is a part of try block
+
+
+
+// class WrongDenominator extends Error
+// {
+   
+//     constructor(message)
+//     {
+//         super(message)
+//         this.name = "DivisionByZero"
+//     }
+// }
+
+// let a = 10
+// let b = 0
+
+// try
+// {
+//     if(b == 0)
+//     {
+//         throw new WrongDenominator("Denominator cannot be zero!")
+//         // console.log("Denominator cannot be zero!")
+//     }
+// }
+
+// // e = new WrongDenominator("Denominator cannot be zero!")
+// catch(e)
+// {
+//     console.log(e.message)
+//     console.log(e.name)
+
+//     console.log(e)
+// }
+
+// // name == message
