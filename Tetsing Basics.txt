@@ -1,0 +1,747 @@
+Principles of Testing
+
+ 1. Testing Shows Presence of Defects
+
+Principle: Testing can show that defects exist, but cannot prove there are no defects.
+
+Analogy:
+
+ Checking a cake: if it tastes bad, you know something is wrong. But if it tastes fine, it doesn’t mean it’s perfect—someone with a sensitive palate might notice a flaw.
+
+Technical Example:
+
+ You test a login page and find that incorrect passwords are accepted → defect found.
+ But just because all tested cases passed doesn’t mean all bugs are gone.
+
+
+
+ 2. Exhaustive Testing is Impossible
+
+Principle: It’s impossible to test all combinations of inputs and scenarios.
+
+Analogy:
+
+ Imagine checking every route in a city to see which roads have potholes → impractical. You test the main roads instead.
+
+Technical Example:
+
+ A calculator app can accept infinite numbers. You cannot test all numbers, but you test common, boundary, and random cases.
+
+
+
+ 3. Early Testing Saves Cost
+
+Principle: Testing early in the SDLC reduces cost and effort.
+
+Analogy:
+
+ Fixing a leak while building a house is cheaper than after painting and flooring.
+
+Technical Example:
+
+ In an e-commerce site, finding a payment gateway bug during design phase is cheaper than fixing it after going live.
+
+
+
+ 4. Defect Clustering
+
+Principle: A small number of modules usually contains most defects.
+
+Analogy:
+
+ In a garden, a few plants get most of the pests, not all plants equally.
+
+Technical Example:
+
+ In a large banking app, fund transfer and loan modules may have most defects, while simple account info pages have few.
+
+
+
+ 5. Pesticide Paradox
+
+Principle: Repeating the same tests will stop finding new defects. Test cases must evolve.
+
+Analogy:
+
+ Using the same pesticide repeatedly won’t kill new types of insects. You need new pesticide for new insects.
+
+Technical Example:
+
+ Running the same login test every day finds nothing new. But adding new scenarios (like login from multiple devices or locations) finds new defects.
+
+
+
+ 6. Testing is Context Dependent
+
+Principle: Testing depends on the type of software, its use, and environment.
+
+Analogy:
+
+ A car designed for city roads is tested differently than a racing car.
+
+Technical Example:
+
+ A banking app needs security and accuracy testing, while a video game focuses more on performance and usability testing.
+
+
+
+ 7. Absence of Errors is a Fallacy
+
+Principle: Just because software has no known defects, it doesn’t mean it’s usable or meets user expectations.
+
+Analogy:
+
+ A recipe may have no mistakes in cooking, but if it tastes bad, it’s not useful.
+
+Technical Example:
+
+ A hotel booking app may have no crashes (no errors), but if the interface is confusing, users won’t book → software fails to meet requirements.
+
+
+Summary Table
+
+| Principle                        | Analogy                              | Technical Example                       |
+| -- |  |  |
+| 1. Shows presence of defects     | Cake tastes bad → something wrong    | Login accepts wrong passwords           |
+| 2. Exhaustive testing impossible | Testing every road in city           | Calculator with infinite inputs         |
+| 3. Early testing saves cost      | Fix leak during construction         | Payment bug found in design phase       |
+| 4. Defect clustering             | Few plants get most pests            | Fund transfer module has most defects   |
+| 5. Pesticide paradox             | Same pesticide stops working         | Repeating old login tests finds nothing |
+| 6. Context dependent             | City car vs racing car               | Banking app vs game app testing         |
+| 7. Absence of errors is fallacy  | Cake cooked correctly but tastes bad | App has no crashes but is confusing     |
+
+
+
+ 1. Introduction to Software Testing
+
+Software testing is the process of checking a software application to ensure it works as expected and is free from bugs or errors. It’s like checking a car before buying it to make sure brakes, lights, engine, and other parts work correctly.
+
+Goal: Find defects early, ensure quality, and make software reliable for users.
+
+
+
+ 2. Software Testing – Definitions
+
+ Software Testing: A process to evaluate and verify that software functions correctly, meets requirements, and is defect-free.
+ Example: If you develop a mobile banking app, testing ensures that login, fund transfer, and statement generation work correctly.
+
+
+
+ 3. Need of Software Testing
+
+Software testing is necessary because:
+
+1. Users expect error-free software.
+2. Software bugs can cause financial loss, reputation damage, or even accidents.
+3. It ensures software meets business and technical requirements.
+
+Real-time example:
+
+ Imagine a payment gateway like PayPal. If it fails during a transaction, users may lose money. Testing prevents such failures.
+
+
+
+ 4. Error – Failure – Defect
+
+These terms are related but different:
+
+| Term           | Meaning                                         | Example                                                                   |
+| -- | -- | - |
+| Error      | Mistake by developer                            | Developer writes `amount = amount + 10` instead of `amount = amount - 10` |
+| Defect/Bug | Flaw in code caused by error                    | The above code deducts money incorrectly                                  |
+| Failure    | When software behaves incorrectly in real usage | User tries to pay ₹100, but ₹110 is deducted                              |
+
+Analogy:
+
+ Error = a chef adds salt instead of sugar
+ Defect = the cake tastes salty
+ Failure = customer eats cake and complains
+
+
+
+ 5. Causes of Software Defects
+
+Defects can happen due to:
+
+1. Human mistakes – developer writes wrong code
+2. Miscommunication – unclear requirements from client
+3. Changing requirements – new features cause old code to break
+4. Environment issues – software behaves differently on another OS or browser
+
+Example:
+
+ In a web app, a developer tests only on Chrome. On Firefox, buttons don’t work → defect caused by environment.
+
+
+
+ 6. Cost of Software Defects
+
+The later a defect is found, the more expensive it is to fix.
+
+| Stage              | Cost of fixing defect                            |
+|  |  |
+| During development | Low                                              |
+| During testing     | Medium                                           |
+| After release      | Very high (loss of money, reputation, customers) |
+
+Example:
+
+ Bug found during development: 1 hour to fix
+ Bug found after release: may require hotfix, patches, customer support, negative reviews
+
+
+what software testing *actually reveals*:
+
+---
+
+  1. Functional Correctness (Does it work properly?)
+
+Testing checks whether the software behaves the way it is supposed to.
+
+ Example:
+If a login page is designed to allow only correct username/password, testing verifies:
+
+* Correct credentials → login success
+* Wrong credentials → login fails
+* Empty fields → error shown
+
+It ensures the software matches the requirements.
+
+---
+
+  2. Performance (Is it fast and efficient?)
+
+Testing checks how the software behaves when many users or heavy tasks occur.
+
+ It reveals:
+
+* Is the page fast or slow?
+* Does the system crash under load?
+* How long does it take to process something?
+
+Example:
+If 10,000 people try to buy tickets at the same time, does the site remain stable?
+
+Performance testing exposes speed, responsiveness, and stability issues.
+
+---
+
+  3. Security (Is the software safe?)
+
+Security testing reveals weaknesses that hackers can exploit.
+
+ It checks for:
+
+* Can someone break into the system?
+* Can they steal user data?
+* Can they bypass authorization?
+
+Example:
+If someone tries SQL Injection or guessing passwords, can the system stop them?
+
+Security testing ensures data protection and safe usage.
+
+---
+
+  4. Usability (Is it easy to use?)
+
+Testing helps reveal how user-friendly the software is.
+
+ It checks:
+
+* Is the UI simple?
+* Can users easily understand navigation?
+* Are instructions clear?
+
+Example:
+If users struggle to find the “Checkout” button, usability testing will highlight this.
+
+It reveals issues that affect user satisfaction.
+
+---
+
+  5. Reliability (Does it work consistently everywhere?)
+
+Reliability testing checks whether the software works correctly in different situations.
+
+ It verifies:
+
+* Works on different devices (mobile, desktop)
+* Works after long usage
+* Works with slow network
+* Works after many transactions
+
+Example:
+An app shouldn’t crash randomly or only work on one phone model.
+
+It reveals how stable and dependable the software is.
+
+---
+
+  In summary: Testing reveals whether the software is:
+
+* Correct ✔️
+* Fast ✔️
+* Secure ✔️
+* Easy to use ✔️
+* Stable ✔️
+
+
+
+Example:
+
+ A social media app may seem fine, but testing could reveal:
+
+   Photos don’t upload in low network
+   Notifications delayed
+   App crashes on old phones
+
+
+
+ 8. Importance of Software Testing
+
+ Ensures quality product for users
+ Reduces maintenance cost
+ Increases user satisfaction
+ Helps in meeting business goals
+
+Example:
+
+ Imagine Amazon doesn’t test its cart. Users cannot checkout → business loss → customer dissatisfaction.
+
+
+
+ 9. Importance of Testing Early in SDLC
+
+ Detecting defects early in design or development saves time and money.
+ Testing early = “preventing problems” vs “fixing problems later”.
+
+Example:
+
+ While designing an ATM software, testing logic for PIN verification early avoids costly corrections after coding or deployment.
+
+
+
+ 10. Testing and Quality
+
+ Testing directly impacts quality.
+ Quality is measured by: accuracy, reliability, usability, performance, and security.
+
+Example:
+
+ A well-tested ride-hailing app like Uber ensures rides are booked accurately, drivers are assigned correctly, and payments are processed securely.
+
+
+
+ 11. Quality Perception
+
+ Quality is not only technical but also user perception.
+ If users feel the software is slow, unreliable, or confusing, they consider it low quality, even if technically correct.
+
+Example:
+
+ WhatsApp works fine technically, but if messages are delayed, users perceive poor quality.
+
+
+ 1. Economics of Testing
+
+Meaning: Economics of testing is all about the costs and benefits of testing software. Think of it as spending money wisely to prevent bigger losses.
+
+Analogy:
+
+ You buy a new car. Spending \$50 for a pre-purchase inspection may save you \$5,000 on repairs later.
+ Similarly, spending time and money on testing saves much more than fixing bugs after release.
+
+Example:
+
+ A banking app has a bug in money transfer. If not tested, users lose money → huge compensation and bad reputation. Testing early prevents this.
+
+
+
+ 2. How Testing is Conducted
+
+Testing is structured and stepwise.
+
+Steps:
+
+1. Requirement Analysis – Understand what the software should do.
+
+    Example: A shopping app should allow login, add to cart, checkout, and payment.
+2. Test Planning – Decide what, when, and how to test.
+
+    Example: Plan to test login on 3 browsers, 2 mobile devices, in 2 languages.
+3. Test Design – Prepare test cases (step-by-step instructions).
+
+    Example: Test Case: Enter valid username/password → click login → verify home page opens.
+4. Test Execution – Run the tests and record results.
+5. Defect Reporting – If a bug is found, report it clearly.
+
+    Example: “Login fails on Firefox v110 with valid credentials.”
+6. Test Closure – Evaluate testing, summarize results, and improve next time.
+
+Analogy:
+
+ It’s like cooking a new recipe: first, read instructions (requirements), gather ingredients (plan), cook (execute), note mistakes (report defects), and finally decide if dish is good (closure).
+
+
+
+ 3. Software Testing – Then (Past)
+
+ Testers often tested after coding.
+ No formal test cases or documentation.
+ Bugs were found late → expensive fixes.
+
+Example:
+
+ Early payroll software: testers manually entered salaries and deductions in spreadsheets to see if totals matched → time-consuming and error-prone.
+
+Analogy:
+
+ Like checking your homework after submission, rather than reviewing while doing it.
+
+
+
+ 4. Software Testing – Now (Present)
+
+ Structured process: test plans, test cases, documentation.
+ Automation: Selenium, JMeter, LoadRunner for faster testing.
+ Shift-left approach: testing starts early in SDLC.
+ Continuous testing: integrated with DevOps pipelines.
+
+Example:
+
+ Amazon tests checkout flows automatically across devices before every release.
+ Instagram tests app updates on hundreds of device models before deployment.
+
+Analogy:
+
+ It’s like building a house with a blueprint and automated checks rather than fixing leaks after the roof is installed.
+
+
+
+ 5. Scope of Software Testing
+
+Scope = what needs to be tested.
+
+1. Functional Testing: Does software work as required?
+
+    Example: Login, search, checkout on an e-commerce site.
+2. Non-functional Testing: Performance, usability, security.
+
+    Example: Can the app handle 1 million users at the same time?
+3. Regression Testing: Does new code break old features?
+
+Analogy:
+
+ Functional = does your car start?
+ Non-functional = is it fuel-efficient, fast, and safe?
+ Regression = after replacing engine, brakes still work?
+
+
+
+ 6. Factors Influencing Scope of Testing
+
+1. Project size and complexity – Bigger projects need more tests.
+
+    Example: Banking software vs. small calculator app.
+2. Risk factors – High-risk modules need more attention.
+
+    Example: Fund transfer in a banking app.
+3. Time and budget – Limited time may reduce testing coverage.
+4. Regulatory requirements – Some industries (banking, healthcare) require strict testing.
+
+Analogy:
+
+ You won’t check every part of a pen, but you check brakes carefully in a car.
+
+
+
+ 7. Risk-Based Testing
+
+Meaning: Focus testing on high-risk areas first.
+
+Example:
+
+ In a ride-sharing app:
+
+   High risk → Payment module
+   Medium risk → Ride scheduling
+   Low risk → Profile updates
+
+Analogy:
+
+ Firefighters focus on the building area most likely to catch fire first.
+
+
+
+ 8. Project Risks
+
+Project risks are related to management, schedule, or resources:
+
+ Delayed development → delayed testing.
+ Insufficient testers → incomplete testing.
+ Changing requirements → rework.
+
+Example:
+
+ A software release planned for Diwali: development delay can result in missed revenue.
+
+Analogy:
+
+ Planning a wedding: delay in cake delivery affects the whole event.
+
+
+
+ 9. Product Risks
+
+Product risks are about software quality and functionality:
+
+ Bugs in critical modules
+ Security vulnerabilities
+ Poor usability
+
+Example:
+
+ Airline booking system allowing double booking → loss of revenue and trust.
+
+Analogy:
+
+ Selling a blender that catches fire → huge product risk.
+
+
+
+ 10. Need of Independent Testing
+
+Independent testing = testing by someone not involved in development.
+
+Why needed:
+
+1. Developers may miss their own mistakes.
+2. Independent testers provide unbiased view.
+3. Improves software reliability and confidence.
+
+Example:
+
+ Google hires independent QA teams to test Chrome or Android updates.
+
+Analogy:
+
+ You make a cake and taste it yourself → might think it’s perfect. But giving it to a friend (independent tester) gives a true feedback.
+
+
+
+SDLC explained clearly WITH CRS and SRS
+
+
+  SDLC With CRS & SRS (No FRS) — Very Clear Explanation
+
+SDLC = Software Development Life Cycle
+A process used by companies to build software step-by-step.
+
+Before development, two important documents are created:
+
+---
+
+ 🔵 1. CRS (Customer Requirement Specification)
+
+ ✔ CRS = “Customer’s needs in simple language (non-technical)”
+
+* Written based on discussions with customer.
+* Contains business-level requirements.
+
+ 🧠 Real Example — Food Delivery App (like Swiggy)
+
+CRS will include:
+
+* Users should browse restaurants
+* Online payment should be available
+* Order tracking should be supported
+* Delivery partner location should be visible
+* App should notify when food is out for delivery
+
+➤ No technical details, just what customer wants.
+
+ 🏠 House Analogy
+
+Customer tells:
+
+* I want 3 bedrooms
+* One balcony
+* Modular kitchen
+* Car parking
+
+That is CRS.
+
+---
+
+ 🔵 2. SRS (Software Requirement Specification)
+
+ ✔ SRS = “Technical version of CRS for developers & testers”
+
+This document is prepared by:
+
+* Business Analyst
+* Architects
+* Dev Leads
+* QA Leads
+
+It translates the customer’s needs into technical requirements.
+
+ SRS contains:
+
+* Functional requirements
+* Non-functional requirements
+* UI descriptions
+* Performance needs
+* Security needs
+* Constraints
+* Technology stack
+
+ 🧠 Real Example — Food Delivery App
+
+SRS will include:
+
+* Login must support email + phone OTP
+* App must support 50,000 users at a time
+* Payment methods: UPI, Card, Net Banking
+* Order API response time < 2 seconds
+* Database tables: Users, Orders, Delivery Partners
+
+ 🏠 House Analogy
+
+Architect creates:
+
+* Dimensions of each room
+* Electrical wiring diagram
+* Plumbing layout
+* Building materials
+* Technical blueprint
+
+---
+
+ 🟢 Now the Full SDLC Stages With CRS & SRS
+
+---
+
+ 1️⃣ Requirement Analysis
+
+This is where CRS is created.
+
+✔ Meetings with customer
+✔ Understanding what the business wants
+✔ High-level expectations written down
+
+📄 Output: CRS
+
+🏠 Analogy: Discussing with owner what type of house they need.
+
+---
+
+ 2️⃣ Planning
+
+Team decides:
+
+* Budget
+* Time
+* Team members
+* Technology (React, Node.js, Java, AWS etc.)
+* Risk factors
+
+📄 Output: Project Plan
+
+🏠 Analogy: Decide house budget, time to build, workers required.
+
+---
+
+ 3️⃣ System Design
+
+This is where SRS is created.
+
+✔ Converting customer requirements (CRS) into technical requirements (SRS)
+✔ Architect designs the system
+✔ UI/UX team prepares mockups
+✔ Database design prepared
+
+📄 Output:
+
+* SRS
+* High-Level Design (HLD)
+* Low-Level Design (LLD)
+* UI screenshots
+* Database schema
+
+🏠 Analogy: Architect creates technical blueprints.
+
+---
+
+ 4️⃣ Development (Coding)
+
+Developers start writing code based on SRS.
+
+Frontend Example:
+
+* Login page
+* Restaurant list
+* Cart page
+
+Backend Example:
+
+* APIs: `/login`, `/restaurants`, `/place-order`
+* Database queries
+* Authentication logic
+
+🏠 Analogy: Construction workers build the house using blueprint.
+
+---
+
+ 5️⃣ Testing
+
+Testers verify if the software matches SRS.
+
+✔ Functional testing
+✔ Performance testing
+✔ Security testing
+✔ UI testing
+
+📄 Output:
+
+* Bug reports
+* Test cases
+* Test summary
+
+🏠 Analogy: Engineer checks if house has any leakage, electrical issues.
+
+---
+
+ 6️⃣ Deployment
+
+Software is released to the real users.
+
+Real deployment options:
+
+* AWS EC2
+* Azure VM
+* Docker containers
+* Kubernetes cluster
+
+📄 Output:
+
+* Release notes
+* Deployment guide
+
+🏠 Analogy: Handing over house keys to the owner.
+
+---
+
+ 7️⃣ Maintenance
+
+After launch:
+
+* Fix bugs
+* Add new features
+* Update app to support more users
+* Apply security patches
+
+🏠 Analogy: Repairing house problems after customer moves in.
+
+
