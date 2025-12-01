@@ -1,0 +1,887 @@
+
+  REQUIREMENT ENGINEERING (Deep + Easy + Real Examples)
+
+ 🛫 Mega Analogy: Building an Airport
+
+Building an airport is large, complex, and involves many people — just like building software.
+
+If requirements are wrong:
+
+* Flights crash
+* People get delayed
+* Safety issues occur
+* Millions are wasted
+
+This is exactly what happens in software too.
+
+---
+
+ 1️⃣ EVOLUTION OF REQUIREMENTS
+
+Requirements always change — before, during, and after development.
+
+ 🛫 Airport Analogy:
+
+At first, the government says:
+
+* “We need an airport with 1 runway.”
+
+Later:
+
+* “Add one more runway for international flights.”
+
+Later:
+
+* “Add cargo terminal also.”
+
+After the airport opens:
+
+* “Add self-check-in KIOSKS.”
+* “Add facial recognition gates.”
+
+Requirements evolve because:
+
+* New technology appears
+* New customer needs
+* New laws (immigration, security rules)
+* More passengers than expected
+
+ 🍔 Real Software Example: Zomato/Swiggy
+
+Initially:
+
+* App only allowed ordering food.
+
+Later requirements evolved:
+
+* Add live order tracking
+* Add pay using UPI/Wallet
+* Add restaurant rating
+* Add delivery person chat
+* Add grocery delivery (Instamart/Zomato Market)
+
+Requirements evolve continuously.
+
+---
+
+ 2️⃣ WHO PROVIDES REQUIREMENTS?
+
+Many people provide requirements — not just users.
+
+ 🛫 Airport Analogy:
+
+| Person                    | What Requirement They Give                  |
+| ------------------------- | ------------------------------------------- |
+| Passengers                | Comfortable waiting areas, enough washrooms |
+| Pilots                    | Long runways, proper markings               |
+| ATC (Air Traffic Control) | Radar systems, communication systems        |
+| Security                  | Scanners, metal detectors, CCTV             |
+| Government                | Safety rules, immigration process           |
+| Vendors                   | Food courts, shops                          |
+
+ 🍔 Software Example: Zomato/Swiggy
+
+| Stakeholder       | Requirements                            |
+| ----------------- | --------------------------------------- |
+| Users             | Easy ordering, fast delivery            |
+| Delivery partners | Accurate maps, optimized routes         |
+| Restaurant owners | Simple menu upload, order notifications |
+| Finance team      | GST, invoices                           |
+| Legal team        | FSSAI rules, privacy laws               |
+| Developers        | Clear API designs                       |
+| Marketing         | Offers, coupons, banners                |
+
+Software requirements come from everyone affected by the product.
+
+---
+
+ 3️⃣ CHALLENGES IN REQUIREMENT GATHERING
+
+Requirement gathering is hard because:
+
+---
+
+ 🛑 1. People Are Not Clear About What They Want
+
+Passengers say, “Make airport comfortable.”
+But what is comfortable? AC? Sofas? Restaurants?
+
+Same in software:
+Users say, “Make app fast.”
+But how fast?
+
+---
+
+ 🛑 2. Conflicting Requirements
+
+Security team: “Strict checking.”
+Passengers: “Fast entry.”
+These two conflict.
+
+Software example:
+
+* Users want password-less login
+* Security team wants strong passwords
+
+---
+
+ 🛑 3. Hidden Requirements
+
+Passenger assumes:
+
+* “Of course there will be Wi-Fi.”
+  But they never mentioned it.
+
+Software users assume:
+
+* “Of course app will work on slow internet.”
+
+Hidden needs create problems later.
+
+---
+
+ 🛑 4. Continuous Change
+
+Government suddenly changes immigration policy → airport must adjust.
+
+In software:
+UPI becomes popular → app must add UPI payment.
+
+---
+
+ 🛑 5. Technical Limitations
+
+Stakeholders ask for something impossible.
+
+Airport:
+“Can you make 10 flights take off at same time?”
+No — runway limit.
+
+Software:
+“We want infinite scalability with zero budget.”
+Not possible.
+
+---
+
+ 4️⃣ WHY WE NEED GOOD REQUIREMENTS?
+
+ ✈️ Airport Example:
+
+If requirements are bad:
+
+* Runway too short → Flights cannot land safely
+* No enough parking slots → Flight delays
+* Immigration area too small → Long queues
+* Wrong gate numbering → Confusion
+
+Millions of rupees and human lives at risk.
+
+ 🍔 Software Example (Zomato/Swiggy):
+
+If requirements are wrong:
+
+* Wrong delivery address → food never arrives
+* Payment failures → customers lose money
+* Wrong order tracking → people get angry
+* Missing GST invoice → legal issues
+* Too slow app → users uninstall
+
+Good requirements ensure:
+
+* Safety
+* Speed
+* User satisfaction
+* Legal compliance
+* Low cost
+
+---
+
+ 5️⃣ BAD REQUIREMENTS — CHARACTERISTICS & IMPACT
+
+ ❌ What are bad requirements?
+
+1. Incomplete
+   “Add login feature.” But no details about password rules.
+
+2. Ambiguous
+   “Make app fast.” (How fast?)
+
+3. Contradicting
+   One says store full user data.
+   Another says do not store anything (privacy).
+
+4. Not testable
+   “App should be beautiful.” → How to test?
+
+5. Too technical
+   “Use MySQL only” even when MongoDB is better.
+
+---
+
+ ❌ Impact of Bad Requirements (Airport)
+
+* Runway built wrongly → entire airport must be rebuilt
+* Luggage belts too short → jams
+* Not enough chairs → passenger complaints
+* Wrong wiring → fire hazard
+
+Cost = Crores lost
+
+---
+
+ ❌ Impact of Bad Requirements (Zomato)
+
+* Wrong delivery charges → company loses money
+* Incorrect tax logic → penalties
+* Users uninstall due to slow app
+* Delivery persons get wrong location → delays
+
+---
+
+ 6️⃣ REQUIREMENT ENGINEERING PROCESS (Deep + Simple)
+
+Requirement Engineering has 5 main steps:
+
+---
+
+ 1️⃣ Elicitation (Collecting Requirements)
+
+ 🛫 Airport Example:
+
+* Interviews with pilots
+* Talking to passengers
+* Observing peak time traffic
+* Discussing with security officers
+* Studying government rules
+
+ 🍔 Zomato Example:
+
+* Talking to restaurant owners
+* Understanding user pain (late delivery, missing items)
+* Observing order patterns
+* Asking delivery partners
+
+Tools used:
+
+* Interviews
+* Surveys
+* Workshops
+* Brainstorming
+* Prototyping
+
+---
+
+ 2️⃣ Analysis (Sorting and Understanding Requirements)
+
+We identify:
+
+* Conflicts
+* Missing information
+* Feasibility
+* Prioritization
+
+ 🛫 Airport:
+
+Security wants strict checking → long queues
+Passengers want fast entry → short queues
+We find balance:
+Fast-track lanes + strong scanning machines
+
+ 🍔 Zomato:
+
+Marketing wants ads
+Users hate too many ads
+Solution:
+Show limited ads + offer premium ad-free subscription
+
+---
+
+ 3️⃣ Specification (Writing Requirements Clearly)
+
+We write:
+
+* Functional requirements
+* Non-functional requirements
+* Business rules
+* Constraints
+
+ 🛫 Airport:
+
+Instead of writing “big runway”, we write:
+
+* Runway length = 3,800 meters
+* Width = 60 meters
+* Material: reinforced concrete
+
+ 🍔 Zomato:
+
+Instead of “fast delivery”, we write:
+
+* “90% of orders must be delivered within 35 minutes.”
+
+This makes it testable.
+
+---
+
+ 4️⃣ Validation (Checking correctness)
+
+We verify:
+
+* Did we misunderstand anything?
+* Do stakeholders agree?
+* Is it testable?
+* Is it legal?
+
+ 🛫 Airport:
+
+= Simulations of aircraft landing
+= Safety audits
+
+ 🍔 Zomato:
+
+= Prototype testing
+= A/B testing
+= Customer feedback
+
+---
+
+ 5️⃣ Requirements Management (Handling changes)
+
+After project starts, changes WILL come.
+
+ 🛫 Airport:
+
+Passenger traffic increases → add new terminal
+New planes introduced → modify runway strength
+
+ 🍔 Zomato:
+
+New payment method → update system
+New tax rules → update billing app
+
+Requirements management:
+
+* Change requests
+* Impact analysis
+* Version control
+* Traceability
+
+---
+  FUNCTIONAL vs NON-FUNCTIONAL REQUIREMENTS
+
+---
+
+ 1️⃣ Functional Requirements (FR) — WHAT the system must do
+
+Functional = functions / actions / behaviors.
+
+ 🛫 Airport Analogy:
+
+Functional Requirements answer: What should the airport do?
+
+Examples:
+
+* Airport must allow passengers to check-in.
+* Airport must scan luggage.
+* Airport must issue boarding passes.
+* Airport must guide planes for landing.
+* Airport must stamp passports.
+
+These are actions the airport performs.
+
+ 🍔 Zomato Real-Time Example:
+
+Functional Requirements:
+
+* User must be able to search restaurants.
+* User must place an order.
+* Delivery partner must accept or reject an order.
+* Restaurants must receive notifications.
+* Payment must be processed.
+
+These are visible features.
+
+---
+
+ 2️⃣ Non-Functional Requirements (NFR) — HOW the system must behave
+
+NFRs describe quality, not features.
+
+ 🛫 Airport Analogy:
+
+Non-functional requirements:
+
+* Passenger security check should take < 10 minutes.
+* Runway must handle aircraft of 500 tons.
+* Airport must work 24/7 with 99.99% uptime.
+* Noise levels must be controlled.
+* CCTV videos must be stored for 90 days.
+* Immigration processing must follow government rules.
+
+These do not add new features, but define quality.
+
+ 🍔 Zomato Example:
+
+NFRs:
+
+* App must load home page in < 2 seconds.
+* System should handle 50,000 users during peak time.
+* Payment system must have 99.9% success rate.
+* App should work on 3G networks.
+* User data must be encrypted.
+
+These make the app better, not bigger.
+
+---
+
+ 🧲 Simple Comparison (Airport Example)
+
+| Type           | Airport Example              | Meaning             |
+| -------------- | ---------------------------- | ------------------- |
+| Functional     | Check-in, boarding, scanning | What airport does   |
+| Non-functional | Speed, safety, capacity      | How well it does it |
+
+---
+
+ 3️⃣ Non-Functional Requirements: FURPS+ Model
+
+FURPS+ is a famous model to classify NFRs.
+
+Let’s explain with Airport + Zomato examples:
+
+---
+
+ F — Functionality
+
+Even though “Functionality” is in FURPS, it refers to quality of functional features.
+
+🛫 Airport:
+
+* Passport scanner must read all modern chip passports.
+
+🍔 Zomato:
+
+* Payment system must support UPI, card, wallet.
+
+---
+
+ U — Usability
+
+How easy it is for users.
+
+🛫 Airport:
+
+* Clear signs, simple navigation, easy-to-find gates.
+
+🍔 Zomato:
+
+* Simple UI, easy cart, easy tracking.
+
+---
+
+ R — Reliability
+
+How dependable the system is.
+
+🛫 Airport:
+
+* Backup power must activate within 10 seconds.
+* Radar must be available 99.99% of the time.
+
+🍔 Zomato:
+
+* App must not crash.
+* Delivery tracking must be accurate.
+
+---
+
+ P — Performance
+
+Speed, capacity, response time.
+
+🛫 Airport:
+
+* Immigration queue time < 15 minutes.
+* Runway can handle 30 flights per hour.
+
+🍔 Zomato:
+
+* App loads in 2 sec.
+* Server handles 50k requests/min.
+
+---
+
+ S — Supportability
+
+How easy it is to update, maintain, or extend.
+
+🛫 Airport:
+
+* Modular terminal design for future expansion.
+
+🍔 Zomato:
+
+* Easy integration of new restaurants.
+* Upgradable payment gateway.
+
+---
+
+ “+” — Extras
+
+Security, legal, scalability, availability, compatibility, etc.
+
+🛫 Airport:
+
+* Follow international aviation laws.
+* CCTV + biometric entry.
+
+🍔 Zomato:
+
+* GDPR data privacy.
+* Fraud detection.
+* Multi-device compatibility.
+
+---
+
+ 4️⃣ Stable vs Volatile Requirements
+
+---
+
+ 🔹 Stable Requirements
+
+These don't change often.
+
+ 🛫 Airport:
+
+* Need for security scanning.
+* Need for runways.
+* Need for baggage handling.
+
+They will be needed always.
+
+ 🍔 Zomato:
+
+* Users will always need ordering.
+* Restaurants will always need order acceptance.
+* Payments will always be required.
+
+Stable ≈ core requirements.
+
+---
+
+ 🔹 Volatile Requirements
+
+These change based on trends, market, or technology.
+
+ 🛫 Airport:
+
+* Need for COVID screening came suddenly.
+* Facial recognition gates added recently.
+* New immigration policies anytime.
+
+ 🍔 Zomato:
+
+* UPI payment → added later.
+* Grocery delivery → became popular after COVID.
+* Dark stores (instamart) introduced later.
+
+Volatile = changing requirements.
+
+---
+
+ 5️⃣ Baselining Requirements
+
+Baselining = Freezing requirements at a point in time
+→ After this, any change must go through approval.
+
+ 🛫 Airport:
+
+Finalized airport blueprint = Baseline.
+After this, if someone says:
+“Add 3 more restaurants,”
+→ It needs approval, cost analysis, time analysis.
+
+ 🍔 Zomato:
+
+Once requirements for "Order Tracking Module" are frozen:
+
+* API designs
+* UI screens
+* Database tables
+
+Any change after baseline requires:
+
+* Change Request (CR)
+* Approval
+* Cost analysis
+
+Baseline helps avoid chaos.
+
+---
+
+ 6️⃣ Requirements Traceability
+
+Traceability = Tracking requirements from start to end.
+
+We can trace:
+
+* Requirement → Design
+* Requirement → Code
+* Requirement → Test cases
+* Requirement → Deployment
+
+ 🛫 Airport:
+
+Requirement: "Install CCTV"
+Trace:
+
+* Design shows CCTV locations
+* Contractor installs heat-proof CCTV
+* Testing team checks angle and clarity
+* Compliance signs approval form
+
+Everything is traceable.
+
+ 🍔 Zomato Example:
+
+Requirement: “Add live order tracking.”
+
+Trace:
+
+* Product doc
+* API design
+* Backend code
+* Mobile UI
+* Test cases
+* Release notes
+
+If one piece is missing → we immediately know.
+
+---
+
+ 7️⃣ Requirement Traceability Matrix (RTM)
+
+RTM = Table that connects:
+
+* Requirements
+* Design
+* Test cases
+* Status
+
+Helps ensure *no requirement is missed*.
+
+---
+
+ 🛫 Airport RTM Example:
+
+| Requirement          | Design | Install | Testing | Status  |
+| -------------------- | ------ | ------- | ------- | ------- |
+| R1: Runway 3800m     | D1     | I1      | T1      | Done    |
+| R2: CCTV in terminal | D2     | I2      | T2      | Pending |
+| R3: Fire alarms      | D3     | I3      | T3      | Done    |
+
+---
+
+ 🍔 Zomato RTM Example:
+
+| Requirement      | Design Doc | Code Module | Test Case | Status |
+| ---------------- | ---------- | ----------- | --------- | ------ |
+| R1 Order food    | FSD-101    | API-Order   | TC-01     | Passed |
+| R2 UPI payment   | FSD-102    | API-Payment | TC-45     | Passed |
+| R3 Live tracking | FSD-103    | API-Track   | TC-60     | Failed |
+| R4 Rating system | FSD-104    | API-Rating  | TC-70     | Passed |
+
+RTM ensures:
+✔ Nothing is missed
+✔ Everything is tested
+✔ Changes are tracked
+✔ Full project visibility
+
+---
+
+
+
+ ✅ Requirements Traceability
+
+ What is Requirement Traceability?
+
+👉 It means tracking every requirement from start to end so nothing gets lost.
+
+ Simple Analogy
+
+Imagine your mom gives you a shopping list:
+
+* Buy milk
+* Buy bread
+* Buy vegetables
+
+When you go to the market, you tick each item to make sure you bought everything.
+This is traceability → tracking what was asked vs what is done.
+
+ Real-Time Example
+
+You are building a food delivery app.
+Requirement: “User should track the delivery on map.”
+
+Traceability ensures:
+
+* You design the map screen
+* You code the map feature
+* You test it
+* You verify with customer
+
+Everything aligns with the original requirement.
+
+---
+
+ ✅ Requirement Traceability Matrix (RTM)
+
+ What is RTM?
+
+A table that connects:
+✔ Requirements
+✔ Design
+✔ Development
+✔ Test cases
+✔ Defects (if any)
+
+It ensures each requirement is covered, implemented, and tested.
+
+ Analogy
+
+School exam timetable:
+
+* Chapter 1 → Question 1
+* Chapter 2 → Question 5
+
+Each chapter is mapped to a question → nothing is skipped.
+Similarly, RTM maps requirements to test cases.
+
+ Real-Time Example RTM
+
+| Requirement ID | Requirement      | Design Doc | Code Module | Test Case ID | Status  |
+| -------------- | ---------------- | ---------- | ----------- | ------------ | ------- |
+| R1             | Login with email | D1         | login.js    | TC1, TC2     | Passed  |
+| R2             | Add to cart      | D2         | cart.js     | TC3          | Failed  |
+| R3             | Payment          | D3         | payment.js  | TC4          | Pending |
+
+This table ensures no requirement is missed.
+
+---
+
+ ✅ Maintaining Requirement Traceability
+
+ What does maintaining mean?
+
+Keeping the TRACEABILITY updated whenever:
+
+* A new requirement comes
+* Old requirement changes
+* Test cases change
+* New functionality is added
+
+ Analogy
+
+You keep updating your monthly budget when you spend or earn money.
+If you don’t update, you will get confused where money went.
+
+ Real-Time Example
+
+If “Track Order” feature changes to “Track Order with ETA,”
+👉 Update: Design → Development → Test Cases → RTM
+Everything must be synced.
+
+---
+
+ ✅ Requirements Change
+
+ What is a requirement change?
+
+When the client modifies what they want.
+
+ Analogy:
+
+You ordered a small pizza.
+Suddenly you change your mind and say:
+“I need medium pizza with extra cheese.”
+
+That’s a requirement change.
+
+ Real-Time Example
+
+Initially:
+“Login using Email & Password”
+
+Later client says:
+“Add Login with Google also.”
+
+This is requirement change.
+
+---
+
+ ✅ Change Management Process
+
+This is a formal method to handle requirement changes without chaos.
+
+ Steps (Very Simple)
+
+1. Request → Client requests a change
+2. Impact Analysis → Team checks how much time, cost & effort needed
+3. Approval/Reject → Manager/client decides
+4. Update Documents → SRS, design, test cases, RTM
+5. Implement → Developers code
+6. Test → Testers validate
+7. Release → Final updated product delivered
+
+ Analogy
+
+When your teacher changes the exam syllabus:
+
+* You check impact: “How much more to study?”
+* Decide: “Should I prepare?”
+* Update your notes
+* Study
+* Write exam
+  Same steps!
+
+---
+
+ ✅ Requirement Creep (Scope Creep)
+
+ What is Requirement Creep?
+
+Small changes added continuously without proper planning.
+
+👉 It slowly makes the project big, complicated, and delayed.
+
+ Analogy
+
+You go to a restaurant and order:
+
+“I want dosa.”
+Then you say:
+“Add chutney.”
+“Add sambar.”
+“Add masala.”
+“Add cheese.”
+“Make it extra crispy.”
+😂 The order keeps expanding.
+
+This is scope creep.
+
+ Real-Time Example
+
+Building a website:
+Initial requirement: “3 pages.”
+Soon client says:
+
+* Add blog
+* Add chatbot
+* Add analytics
+* Add user login
+* Add dark mode
+* Add payment
+
+Slowly the project explodes.
+
+
