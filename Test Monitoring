@@ -1,0 +1,833 @@
+
+ ✅ 1. Test Strategy vs Test Approach
+
+ ⭐ A. Test Strategy (HIGH LEVEL — What & Why)
+
+Analogy:
+Imagine planning a trip.
+
+ Test Strategy = deciding the destination, budget, and purpose of the trip.
+
+You do NOT worry about:
+
+ Which taxi to use
+ What time to leave
+
+Those are details (Test Approach).
+
+ ✔ Technical
+
+Test Strategy specifies:
+
+ Overall testing goals
+ What types of testing will be done
+  (Functional, Regression, Performance, Security, Compatibility…)
+ Testing levels
+  (Unit → Integration → System → UAT)
+ Testing tools
+  (Selenium, JMeter, Postman)
+ Risk-based testing decisions
+
+It is usually created by QA Manager for the entire organization/project.
+
+---
+
+ ⭐ B. Test Approach (LOW LEVEL — How & When)
+
+Analogy:
+If Test Strategy is “we will travel to Goa by train”,
+Test Approach is the details:
+
+ Which train?
+ What time?
+ Which platform?
+ What is the packing plan?
+ Who will go where?
+
+ ✔ Technical
+
+Test Approach includes details of:
+
+ How test cases will be written
+ How test data will be prepared
+ How defects will be logged
+ How regression tests will be executed
+ How environments will be used
+ How risks will be mitigated
+ Step-by-step execution plan
+
+It is more practical and tactical.
+
+---
+
+ 🟩 Summary Table — Strategy vs Approach
+
+| Topic      | Test Strategy    | Test Approach             |
+| ---------- | ---------------- | ------------------------- |
+| Level      | High-level       | Low-level                 |
+| Focus      | What & Why       | How & When                |
+| Created by | QA Manager       | Test Lead                 |
+| Example    | Types of testing | Steps for executing tests |
+
+---
+
+ ✅ 2. Entry Criteria & Exit Criteria
+
+Also called Definition of Ready (DoR) and Definition of Done (DoD).
+
+---
+
+ ⭐ A. Entry Criteria = Definition of Ready
+
+Meaning:
+Conditions that must be fulfilled before testing can start.
+
+Analogy:
+Before cooking food:
+
+ Vegetables must be washed
+ Stove must be ready
+ Ingredients available
+
+Without this → cooking will fail.
+
+ ✔ Technical
+
+Entry criteria include:
+
+ Requirements document available (SRS/CRS)
+ Test data ready
+ Test environment up & running
+ Build deployed successfully
+ Necessary tools/configurations ready
+
+If entry criteria are not met → testing starts late → poor quality.
+
+---
+
+ ⭐ B. Exit Criteria = Definition of Done
+
+Meaning:
+Conditions that must be met before testing can stop.
+
+Analogy:
+Before you serve food:
+
+ Food fully cooked
+ Taste checked
+ Gas turned off
+ Kitchen cleaned
+
+ ✔ Technical
+
+Exit criteria include:
+
+ All test cases executed
+ All high/critical bugs fixed
+ No open severity-1 or severity-2 bugs
+ Test coverage achieved (ex: 90%)
+ Regression testing completed
+
+If exit criteria are not met → product is not ready for release.
+
+---
+
+ 🟩 Summary Table — Entry vs Exit Criteria
+
+| Entry Criteria (DoR) | Exit Criteria (DoD)     |
+| -------------------- | ----------------------- |
+| Testing can start    | Testing can stop        |
+| Requirements ready   | All test cases executed |
+| Environment ready    | All critical bugs fixed |
+
+---
+
+ ✅ 3. Test Execution Schedule
+
+This explains WHEN each testing activity will happen.
+
+Analogy:
+A school timetable.
+
+ Maths: 9–10
+ Science: 10–11
+ English: 11–12
+
+Same way, testing has a timetable.
+
+ ✔ Technical Example
+
+A typical test execution schedule:
+
+| Week   | Activity                             |
+| ------ | ------------------------------------ |
+| Week 1 | Test planning + test case writing    |
+| Week 2 | Test case review + environment setup |
+| Week 3 | Test execution                       |
+| Week 4 | Bug fixing                           |
+
+
+The schedule helps manage:
+
+ Resources
+ Environment availability
+ Build delivery
+ Deadlines
+
+---
+
+ ✅ 4. Factors Influencing Test Effort
+
+Why does testing take long or short?
+Many factors affect it.
+
+---
+
+ ⭐ Analogy
+
+Suppose you're doing house cleaning.
+
+Effort depends on:
+
+ Size of the house
+ How dirty it is
+ How many people are helping
+ Number of tools (vacuum cleaner, broom)
+ Your experience in cleaning
+
+Similarly, testing effort depends on many factors.
+
+
+ ⭐ Factors Influencing Test Effort (Technical + Easy Analogy)
+
+These are the things that decide how much time, effort, and resources testing will need.
+
+Think of testing like preparing a big meal.
+Different dishes require different:
+
+ time
+ ingredients
+ chefs
+ tools
+
+Same with testing — different features require different effort.
+
+Let’s explain each factor with super easy English + analogy + technical meaning.
+
+---
+
+ ✅ 1️⃣ Complexity of Requirements
+
+ ✔ Easy English
+
+If the feature is big or complicated, it needs more testing time.
+
+ ✔ Analogy
+
+Making biryani takes more time than making maggi.
+More steps → more time.
+
+ ✔ Technical Meaning
+
+A complex feature like:
+
+ Payment gateway
+ Multi-step checkout
+ AI recommendations
+  needs more:
+ test cases
+ scenarios
+ negative tests
+  → so effort increases.
+
+---
+
+ ✅ 2️⃣ Quality of Requirements Document (SRS/CRS)
+
+ ✔ Easy English
+
+If requirements are not clear, testers waste time asking questions.
+
+ ✔ Analogy
+
+If someone gives you a recipe with half instructions missing…
+you will keep asking: “What next?”
+This wastes time.
+
+ ✔ Technical Meaning
+
+Poor SRS =
+
+ misunderstandings
+ rework
+ wrong test cases
+ more clarification meetings
+  → testing effort increases.
+
+---
+
+ ✅ 3️⃣ Number of Test Cases
+
+ ✔ Easy English
+
+More test cases = more time to execute.
+
+ ✔ Analogy
+
+If you wash 20 clothes, it takes less time;
+If you wash 200 clothes, it takes more time.
+
+ ✔ Technical Meaning
+
+Each test case requires:
+
+ execution
+ result validation
+ defect logging (if fails)
+
+So number of test cases has direct impact on time.
+
+---
+
+ ✅ 4️⃣ Skill Level of Testers
+
+ ✔ Easy English
+
+Experienced testers finish faster and catch more bugs.
+
+ ✔ Analogy
+
+A trained chef cooks quickly and perfectly.
+A new cook takes more time and makes mistakes.
+
+ ✔ Technical Meaning
+
+Senior testers:
+
+ write better test cases
+ execute faster
+ understand requirements quickly
+  → testing effort reduces.
+
+Junior testers:
+
+ need guidance
+ take more time
+ may miss scenarios
+  → effort increases.
+
+---
+
+ ✅ 5️⃣ Tools Used (Manual vs Automation)
+
+ ✔ Easy English
+
+Automation tools help finish work faster.
+
+ ✔ Analogy
+
+A washing machine washes faster than doing it by hand.
+
+ ✔ Technical Meaning
+
+Automation (Selenium, Playwright):
+
+ fast execution
+ repeatable
+ good for regression
+
+Manual testing:
+
+ slower
+ more human effort
+
+Choosing the right tools affects effort.
+
+---
+
+ ✅ 6️⃣ Defect Density (Number of Bugs)
+
+ ✔ Easy English
+
+More bugs = more retesting = more effort.
+
+ ✔ Analogy
+
+If the food you cooked tastes bad, you must correct it → more time.
+
+ ✔ Technical Meaning
+
+High defect density means:
+
+ more retesting
+ more communication with developers
+
+This increases testing time.
+
+---
+
+ ✅ 7️⃣ Test Environment Stability
+
+ ✔ Easy English
+
+If the test server keeps crashing, testers cannot test.
+
+ ✔ Analogy
+
+If there is no electricity, you cannot cook or iron clothes.
+Work stops.
+
+ ✔ Technical Meaning
+
+Unstable environment causes:
+
+ test delays
+ partial execution
+ false failures
+ repeated testing
+
+→ effort increases a lot.
+
+---
+
+ ✅ 8️⃣ Dependency on Developers / Other Teams
+
+ ✔ Easy English
+
+If developers delay delivering the build, testing also gets delayed.
+
+ ✔ Analogy
+
+You can’t start making tea if milk is not delivered yet.
+
+ ✔ Technical Meaning
+
+Testing depends on:
+
+ build availability
+ database setup
+ third-party APIs
+
+Any delay increases test effort and shifts the schedule.
+
+---
+
+ ✅ 9️⃣ Integration With Third-Party Systems
+
+ ✔ Easy English
+
+If your system depends on other systems, their issues delay your testing.
+
+ ✔ Analogy
+
+If you depend on Swiggy delivery and the rider is late → your entire plan gets delayed.
+
+ ✔ Technical Meaning
+
+Example systems:
+
+ Paytm API
+ Google Maps API
+ OTP gateways
+
+If they:
+
+ go down
+ timeout
+ respond slowly
+
+then testing stops → effort increases.
+
+---
+
+ ✅ 🔟 Risk Level of the Module
+
+ ✔ Easy English
+
+High-risk features need extra testing.
+
+ ✔ Analogy
+
+When you cook for guests, you double-check everything more carefully.
+But when cooking for yourself, you don’t.
+
+ ✔ Technical Meaning
+
+High-risk modules like:
+
+ Banking transactions
+ Payments
+ Data security
+ Healthcare
+
+need:
+
+ more test cases
+ deeper testing
+ multiple cycles
+
+So effort is higher.
+
+---
+
+ ⭐ 1. Test Monitoring and Control
+
+ ✔ What is Test Monitoring?
+
+Monitoring = Checking the progress of testing every day.
+
+ ✔ Analogy (Easy)
+
+Imagine you’re cooking biryani.
+
+ You keep checking:
+  ➜ Is rice cooked?
+  ➜ Is salt enough?
+  ➜ Is chicken soft?
+
+You monitor the dish so it doesn’t burn or go wrong.
+
+ ✔ Technical Meaning
+
+Monitoring means:
+
+ Tracking test progress
+ Tracking test coverage
+ Tracking number of defects found vs fixed
+ Tracking schedule delays
+
+Tools used: Jira, TestRail, Zephyr, Excel reports
+
+---
+
+ ✔ What is Test Control?
+
+Control = Taking action when something goes wrong.
+
+ ✔ Analogy
+
+Cooking biryani → if rice is undercooked:
+You take action:
+
+ Add more water
+ Extend cooking time
+
+Same in testing.
+
+ ✔ Technical Meaning
+
+Test Manager performs actions like:
+
+ Adding more testers if delays happen
+ Extending deadlines
+ Increasing test time for risky modules
+ Changing test priorities
+ Asking developers to fix high-priority bugs first
+
+---
+
+ ⭐ 2. Metrics Used in Testing
+
+Metric = A number that shows testing progress or quality.
+
+ ✔ Analogy
+
+In cricket, you track:
+
+ Run rate
+ Wickets
+ Strike rate
+ Economy
+
+Same way, in testing we track numerical indicators.
+
+---
+
+ ✔ Important Testing Metrics (Easy + Technical)
+
+ 1️⃣ Test Case Execution Metrics
+
+Shows how many test cases are executed.
+
+ Total test cases = 100
+ Executed = 60
+ Passed = 50
+ Failed = 10
+ Not executed = 40
+
+Analogy:
+Like checking how many chapters you studied out of total.
+
+---
+
+ 2️⃣ Defect Metrics
+
+Shows defect health.
+
+ Total defects
+ Open defects
+ Closed defects
+ Severity & priority
+ Defect density (bugs per module)
+
+Analogy:
+If you clean your room and find 30 dust spots in one corner, that corner is “high defect density.”
+
+---
+
+ 4️⃣ Test Productivity Metrics
+
+= Test cases executed per day per tester.
+
+Analogy:
+Number of pages you read per hour while studying.
+
+---
+
+ 5️⃣ Defect Removal Efficiency (DRE)
+
+How many bugs were caught by testers (not customers)?
+
+Formula:
+DRE = Bugs found in testing / Total bugs
+
+Analogy:
+Checking how many mistakes YOU catch before teacher checks your notebook.
+
+---
+
+ 6️⃣ Automation Metrics
+
+ % of test cases automated
+ Automation execution time
+
+Analogy:
+How many household tasks you automated with a washing machine instead of doing manually.
+
+---
+
+ ⭐ 3. Test Reports (Purpose, Contents, Audience)
+
+ ✔ What is a Test Report?
+
+It is a summary of the testing activities, created at the end of the test cycle.
+
+ ✔ Analogy
+
+Like your mark sheet after exams:
+
+ Marks
+ Strengths
+ Weak areas
+ Final result
+
+Same concept.
+
+---
+
+ ⭐ A. Purpose of Test Reports
+
+Why do we need test reports?
+
+1. Show overall quality of the software
+2. Help management decide whether to release or delay the product
+3. Provide status of testing progress
+4. Highlight risks
+5. Communicate defects status
+6. Provide traceability with requirements
+
+---
+
+ ⭐ B. Contents of a Test Report (Easy + Technical)
+
+| Section                   | Meaning (Easy English)             | Analogy                                            |
+| ------------------------- | ---------------------------------- | -------------------------------------------------- |
+| Test Summary          | What we tested                     | Overview like “Exam was Maths, Physics, Chemistry” |
+| Test Execution Status | Passed, failed, blocked test cases | Your marks: passed/failed subjects                 |
+| Defect Summary        | Bugs found grouped by severity     | Mistakes found in your notebook                    |
+| Environment Details   | Browser, OS, devices used          | Exam hall details                                  |
+| Risks & Issues        | Problems during testing            | “Fan not working during exam”                      |
+| Recommendations       | Ready to release or not            | Teacher saying “you can pass to next class”        |
+| Test Coverage         | How much requirement tested        | “Completed 90% of syllabus”                        |
+
+---
+
+ ⭐ C. Audience of Test Reports
+
+Who reads test reports?
+
+ 1️⃣ Project Manager
+
+ Checks progress
+ Decides release date
+
+ 2️⃣ Client / Product Owner
+
+ Understands product quality
+ Takes business decisions
+
+ 3️⃣ Developers
+
+ Check defects
+ Identify impacted modules
+
+ 4️⃣ QA Team / Testers
+
+ Review test effectiveness
+
+ 5️⃣ Senior Management
+
+ For future planning & budgeting
+
+ ⭐ 1. Risks and Testing
+
+ ❗ Simple Meaning
+
+Risk = Something bad may happen in the future.
+
+Testing deals with risks by:
+
+ Identifying risks
+ Planning tests to reduce those risks
+ Tracking risks until project ends
+
+ ✔ Analogy
+
+Before crossing the road, you check left-right.
+Why?
+Because there is a risk of accident.
+
+Testing also checks software from all sides to avoid "accidents" in production.
+
+ ✔ Technical Meaning
+
+Risk in testing means:
+
+> “A problem that MIGHT happen if software has defects.”
+
+Example risks a tester considers:
+
+ Login might fail
+ Payment may be deducted twice
+ System may crash with 1000 users
+ Wrong tax calculation
+
+Testing reduces the chances of these problems.
+
+---
+
+ ⭐ 2. Definition of Risk
+
+ ✔ Easy Definition
+
+Risk = Probability of something going wrong × Impact if it goes wrong
+
+ ✔ Analogy
+
+Rain Risk Example:
+
+ Probability = 60%
+ Impact = you’ll get wet
+
+So you carry an umbrella.
+
+ ✔ Technical Example
+
+Risk in an e-commerce app:
+
+ Probability: Payment gateway might fail under high load
+ Impact: Customers lose money → business loss
+
+So testers perform load testing with JMeter.
+
+---
+
+ ⭐ 3. Product Risk
+
+ ✔ Simple Meaning
+
+Risk related to the software itself.
+
+ ✔ Analogy
+
+If a car has a braking issue → it is a product risk.
+
+ ✔ Technical Examples
+
+Product risks include:
+
+1. Incorrect login functionality
+2. Payment gateway failure
+3. App crashes
+4. Security vulnerabilities
+5. Slow performance
+6. Wrong business calculations
+7. Data not saved correctly
+
+These risks come from the software quality.
+
+ ✔ Testing Focus
+
+ Functional testing
+ Regression testing
+ Performance testing
+ Security testing
+
+Product risks ≈ “What can go wrong inside the product?”
+
+---
+
+ ⭐ 4. Project Risk
+
+ ✔ Simple Meaning
+
+Risks related to project execution, not the software.
+
+ ✔ Analogy
+
+If the driver leaves late → the car is fine, but you might reach late.
+
+Same for projects — nothing wrong with the software yet, but the project may delay.
+
+ ✔ Technical Examples
+
+Project risks include:
+
+1. Requirement delays
+
+    Clients take too long to give SRS
+
+2. Developer availability
+
+    Key developer resigns
+
+3. Test environment not ready
+
+    Server not deployed
+    Database down
+
+4. Budget issues
+
+    No money for automation tools
+
+5. Unrealistic deadlines
+
+    Tester is given 4 days for 10 days of testing
+
+6. Build instability
+
+    Frequent crashes delay QA
+
+These risks impact schedule, cost, and team.
+
+ ✔ Testing Focus
+
+ Test planning adjustments
+ Re-estimating effort
+ Communicating delays
+ Risk-based testing (test most risky things first)
+
+Project risks ≈ “What can go wrong in the project execution?”
+
+---
+
