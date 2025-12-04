@@ -1,0 +1,635 @@
+
+ ⭐ 1. Introduction to SCRUM
+
+SCRUM is an Agile framework used to develop software in small iterations called Sprints (1–4 weeks).
+It focuses on:
+✔ teamwork
+✔ customer feedback
+✔ small increments
+✔ continuous improvement
+
+
+ ⭐ Analogy (Best One)
+
+Scrum is like building a house room-by-room.
+You don’t wait until the entire building is completed.
+Instead:
+
+ build a room
+ show it to owner
+ get feedback
+ improve
+ then build next room
+
+ ⭐ Real-Time Example
+
+Swiggy adds small features every 2 weeks:
+
+ Week 1: Add coupons section
+ Week 3: Add voice ordering
+ Week 5: Improve delivery ETA accuracy
+
+That is Scrum happening in the background.
+
+
+ ⭐ 2. Scrum Roles and Responsibilities
+
+Scrum has 3 major roles:
+
+ ⭐ 1. Product Owner (PO)
+
+ ✔ Responsibilities
+
+ Owns the product vision
+ Writes user stories
+ Manages Product Backlog
+ Prioritizes features
+ Represents the customer
+
+ ⭐ Analogy
+
+PO = film director
+He decides:
+
+ what the movie should look like
+ which scenes are important
+ what should be shot first
+
+
+ ⭐ Real-Time Example
+
+Zomato PO decides:
+
+ Add "Zomato Gold" feature first
+ Improve order tracking later
+ Remove unwanted features
+
+
+ ⭐ 2. Scrum Master (SM)
+
+ ✔ Responsibilities
+
+ Removes impediments(problems)
+ Coaches team in Agile
+ Facilitates meetings (Scrum events)
+ Shields team from outside pressure
+
+
+
+ ⭐ Analogy
+
+Scrum Master = Traffic police
+He does not drive the car.
+He ensures smooth flow, removes blockages.
+
+
+
+ ⭐ Real-Time Example
+
+If Jenkins is down during build, SM arranges DevOps support.
+
+
+ ⭐ 3. Development Team
+
+ ✔ Responsibilities
+
+ Design
+ Code
+ Test
+ Deploy
+ Deliver working software every sprint
+
+ ⭐ Analogy
+
+Construction workers building the house.
+
+ ⭐ Real-Time Example
+
+A team of 6:
+
+ 3 developers
+ 2 testers
+ 1 designer
+
+Deliver a working module every 2 weeks.
+
+ ⭐ 3. Scrum Core Practices and Artifacts
+
+Below are all Scrum events, artifacts, and practices with analogy and real examples.
+
+ ⭐ A. User Story
+
+A user story describes a requirement from the user’s point of view.
+
+Format:
+As a <user> I want <feature> so that <benefit>
+
+ ⭐ Analogy
+
+Like a customer saying to a tailor:
+“As a groom, I want a perfectly fitted suit so I look good at my wedding.”
+
+ ⭐ Real-Time Example
+
+As a user, I want to search food by cuisine so I can find nearby restaurant options.
+
+(Swiggy story)
+
+ ⭐ B. Sprint
+
+A Sprint is a time-boxed iteration, usually 2 weeks, where the team builds a working feature.
+
+ ⭐ Analogy
+
+A school timetable
+You have 2 weeks to complete a chapter → then review → then start next chapter.
+
+ ⭐ Real-Time Example
+
+Sprint 1 (week 1–2): Add “Add to Cart”
+Sprint 2: Add “Checkout”
+Sprint 3: Add “Payment Gateway”
+
+ ⭐ C. Release Planning Meeting
+
+This meeting decides when a set of features will be released.
+
+ ⭐ Analogy
+
+Planning a wedding timeline:
+
+ Invitations by 15th
+ Decoration by 20th
+ Catering by 24th
+
+
+ ⭐ Real-Time Example
+
+Zomato decides:
+
+ Release new UI by January
+ Add voice ordering by March
+ Add table booking by June
+
+ ⭐ D. Sprint Planning Meeting
+
+Held at the start of each sprint to decide:
+
+ What to build (PO + team)
+ How to build (team)
+
+ ⭐ Analogy
+
+Before cooking biryani →
+You check ingredients, assign tasks, decide time.
+
+
+
+ ⭐ Real-Time Example
+
+Team takes 25 story points worth of work for the next 2-week sprint.
+
+
+
+
+
+ ⭐ E. Daily Scrum Meeting (Daily Stand-up)
+
+A 15-minute meeting where each member answers:
+
+1. What I did yesterday
+2. What I’ll do today
+3. Any blockers?
+
+
+
+ ⭐ Analogy
+
+Morning school assembly → each student gives daily updates.
+
+
+
+ ⭐ Real-Time Example
+
+Dev: “I completed login API.”
+QA: “I will test it today.”
+Blocker: “DB access is pending.”
+
+Scrum Master resolves it.
+
+
+ ⭐ F. Sprint Review Meeting
+
+At the end of the sprint →
+Team demo the working software to PO and stakeholders.
+
+
+
+ ⭐ Analogy
+
+Like showing a room to the owner after building it.
+
+
+
+ ⭐ Real-Time Example
+
+Team shows:
+✔ working cart
+✔ working checkout
+✔ working search
+
+PO gives feedback: “Improve UI alignment.”
+
+
+ ⭐ G. Retrospective
+
+Meeting after Sprint Review
+Discuss:
+
+ What went well?
+ What didn’t?
+ What to improve next?
+
+
+ ⭐ Analogy
+
+After a cricket match, players discuss mistakes and improvements.
+
+
+ ⭐ Real-Time Example
+
+Team identifies:
+
+ Delays due to unclear stories
+ Plan to refine backlog better next sprint
+
+
+ ⭐ I. Sprint Backlog
+
+The subset of Product Backlog items selected for the sprint.
+
+
+ ⭐ J. Burn-Down Chart
+
+Shows:
+
+ work remaining vs. time
+
+Used to track sprint progress.
+
+
+ ⭐ Analogy
+
+Like a countdown chart before exam → remaining chapters vs. days left.
+
+ ⭐ Real-Time Example
+
+If team planned 30 story points
+Day 5: 20 points remaining
+Day 10: 0 points
+→ Good progress shown in burn-down.
+
+ ⭐ K. Velocity
+
+Velocity = How many story points the team completes every sprint.
+
+
+
+ ⭐ Analogy
+
+Speed of a car → 60 km/h
+Similarly → team speed = 25 story points/sprint
+
+
+
+ ⭐ Real-Time Example
+
+Sprint 1 → 18 points
+Sprint 2 → 22 points
+Sprint 3 → 20 points
+= Velocity around 20
+
+Used for planning next sprints.
+
+
+ ⭐ 1. Definition of “Done” (DoD)
+
+ ✔ Definition
+
+The Definition of Done is a clear checklist that tells the team when a user story or task is truly completed.
+
+It removes confusion like:
+
+ “Is development done?”
+ “Has testing finished?”
+ “Shall we move it to Done column?”
+
+ ⭐ Analogy
+
+Submitting an assignment in college.
+You consider it "Done" only when:
+
+ You write the assignment
+ Proofread it
+ Add references
+ Get it printed
+ Submit it
+
+Only then it is truly DONE.
+
+ ⭐ Real-Time Example (Software)
+
+For a user story “As a user, I want to reset my password”, DoD could be:
+
+ Code written
+ Code review done
+ QA tested
+ No critical bugs
+
+Only after all items are done → story is “Done”.
+
+ ⭐ 2. Splitting User Story into Task
+
+ ✔ Definition
+
+Breaking a user story into smaller actionable tasks that developers and testers can work on.
+
+ ⭐ Analogy
+
+User story = “Cook a biryani.”
+Tasks:
+
+ Buy ingredients
+ Chop vegetables
+ Marinate chicken
+ Cook rice
+ Fry onions
+ Mix and steam
+
+You cannot give the whole story to one person; tasks make it manageable.
+
+ ⭐ Real-Time Example
+
+User Story: “User should be able to log in.”
+Tasks:
+
+ Design login UI
+ Create backend API
+ Implement validation
+ Create database table
+ Write unit tests
+ Testing & bug fixing
+
+ ⭐ 3. Why Split a User Story into Tasks?
+
+ ⭐ Reasons:
+
+✔ Easier to estimate
+✔ Easier to assign work
+✔ Break complexity
+
+
+
+ ⭐ Analogy
+
+Breaking down exam syllabus into chapters makes studying easier.
+
+
+
+ ⭐ Real-Time Example
+
+If a login story is not split:
+“Who is doing what?” becomes confusing.
+
+When split:
+
+ Dev1 does backend
+ Dev2 does UI
+ Tester prepares test cases
+  Clearly organized.
+
+
+ ⭐ 4. Guidelines for Breaking Down a User Story into Tasks
+
+ ✔ 1. Each task must be 1 day or less
+
+If > 1 day → break it further.
+
+ ✔ 2. Tasks should be technology-based, not requirement-based
+
+Example:
+❌ “Create login feature”
+✔ “Create login API”
+
+
+
+ ⭐ Analogy
+
+Packing for a vacation:
+Instead of writing “Pack luggage,” break into:
+
+ Pack clothes
+ Pack toiletries
+ Pack shoes
+ Pack documents
+
+
+
+ ⭐ Real-Time Example
+
+Story: “Upload profile picture”
+Tasks:
+
+ UI for file upload
+ API for uploading
+ AWS S3 integration
+ Add validation
+ Testing
+
+
+
+
+
+ ⭐ 5. Examples of Scrum Task Board
+
+Text version of task board:
+
+```
+-
+|       To Do        |      In Progress   |    Done    |
+-
+| UI Design          |                    |            |
+| Backend API        | Coding API         | Unit Tests |
+| DB Setup           |                    |            |
+| Write Test Cases   |                    |            |
+-
+```
+
+ ⭐ Analogy
+
+It is like a school timetable board, showing:
+
+ Subjects to study
+ Subjects you are currently studying
+ Subjects completed
+
+ ⭐ Real-Time Example
+
+Jira board for login story:
+
+ To Do → “Write test cases”
+ In Progress → “Build login API”
+ Done → “Validation complete”
+
+
+ ⭐ 6. Planning Poker®
+
+ ✔ Definition
+
+Planning Poker® is a game-like estimation technique used to estimate user stories in story points.
+
+Everyone picks cards → discuss → agree on final estimate.
+
+ ⭐ Analogy
+
+Like friends guessing the bill amount at a restaurant before the bill arrives.
+Everyone gives a number, discuss why, and agree on one amount.
+
+
+
+ ⭐ Real-Time Example
+
+For story “Add product to cart”:
+Dev1: 5 points
+Dev2: 3 points
+Tester: 5 points
+Architect: 8 points
+
+Discussion happens → Final = 5 points.
+
+
+ ⭐ 7. Planning Poker® - Process/Steps
+
+ ✔ Step-by-step:
+
+1. Product Owner reads the user story
+2. Team asks questions for clarity
+3. Each member secretly chooses a card (Fibonacci numbers: 1, 2, 3, 5, 8, 13…)
+4. Everyone reveals at the same time
+5. Highest and lowest explain their reasoning
+6. Final estimate is decided
+
+ ⭐ Analogy
+
+Like everyone secretly voting for class monitor, then revealing votes together.
+
+ ⭐ Real-Time Example
+
+Story: “Add search suggestions in shopping app”
+
+ Dev1 chooses 8 (complex API logic)
+ Dev2 chooses 3 (simple UI)
+ Tester chooses 5 (moderate testing)
+
+After discussion, final = 5 points.
+
+
+ ⭐ 8. What Are Story Points?
+
+ ✔ Definition
+
+Story Points measure:
+
+ Complexity
+ Effort
+ Uncertainty
+
+NOT time like hours or days.
+
+ ⭐ Analogy
+
+Story points are like distance (km), not time.
+Traveling 10 km could take:
+
+ 10 mins (bike)
+ 30 mins (car)
+ 1 hour (walk)
+
+Distance stays same → time varies.
+
+ ⭐ Real-Time Example
+
+Login story = 3 points
+Add-to-cart = 5 points
+Checkout with payment = 13 points (big and complex)
+
+
+ ⭐ 9. How Do We Estimate in Story Points?
+
+We use:
+✔ Fibonacci scale (1, 2, 3, 5, 8, 13, 21…)
+Bigger numbers represent higher complexity.
+
+The team compares stories relatively.
+
+ ⭐ Analogy
+
+Estimating story points is like:
+“Which bag is heavier?”
+You compare bags, not measure exact weight.
+
+ ⭐ Real-Time Example
+
+If:
+
+ Login = 3
+ File upload seems double complex → 5
+ Payment integration seems huge → 13
+
+Team creates a relative scale.
+
+
+ ⭐ 10. What Goes into Story Points?
+
+Story Points include:
+
+ ✔ 1. Complexity
+
+How complex the logic is
+Ex: Payment gateway = high complexity
+
+ ✔ 2. Effort
+
+How much work is needed
+Ex: Uploading files requires more backend work
+
+ ✔ 3. Uncertainty / Risks
+
+Unknown things → increase points
+Ex: Third-party API integration
+
+ ✔ 4. Dependencies
+
+More people involved → more points
+
+ ⭐ Analogy
+
+Planning a trip includes:
+✔ Distance
+✔ Road conditions
+✔ Traffic
+✔ Weather
+✔ Vehicle condition
+
+All together determine the travel effort.
+
+ ⭐ Real-Time Example:
+
+Story: “Integrate Razorpay payment gateway”
+
+ Complex logic
+ External API
+ Security checks
+ Many components involved
+
+Hence → 13 or 21 story points
