@@ -1,0 +1,59 @@
+// Verify login with invalid username and invalid password
+
+// open the browser
+// navigate to facebook
+// enter invalid username
+// enter invalid password
+// click on login button
+
+
+// E.O ==> Error message sgould be diaspalyed
+// A.O
+
+
+// i need to import test()
+// test() ==> create a test case
+
+import { test, expect } from "@playwright/test"
+
+
+// test("Verify login with invalid username and invalid password", async function({ page })
+// {
+//     // open the browser
+
+//     // navigate to facebook
+//     await page.goto("https://www.facebook.com")
+//     // enter invalid username
+//     await page.locator("#email").fill("dfldkjfsd@gmail.com")
+//     // ...
+//     // enter invalid password
+//     await page.locator("#pass").fill("flksd@1234")
+//     // click on login button
+//     await page.locator("button[name='login']").click()
+
+   
+//     // get error message
+//     let actualErrorMsg = 
+//     await page.locator("text='Invalid username or password'").textContent()
+
+//     // validation ==> assertion ==> expect()
+//     // expect(actualErrorMsg).toContain("Invalid")
+//         expect(actualErrorMsg).toContain(/^Invalid$/)
+
+//     await page.waitForTimeout(10000)
+// })
+
+test("Verify login with invalid username and invalid password", async function({ page })
+{
+    // open the browser
+
+    // navigate to facebook
+    await page.goto("https://www.facebook.com")
+
+    // await page.locator(".inputtext").first().fill("Hello")
+    // await page.locator(".inputtext").last().fill("Hello")
+    await page.locator(".inputtext").nth(0).fill("Hello")
+        
+
+    await page.waitForTimeout(10000)
+})
