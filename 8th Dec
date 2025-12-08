@@ -1,0 +1,59 @@
+1) id locator
+ locator(email)
+
+2) class locator
+ locator(email)
+
+3) name locator
+locator(tagname[name=".........."])
+
+Ex:
+<input type="text" name="email" placeholder="email" />
+<input type="password" name="pass" placeholder="pass" />
+tagname => input
+atrribute_name = attribute_value ===> attribute
+
+4) attribute locator
+locator([ name="email"]) ==> email webelement
+locator([ type="password"]) ==> password webelement
+
+5) tag name
+locator(tagname) ==> locator(input)
+
+6) multiple attributes
+
+locator([attr_name = 'attr_value'][attr_name = 'attr_value'])
+
+7) tagname with id
+locator(tagnameid) 
+==> locator(input).nth(number) ==> email web element
+==> locator(input#email) ==> email web element
+
+8) tagname with class
+
+
+
+
+test("Demo", async function({ page })
+{
+    
+    await page.goto("https://www.facebook.com")
+
+    // await page.locator("[placeholder='Password']").fill("Welcome@1234")
+    //  await page.locator("input").nth(3).fill("Welcome@1234")
+     await page
+     .locator("[type='password'][data-testid='royal-pass']").fill("Welcome@1234")
+    
+    
+
+    await page.waitForTimeout(10000)
+})
+
+
+
+
+
+
+
+
+
