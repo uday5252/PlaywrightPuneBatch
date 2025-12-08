@@ -53,6 +53,28 @@ test("Demo", async function({ page })
 
 
 
+========================================
+<div class="card">
+        <h2>Product Title</h2>
+        <button>Buy</button>
+         <div class="footer">
+            <button>Add</button>
+        </div>
+    </div>
+
+test("Demo", async function({ page })
+{
+    await page.goto("http://127.0.0.1:5500/index.html") 
+    
+    // > ==> direct child inside the parent
+    // await page.locator(".card > input").fill("Raju")
+
+    // space ==> all the level of the child
+    await page.locator(".card  input").nth(0).fill("Raju")
+
+    await page.waitForTimeout(10000)
+})
+
 
 
 
