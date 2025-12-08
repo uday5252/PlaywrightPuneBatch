@@ -102,3 +102,142 @@ test("Demo", async function({ page })
     </div>
 
 
+=========================================================================
+<div class="product">
+  <h2 class="title">Samsung S24</h2>
+  <span class="price">₹80,000</span>
+  <p class="desc">Flagship Samsung phone</p>
+  <button class="buy">Buy Now</button>
+</div>
+
+<div class="product">
+  <h2 class="title">iPhone 15</h2>
+  <span class="price">₹90,000</span>
+  <p class="desc">Latest iPhone model</p>
+  <button class="buy">Buy Now</button>
+</div>
+________________________________________
+🧭 1. WHAT ARE XPATH AXES?
+Axes = directions to move inside HTML.
+HTML is like a family tree:
+•	parent
+•	child
+•	sibling
+•	ancestor
+•	descendant
+•	following
+•	preceding
+CSS cannot move UP. XPath can.
+That’s why axes are powerful.
+________________________________________
+🚀 2. CHILD AXIS
+Means: "Select children of this element"
+XPath:
+//div[@class='product']/child::h2
+Playwright:
+await page.locator("//div[@class='product']/child::h2");
+👉 Returns the <h2> inside every product.
+________________________________________
+🚀 3. PARENT AXIS
+Means: "Go upward"
+//span[@class='price']/parent::div
+Example: find the div product of a price.
+Playwright:
+await page.locator("//span[@class='price']/parent::div");
+________________________________________
+🚀 4. ANCESTOR AXIS
+More powerful: Go up ANY levels
+//span[text()='₹80,000']/ancestor::div[@class='product']
+Playwright:
+await page.locator("//span[text()='₹80,000']/ancestor::div[@class='product']");
+🟢 Use this for finding the card when you only know a small text inside it.
+________________________________________
+🚀 5. DESCENDANT AXIS
+Means: All children + grandchildren + deep elements
+//div[@class='product']/descendant::button
+Playwright:
+await page.locator("//div[@class='product']/descendant::button");
+________________________________________
+🚀 6. SIBLING AXES (VERY IMPORTANT)
+Siblings = same parent.
+HTML example:
+<h2>Samsung</h2>      ← sibling
+<span>₹80,000</span>  ← sibling
+<p>desc</p>           ← sibling
+<button>Buy</button>  ← sibling
+________________________________________
+6.1 following-sibling
+Means: Select siblings that come AFTER this element
+Example: get price after Samsung:
+//h2[text()='Samsung S24']/following-sibling::span
+Playwright:
+await page.locator("//h2[text()='Samsung S24']/following-sibling::span");
+________________________________________
+6.2 preceding-sibling
+Means: Select siblings that come BEFORE this element
+Example: find h2 that comes before Buy button:
+//button[@class='buy']/preceding-sibling::h2
+Playwright:
+await page.locator("//button[@class='buy']/preceding-sibling::h2");
+________________________________________
+🚀 7. FOLLOWING AXIS
+Means: Everything after the element in the entire page flow.
+(Not only siblings!)
+Example: all elements after Samsung name:
+//h2[text()='Samsung S24']/following::*
+Playwright:
+await page.locator("//h2[text()='Samsung S24']/following::*");
+________________________________________
+🚀 8. PRECEDING AXIS
+Everything before the element in page flow:
+//button[@class='buy']/preceding::*
+Playwright:
+await page.locator("//button[@class='buy']/preceding::*");
+________________________________________
+🔥 Most Useful Real Automation Examples
+________________________________________
+✔ 1. Click Buy button of Samsung (child → parent → descendant)
+//h2[text()='Samsung S24']/ancestor::div[@class='product']//button
+Playwright:
+await page.locator("//h2[text()='Samsung S24']/ancestor::div[@class='product']//button").click();
+________________________________________
+✔ 2. Get the price next to the name using sibling
+//h2[text()='Samsung S24']/following-sibling::span
+Playwright:
+await page.locator("//h2[text()='Samsung S24']/following-sibling::span").textContent();
+________________________________________
+✔ 3. Get product description using following-sibling
+//h2[text()='Samsung S24']/following-sibling::p
+________________________________________
+✔ 4. Get product title from Buy button (reverse direction)
+//button[@class='buy']/preceding-sibling::h2
+Playwright:
+await page.locator("//button[@class='buy']/preceding-sibling::h2");
+________________________________________
+💡 SUPER SIMPLE SUMMARY
+Axis	Meaning	Example
+child	down	parent/child
+parent	up	child/..
+ancestor	up many levels	child/ancestor::div
+descendant	down many levels	div/descendant::button
+following-sibling	after same parent	h2/following-sibling::span
+preceding-sibling	before same parent	button/preceding-sibling::h2
+following	everything after	h2/following::span
+preceding	everything before	button/preceding::*
+
+
+
+    await page.setContent(`<div class="product">
+        <h2>I Phone 15</h2>
+         <input type="text" name="Buy" />
+        </div>
+
+            <div class="product">
+                <h2>Samsumg s25</h2>
+                <input type="text" name="Add" />
+        </div>
+    `)
+
+    // await page.locator("//h2[text()='Samsumg s25']/../input").fill("Hello")
+        // await page.locator("//h2[text()='Samsumg s25']/parent::div/input").fill("Hello")
+    // await page.locator("//h2[text()='Samsumg s25']/parent::div/child::input").fill("Hello")
