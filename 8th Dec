@@ -76,6 +76,29 @@ test("Demo", async function({ page })
 })
 
 
+====================================================================
 
+
+test("Demo", async function({ page })
+{
+    await page.goto("http://127.0.0.1:5500/index.html") 
+
+    
+    // await page.locator("xpath=/html/body/div/input[1]").fill("Raju")
+    // await page.locator("xpath=/html/body/div/input[2]").fill("Ramu")
+    // await page.locator("xpath=/html/body/div/input[3]").fill("Mary")
+
+    await page.locator("xpath=//input[1]").fill("Raju")
+    await page.locator("xpath=//input[2]").fill("Ramu")
+    await page.locator("xpath=//input[3]").fill("Mary")
+
+    await page.waitForTimeout(10000)
+})
+
+   <div>
+        Enter First Name:<input type="text" /><br><br>
+        Enter Middle Name:<input type="text" /><br><br>
+        Enter Last Name:<input type="text" />
+    </div>
 
 
