@@ -40,3 +40,51 @@ iff there is no space before and after the text, we can solve this problem usign
 There is still a major problem with contains(), it fails to identify text whenever the text is split across multiple tags, to overcome this problem playwrigth's text locator was invented!
  // await page.locator("text='Login'i").click() // CASE SENSITIVE
     // await page.locator("text=/\\w+/").click()
+
+===========================================================
+
+page.getByRole() to locate by explicit and implicit accessibility attributes.
+page.getByText() to locate by text content.
+page.getByLabel() to locate a form control by associated label's text.
+page.getByPlaceholder() to locate an input by placeholder.
+page.getByAltText() to locate an element, usually image, by its text alternative.
+page.getByTitle() to locate an element by its title attribute.
+page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
+
+==========================================================
+
+
+test("Demo", async function({ page })
+{
+ 
+    // await page.goto("http://127.0.0.1:5500/index.html")
+
+    // await page.getByText("Welcome").click()
+
+    // await page.getByRole("link", { name: "Welcome" }).click()
+    // let readData = await page.getByRole("heading", { name: "Welcome" }).textContent()
+    // console.log(readData)
+
+    // ================================
+
+    // await page.getByPlaceholder("Enter username").fill("Raju")
+
+    // await page.getByLabel("Email").fill("Raju@gmail.com")
+    
+    // ====================================
+    
+    // console.log(await page.getByAltText("nature").count())
+
+    // ================================================
+    // console.log(await page.getByTitle("Programming Language").textContent())
+
+    // ================================================
+    
+    await page.goto("https://www.facebook.com")
+    // await page.getByTestId("royal-email").fill("raju@gmail.com")
+    
+
+
+    await page.waitForTimeout(2000)
+})
+
