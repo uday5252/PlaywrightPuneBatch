@@ -1,0 +1,40 @@
+
+
+// PROBLEM WITH text() and solution with contains()
+
+// test("Demo", async function({ page })
+// {
+//     await page.setContent(`<button>&nbsp;&nbsp;&nbsp;Login&nbsp;</button>`)
+//     // await page.locator("//button[text() = 'Login']").click()
+//     await page.locator("//button[contains(text(), 'Login')]").click()
+
+    
+//     await page.waitForTimeout(5000)
+// })
+
+
+
+
+// PRONBLEM WITH contains() and solution with text locator
+
+test("Demo", async function({ page })
+{
+    await page
+    .setContent(`<button><span>Log</span><span>in</span></button>`)
+    // await page.locator("//button[contains(text(), 'Login')]").click()
+        await page.locator("text=Login").click()
+
+    
+    await page.waitForTimeout(5000)
+})
+
+These are the locators which are give by playwright:-
+
+1) text locator
+
+In CSS ==> no text based locator
+In Xpath ==> text(), contains()           some cases wont work
+In Playwright ==> text locator ==> all the cases
+text() problem ==> It can identify the web element using the text
+iff there is no space before and after the text, we can solve this problem usign contains()
+There is still a major problem with contains(), it fails to identify text whenever the text is split across multiple tags, to overcome this problem playwrigth's text locator was invented!
