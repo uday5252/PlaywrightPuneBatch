@@ -87,4 +87,36 @@ test("Demo", async function({ page })
 
     await page.waitForTimeout(2000)
 })
+=================================================================================
+
+test("Validating non auto suggestive dropdowns", async function({ page })
+{
+    await page.goto("https://www.amazon.in")
+    const dropDown = page.locator("#searchDropdownBox")
+    dropDown.click()
+
+    await dropDown.selectOption({ label: "Electronics" })
+    // dropDown.selectOption({ index: 6 })
+    // dropDown.selectOption("search-alias=kitchen")
+    
+    // const options = page.locator("#searchDropdownBox > option")
+    // console.log("Options Count: ", await options.count())
+
+    // console.log("Selected option: ", await dropDown.inputValue())
+
+    // console.log("Selected Option: ", await page.locator("#searchDropdownBox > option:checked").textContent())
+
+     const options = page.locator("#searchDropdownBox > option")
+     let mycount = await options.filter({ hasText: /^Electronics$/ }).count()
+     if(mycount > 0)
+     {
+        console.log("Food option exists!")
+     }
+     else
+     {
+        console.log("Food option doesnt exists!")
+     }
+
+    await page.waitForTimeout(2000)
+})
 
