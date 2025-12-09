@@ -38,3 +38,5 @@ In Playwright ==> text locator ==> all the cases
 text() problem ==> It can identify the web element using the text
 iff there is no space before and after the text, we can solve this problem usign contains()
 There is still a major problem with contains(), it fails to identify text whenever the text is split across multiple tags, to overcome this problem playwrigth's text locator was invented!
+ // await page.locator("text='Login'i").click() // CASE SENSITIVE
+    // await page.locator("text=/\\w+/").click()
