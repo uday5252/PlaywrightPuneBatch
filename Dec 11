@@ -169,3 +169,49 @@ test("Handling Frames", async function({ page })
     
 </body>
 </html>
+===========================================================================================
+test("Handling Popups", async function({ page })
+{
+  
+    await page.goto("https://echoecho.com/javascript4.htm")
+
+     // one
+    // page.once("dialog", async function(info)
+    // {
+    //     console.log(info.message())
+    //     // dialog handling logic
+    //     await info.accept()
+
+    // })
+
+    //  page.once("dialog", async function(info)
+    // {
+    //     console.log(info.message())
+    //     // dialog handling logic
+    //     await info.accept()
+
+    // })
+
+     await page.waitForTimeout(50000)
+
+    // await page.locator("//input[@name='B2']").click()
+
+
+     page.once("dialog", async function(info)
+    {
+        
+        console.log("Hi")
+        await info.accept("Raju")
+        console.log("Hello")
+    })
+
+    await page.locator("//input[@name='B3']").click()
+
+
+
+    
+   
+
+    await page.waitForTimeout(5000)
+})
+
