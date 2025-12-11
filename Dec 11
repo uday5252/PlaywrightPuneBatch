@@ -1,0 +1,121 @@
+
+// test("Demo", async function({ page })
+// {
+//     await page.goto("http://127.0.0.1:5500/first.html")   
+//     console.log("Hi")  
+//     const info = await page.locator("#firstname").fill("Raju") // 3 sec
+//     console.log(info)
+//     console.log("Hello")
+//     await page.waitForTimeout(2000)
+//     // kjhkjshdasfd
+//     // askjdhkjashfkjsdhf
+
+// })
+
+// locator ==> will just store the information of the web element
+// that we wanted
+// fill() ==> 
+// 1) will actually that look for that webe element taht locator() is 
+// storing ==> after 5 sec
+// 2) start filling that Rajuclea
+
+
+
+
+
+
+
+
+// test("Demo", async function({ page })
+// {
+//     await page.goto("http://127.0.0.1:5500/first.html")   
+//     const info = page.locator("#erfdskjfkjasdkhf")
+//     console.log("Hello",info)
+//     await info.click()
+//     await page.waitForTimeout(2000)
+// })
+
+
+
+test("Verify search feature", async function({ page })
+{
+    await page.goto("https://www.easemytrip.com/railways/")
+    await page.locator("#txtfromcity").fill("Delhi")
+    // options loaded ==> after 3 sec
+
+    await page.waitForSelector("//ul[@id='ui-id-1']/li")
+
+    // const optionCount = await page.locator("//ul[@id='ui-id-1']/li").count()
+
+    const options = page.locator("//ul[@id='ui-id-1']/li")
+    const optionsCount = await options.count()
+
+    console.log(options)
+
+    // options ==> info of 12 options ==< <li>New Delhi</li>
+   
+    // optionCount = 12
+    for(let i = 0; i < optionsCount; i++)
+    {
+           let expectedOption = "New Delhi"
+           let actualOption = await options.nth(i).textContent()
+        //    actualOption = "New Delhi"
+           if(actualOption.includes(expectedOption))
+           {
+                await options.nth(i).click()
+           }
+
+    }
+
+    await page.waitForTimeout(5000)
+    
+})
+
+
+
+
+
+
+// await page.locator("//ul[@id='ui-id-1']/li").fill("Raju")
+
+
+
+
+// fill() doesnt search for //ul[@id='ui-id-1']/li INSTEAD it waits
+// unitl that //ul[@id='ui-id-1']/li is visible
+
+// await page.locator("//ul[@id='ui-id-1']/li").click()
+
+// fill() and click() ==> has auto-wait mechanim
+// count() ==> doesnt have auto-wait mechanism
+
+
+// await page.locator("//ul[@id='ui-id-1']/li").count()
+
+============================================================================
+
+test("Demo", async function({ page })
+{
+    
+ await page.goto("https://www.facebook.com")
+await page.locator("#pass").fill("Welcome@1234")
+
+})
+when to use await and when not use await
+await page.locator("#pass").fill("Welcome@1234")
+we use await to wait for sufficient amount of time, until that 
+line gets completed before going to the next line.
+OR
+await will wait until the promise will be get fullfilled
+
+we can use await keyword only on a method that return a PROMISE
+
+page.locator("#pass")
+locator method has the value #pass ==> id = "pass"
+locator method will not target that element, instead
+it just keep the information like which element has to be targetted
+await will wait for some time until the promise schanges from
+pendign to resolved
+RAM
+"#pass"
+info
