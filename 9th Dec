@@ -119,4 +119,40 @@ test("Validating non auto suggestive dropdowns", async function({ page })
 
     await page.waitForTimeout(2000)
 })
+========================================
+// test("Validating non auto suggestive dropdowns", async function({ page })
+// {
+//     await page.goto("https://www.amazon.in")
+//     const dropDown = page.locator("#searchDropdownBox")
+//     await dropDown.click()
+
+//     await dropDown.selectOption({ label: "Books" })
+
+//     // Write some kind of validation / assertions
+//     await expect(dropDown).toHaveValue("search-alias=electronics")
+// })
+
+
+
+// test("Validating non auto suggestive dropdowns", async function({ page })
+// {
+//     await page.goto("https://www.amazon.in")
+//     const dropDown = page.locator("#searchDropdownBox")
+//     await dropDown.click()
+
+//     const options = page.locator("#searchDropdownBox > option")
+//     await expect(await options.count()).toBe(46)
+// })
+
+// test("Validating non auto suggestive dropdowns", async function({ page })
+// {
+//     await page.goto("https://www.amazon.in")
+//     const dropDown = page.locator("#searchDropdownBox")
+//     await dropDown.click()
+
+//     const options = page.locator("#searchDropdownBox > option")
+//     let mycount = await options.filter({ hasText: /^Electronics$/ }).count()
+//     expect(mycount).toBe(1)
+
+// })
 
