@@ -119,3 +119,53 @@ pendign to resolved
 RAM
 "#pass"
 info
+==========================================================================
+
+// test("Handling Frames", async function({ page })
+// {
+//     await page.goto("http://127.0.0.1:5500/first.html")
+
+//     await page.locator("#firstname").fill("Raju")
+
+
+    const data = await page.frameLocator("#first")
+    data.locator("#lastname").fill("John")
+
+//     await page.frameLocator("#first").frameLocator("#third").locator("#middlename").fill("Mary")
+
+//     await page.waitForTimeout(5000)
+
+// })
+
+
+test("Handling Frames", async function({ page })
+{
+    await page.goto("http://127.0.0.1:5500/first.html")
+
+    await page.locator("#firstname").fill("Raju")
+
+    page.waitForSelector("iframe")
+    const myFrame =  page.frame({ name: "first"}) // frame is not loaded
+    await myFrame.locator("#lastname").fill("Mary")
+
+    // const myFrame = page.frame({ url: /second.html/})
+    // await myFrame.locator("#lastname").fill("Mary")
+
+
+
+    await page.waitForTimeout(5000)
+})
+
+=================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    Enter FirstName:<input type="text" name="firstname" id="firstname">
+
+    <iframe id="first" name="first" src="second.html"></iframe>
+    
+</body>
+</html>
