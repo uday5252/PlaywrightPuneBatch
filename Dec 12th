@@ -1,0 +1,42 @@
+
+test("Handling windows!", async function({ page })
+{
+  
+    await page.goto("http://127.0.0.1:5500/first.html")
+
+    // playwright watch any child window that get opened in the future
+    const mypopup = page.waitForEvent("popup")
+   
+    await page.getByText("Click Here!").click()
+
+    // Child window gets opened
+    let childWindow = await mypopup
+
+    await childWindow.locator("#name").fill("Raju")
+
+    await page.waitForTimeout(5000) 
+})
+=============================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+  
+    <a href="second.html" target="blank">Click Here!</a>
+    
+</body>
+</html>
+==============================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+   
+    Enter Username:<input type="text" id="name">
+
+</body>
+</html>
