@@ -40,3 +40,20 @@ test("Handling windows!", async function({ page })
 
 </body>
 </html>
+==============================================================================
+
+test("Handling windows!", async function({ page })
+{
+  
+    await page.goto("http://127.0.0.1:5500/first.html")
+
+   const [ childWindow ] = await Promise.all([page.waitForEvent("popup"), page.getByText("Click Here!").click()])
+
+    await childWindow.locator("#name").fill("Raju")
+
+    await page.waitForTimeout(5000) 
+})
+
+
+
+
