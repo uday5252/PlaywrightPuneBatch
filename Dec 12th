@@ -83,7 +83,63 @@ test.only("Uploading multiple files!", async function({ page })
 
     await page.waitForTimeout(5000) 
 })
+==================================================================================================
+test("Uploading single file!", async function({ page })
+{
+    await page.goto("https://davidwalsh.name/demo/multiple-file-upload.php")
+    
+    await page.locator("#filesToUpload").setInputFiles("C:\\Users\\udayk\\Downloads\\11th Dec.pdf")
+    
+    
+    expect(page.locator("//ul[@id='fileList']/li")).toHaveText("12th Dec.pdf")
 
+    await page.waitForTimeout(5000) 
+})
+
+
+test("Uploading multiple files!", async function({ page })
+{
+    await page.goto("https://davidwalsh.name/demo/multiple-file-upload.php")
+    
+    await page.locator("#filesToUpload").setInputFiles
+    (["C:\\Users\\udayk\\Downloads\\11th Dec.pdf", "C:\\Users\\udayk\\Downloads\\8th Dec.pdf"])
+    
+    
+    expect(page.locator("//ul[@id='fileList']/li").nth(0)).toHaveText("11th Dec.pdf")
+    expect(page.locator("//ul[@id='fileList']/li").nth(1)).toHaveText("8th Dec.pdf")
+
+    await page.waitForTimeout(5000) 
+})
+
+
+
+
+
+test("Uploading single file!", async function({ page })
+{
+
+    await page.goto("https://www.facebook.com")
+
+    // current page screenshot
+    await page.screenshot(
+        { path: "C:\\Users\\udayk\\Downloads\\Playwright\\screenshots\\first.jpg" })
+
+    // current page screenshot
+    await page.screenshot(
+        { 
+            path: "C:\\Users\\udayk\\Downloads\\Playwright\\screenshots\\second.jpg", 
+            fullPage: true 
+    })
+
+     // particular webelement screenshot
+    await page.getByTestId("royal-login-button").screenshot(
+        { 
+            path: "C:\\Users\\udayk\\Downloads\\Playwright\\screenshots\\third.jpg"
+        })
+
+    await page.waitForTimeout(5000) 
+})
+============================================================================================
 
 
 
