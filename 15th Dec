@@ -1,0 +1,34 @@
+import { test } from "@playwright/test";
+
+test("Uploading single file!", async function({ page }, testinfo)
+{
+
+    await page.goto("https://www.facebook.com")
+
+    // current page screenshot
+    const currentPage = await page.screenshot()
+
+    await testinfo.attach("Login page screenshot!", {
+        body: currentPage,
+        contentType: "image/jpg"
+      })
+
+    const fullPage = await page.screenshot({fullPage: true})
+
+    await testinfo.attach("Login full page screenshot!", {
+        body: fullPage,
+        contentType: "image/jpg"
+      })
+
+
+    const loginBtn = page.getByTestId("royal-login-button")
+    
+    const loginBtnScreenshot = await loginBtn.screenshot()
+
+    await testinfo.attach("Login button screenshot!", {
+        body: loginBtnScreenshot,
+        contentType: "image/jpg"
+      })
+
+    await page.waitForTimeout(5000) 
+})
