@@ -141,3 +141,94 @@ command to convert JSON file to HTML file
 allure generate allure-results --clean allure-reports
 allure open allure-report
 Integrate allure ==> Github Actions / Jenkins
+==================================================================
+
+
+// import { test } from "@playwright/test";
+
+// // 3 sec
+
+// import { data } from "./data/validCredentials.json"
+
+
+
+
+// // for(let i of data)
+// // {
+// //     test(`Verify login with valid email ${i.email} and valid password ${i.password}`, async function({ page })
+// //     {
+        
+// //             await page.goto("https://www.facebook.com")
+
+// //             await page.locator("#email").fill(i.email)
+            
+// //             await page.locator("#pass").fill(i.password)
+            
+// //             await page.locator("button[name='login']").click()
+        
+// //             await page.waitForTimeout(10000)
+// //     })
+
+// // }
+
+
+
+
+//     test(`Verify login with valid email and valid password`, async function({ page })
+//     {
+        
+//         for(let i of data)
+//             {
+//                 await page.goto("https://www.facebook.com")
+
+//                 await page.locator("#email").fill(i.email)
+                
+//                 await page.locator("#pass").fill(i.password)
+                
+//                 await page.locator("button[name='login']").click()
+            
+//                 await page.waitForTimeout(10000)
+
+//             }
+//     })
+
+// ====================================================================
+
+
+// fs ==> file system
+
+import FS from "fs"
+
+import { test } from "@playwright/test";
+
+   
+
+    test(`Verify login with valid email and valid password`, async function({ page })
+    {
+        
+
+                const readJsonData = FS.readFileSync("C:\\Users\\udayk\\Downloads\\Playwright\\tests\\data\\validCredentials.json")
+
+
+                const dataObj = JSON.parse(readJsonData)
+
+                console.log(dataObj)
+
+
+                for(let i of dataObj.data)
+                {
+                    await page.goto("https://www.facebook.com")
+
+                    await page.locator("#email").fill(i.email)
+                    
+                    await page.locator("#pass").fill(i.password)
+                    
+                    await page.locator("button[name='login']").click()
+                
+                    await page.waitForTimeout(10000)
+
+                }
+       
+                
+            
+    })
