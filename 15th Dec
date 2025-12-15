@@ -271,4 +271,21 @@ test(`Verify login with valid email and valid password`, async function({ page }
                    const result = readData("data.xlsx","Sheet1")
                    console.log(result)
 
+===========================================
+import FS from "fs"
+import { parse } from "csv-parse/sync"
+
+// libray / sub library
+// npm install csv-parse
+
+export function readCsvData()
+{
+    const csvFile = FS.readFileSync("C:\\Users\\udayk\\Downloads\\Playwright\\tests\\data\\login.csv")
+
+    const dataObj = parse(csvFile, { columns: true, skip_empty_lines: true }) 
+    //npm install csv-parse
+
+   return dataObj
+
+}
 
