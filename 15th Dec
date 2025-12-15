@@ -232,3 +232,15 @@ import { test } from "@playwright/test";
                 
             
     })
+======================================================
+{
+    "data" : [ 
+        {  "email": "Raju@gmail.com", "password": "Welcome@1234" },
+        {  "email": "Cook@gmail.com", "password": "Welcome@1234" },
+        {  "email": "Sam@gmail.com", "password": "Hello@1234" }
+    ]
+}
+
+
+
+
