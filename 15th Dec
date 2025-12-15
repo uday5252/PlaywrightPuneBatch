@@ -241,6 +241,34 @@ import { test } from "@playwright/test";
     ]
 }
 
+==================================================================
+import XLSX from "xlsx"
 
+export function readData(fileName, sheetName) 
+{
+      const excelFile = 
+         XLSX.readFile(`C:\\Users\\udayk\\Downloads\\Playwright\\tests\\data\\${fileName}`)
+
+     const excelSheet = excelFile.Sheets[sheetName]
+     
+
+     const loginJsonData = XLSX.utils.sheet_to_json(excelSheet)
+
+     return loginJsonData
+
+}
+==================================================================
+
+test(`Verify login with valid email and valid password`, async function({ page })
+        
+            {
+
+
+
+                await page.goto("https://www.facebook.com")
+
+              
+                   const result = readData("data.xlsx","Sheet1")
+                   console.log(result)
 
 
