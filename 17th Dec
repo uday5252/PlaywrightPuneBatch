@@ -1,0 +1,57 @@
+
+
+import { test, expect } from "@playwright/test"
+
+test("visual regression testing!", async function({ page })
+{
+    await page.goto("http://127.0.0.1:5500/first.html")
+
+    await expect(page).toHaveScreenshot("login.png", { fullPage: true})
+
+    await page.waitForTimeout(2000)
+})
+
+========================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Test Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    .card {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Login</h2>
+    <p>Welcome back</p>
+    <button>Login</button>
+  </div>
+
+</body>
+</html>
+=======================================================
+npx playwright test --update-snapshots
