@@ -55,3 +55,73 @@ test("visual regression testing!", async function({ page })
 </html>
 =======================================================
 npx playwright test --update-snapshots
+
+=====================================================
+// mouse events
+// click, double click, right click, hover, .........................
+
+
+import { test, expect } from "@playwright/test"
+
+// test("mouse events!", async function({ page })
+// {
+//     await page.goto("https://www.magicbricks.com")
+
+//     // await page.getByText("Rent", { exact: true }).nth(0).hover()
+
+//     await page.waitForTimeout(5000)
+// })
+
+
+// test("mouse events!", async function({ page })
+// {
+//     await page.goto("https://qa-automation-practice.netlify.app/double-click")
+
+//    await page.locator("#double-click-btn").dblclick()
+
+//     await page.waitForTimeout(5000)
+// })
+
+
+
+// test("mouse events!", async function({ page })
+// {
+//     await page.goto("https://swisnl.github.io/jQuery-contextMenu/demo.html")
+
+//    await page.getByText("right click me", { exact: true }).click({ button: 'right' })
+
+//     await page.waitForTimeout(5000)
+// })
+
+
+// .click({button: 'left'}) ==> left
+// .click({button: 'right'}) ==> right
+
+
+
+// drag and drop
+// test("mouse events!", async function({ page })
+// {
+//     await page.goto("https://demo.automationtesting.in/Static.html")
+
+//     const sourceEle = page.locator("#angular")
+//     const destEle = page.locator("#droparea")
+//     await sourceEle.dragTo(await destEle)
+
+//     await page.waitForTimeout(5000)
+// })
+
+
+test("mouse events!", async function({ page })
+{
+    await page.goto("https://demo.automationtesting.in/Static.html")
+
+    const sourceEle = await page.locator("#angular").hover()
+    await page.mouse.down() // pressing the button
+
+    const destEle = await page.locator("#droparea").hover()
+    await page.mouse.up() // releasing the button
+   
+
+    await page.waitForTimeout(5000)
+})
