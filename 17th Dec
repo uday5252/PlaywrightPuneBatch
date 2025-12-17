@@ -146,3 +146,28 @@ test("mouse events and keyboard events!", async function({ page })
     await page.waitForTimeout(5000)
 
 })
+==============================
+
+test("mouse events and keyboard events!", async function({ page })
+{
+    await page.goto("https://gotranscript.com/text-compare")
+
+    // await page.mouse.wheel(0, 200)
+
+    const src = page.locator("//textarea[@name='text1']")
+
+    await src.scrollIntoViewIfNeeded()
+    
+    await src.fill("Welcome")
+
+    await page.keyboard.press("Control+A")
+
+    await page.keyboard.press("Control+C")
+
+    await page.keyboard.press("Tab")
+
+    await page.keyboard.press("Control+V")
+    
+    await page.waitForTimeout(5000)
+
+})
