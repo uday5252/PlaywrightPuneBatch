@@ -171,3 +171,104 @@ test("mouse events and keyboard events!", async function({ page })
     await page.waitForTimeout(5000)
 
 })
+======================================================================
+// test("mouse events and keyboard events!", async function({ page })
+// {
+//     await page.goto("https://www.facebook.com")
+
+//     // enter email
+//     const email = page.locator("#email")
+//     await email.fill("Raju@gmail.com")
+//     await expect(email).toHaveValue("Raju@gmail.com")
+
+//     // enter password
+//     await page.locator("#pass").fill("Welcome@1234")
+//     // click login
+//     const loginBtn = page.locator("//button[@name='login']")
+//     // home page getting dispalyed or not
+//     await expect(loginBtn).toBeVisible()
+
+//     // check whether that button is enabled or not
+//     await expect(loginBtn).toBeEnabled()
+
+//     await loginBtn.click()
+//     // write to click on login
+
+//     // =========================================
+    
+//     // let expectedTitle = "Facebook"
+//     // await expect(page).toHaveTitle(expectedTitle)
+
+//     // ============================================
+
+//     // await expect(page).toHaveURL("https://www.facebook.com")
+
+
+//     // toHaveText()
+//     // toContain()
+//     // toBe()
+   
+    
+//     await page.waitForTimeout(5000)
+
+// })
+
+
+
+// test("mouse events and keyboard events!", async function({ page })
+// {
+//     await page.goto("https://testautomationpractice.blogspot.com/")
+
+//     const day = page.locator("#sunday")
+//     await day.check()
+
+//     await expect(day).toBeChecked()
+
+
+    
+//     await page.waitForTimeout(5000)
+
+// })
+
+
+
+test("assertions!", async function({ page })
+{
+    await page.goto("https://www.facebook.com")
+
+    // enter email
+    const email = page.locator("#email")
+    await email.fill("Raju@gmail.com")
+    await expect(email).toHaveValue("Raju@gmail.com")
+
+    // enter password
+    await page.locator("#pass").fill("Welcome@1234")
+    // click login
+    const loginBtn = page.locator("//button[@name='login']")
+    // home page getting dispalyed or not
+    await expect.soft(loginBtn).toBeDisabled()
+
+    // check whether that button is enabled or not
+    await expect.soft(loginBtn).toBeEnabled()
+
+    await loginBtn.click()
+   
+    
+    await page.waitForTimeout(5000)
+
+})
+============================================================================
+Assertions:-
+For every test case, we want to track whether it has
+passed OR failed based on some condition. we use assertions for this!
+
+Hard Assertion
+When we have multiple assertions one below the other, if one assertions fails, the remaining assertions below that doesn't execute.
+
+NOTE: playwright has assertions which is hard assertion by default
+
+Soft Assertion
+await expect.soft(page).toHaveText("Mobile")
+await expect.soft(page).toHaveText("Books")
+await expect.soft(page).toHaveText("Sofa")
+await expect(page).toHaveText("Food")
