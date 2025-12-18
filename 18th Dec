@@ -1,0 +1,68 @@
+
+// import { chromium, test, webkit } from '@playwright/test';
+
+// import { firefox } from '@playwright/test';
+
+// test("Verify login with invalid username and invalid password", async function()
+// {
+//     const browser = await webkit.launch({headless: false})
+//     const browserContext = await browser.newContext()
+//     const page = await browserContext.newPage()
+
+//     await page.goto("https://www.facebook.com")
+
+//     await page.waitForTimeout(5000)
+
+// })
+
+
+// import { chromium, test, webkit } from '@playwright/test';
+
+// test("Verify login with invalid username and invalid password", async function({ browser, context })
+// {
+//     const myPage = await context.newPage()
+    
+//     await myPage.goto("https://www.facebook.com")
+
+//     await myPage.waitForTimeout(10000)
+// })
+
+
+// import { test} from '@playwright/test';
+
+// test("Verify login with invalid username and invalid password", async function({ page })
+// {
+   
+//     const browserContext = await browser.newContext()
+//     const myPage = await browserContext.newPage()
+
+//     await myPage.goto("https://www.facebook.com")
+
+//     await myPage.waitForTimeout(10000)
+// })
+
+
+import { test} from '@playwright/test';
+
+test("demo", async function({ browser })
+{
+    const context1 = await browser.newContext()
+    const context2 = await browser.newContext()
+
+    const page1 = await context1.newPage()
+    const page2 = await context2.newPage()
+
+   await page1.goto("https://tutorialsninja.com/demo/index.php?route=account/login")
+   await page1.locator("#input-email").fill("Raju5252@gmail.com")
+   await page1.locator("#input-password").fill("Welcome@1234")
+   await page1.locator("//input[@value='Login']").click()
+
+   await page2.goto("https://tutorialsninja.com/demo/index.php?route=account/login")
+   await page2.locator("#input-email").fill("Ramu5252@gmail.com")
+   await page2.locator("#input-password").fill("Welcome@1234")
+   await page2.locator("//input[@value='Login']").click()
+
+   await page1.waitForTimeout(40000)
+   await page2.waitForTimeout(40000)
+
+})
