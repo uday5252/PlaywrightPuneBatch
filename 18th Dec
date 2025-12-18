@@ -187,5 +187,22 @@ test("another another", function()
     console.log("another another")
 })
 
+===================================
+// import { test as hello , extend } from "@playwright/test"
 
+import { test  } from "@playwright/test"
+
+export const data = test.extend({
+    logindata : async function({ page }, use)
+    {
+        await page.goto("https://www.facebook.com")
+        await page.fill("#email", "Raju@gmail.com")
+        await page.fill("#pass", "Welcome")
+        await page.click("//button[@name='login']")
+
+        await use(page)
+
+        // connect the latest page ==> to the fixture ==> use()
+    }
+})
 
