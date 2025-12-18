@@ -66,3 +66,126 @@ test("demo", async function({ browser })
    await page2.waitForTimeout(40000)
 
 })
+=============================
+
+// import { test} from '@playwright/test';
+
+// test.beforeAll(function()
+// {
+
+// })
+
+// test.afterAll(function()
+// {
+
+// })
+
+// // run before every test case
+// test.beforeEach(async function({ page })
+// {
+//         // Login
+//     await page.goto("https://www.facebook.com")
+//     await page.fill("#email", "Raju@gmail.com")
+//     await page.fill("#pass", "Welcome")
+//     await page.click("//button[@name='login']")
+// })
+
+// test("Adding a product", async function({ page })
+// {
+//     // logic to add the product
+//     await page.click("#product1")
+//     // assertion
+// })
+
+// test("Deleting a product", async function({ page })
+// {
+//     // logic to add the product
+//     await page.click("#delete")
+// })
+
+
+// test.afterEach(async function({ page })
+// {
+//     // write the logic for logout
+// })
+
+
+
+// import { test} from '@playwright/test';
+
+
+
+// test.describe("Ecommerce", function()
+// {
+
+//     // run before every test case
+//     test.beforeEach(async function({ page })
+//     {
+//             // Login
+//         await page.goto("https://www.facebook.com")
+//         await page.fill("#email", "Raju@gmail.com")
+//         await page.fill("#pass", "Welcome")
+//         await page.click("//button[@name='login']")
+//     })
+    
+//     test("Adding a product", async function({ page })
+//     {
+//         // logic to add the product
+//         await page.click("#product1")
+//         // assertion
+//     })
+
+//     test("Deleting a product", async function({ page })
+//     {
+//         // logic to add the product
+//         await page.click("#delete")
+//     })
+// })
+
+// test("another", function()
+// {
+//     console.log("another")
+// })
+
+// test("another another", function()
+// {
+//     console.log("another another")
+// })
+
+
+
+
+import { test} from '@playwright/test';
+import { data } from './login-fixture.js';
+
+
+test.describe("Ecommerce", function()
+{
+
+    data("Adding a product", async function({ logindata })
+    {
+        // logindata.click("#product1")
+        // logic to add the product
+        await logindata.click("#product")
+        // assertion
+    })
+
+    data("Deleting a product", async function({ logindata })
+    {
+        // logic to add the product
+        await logindata.click("#delete")
+    })
+})
+
+test("another", function()
+{
+    console.log("another")
+})
+
+test("another another", function()
+{
+    console.log("another another")
+})
+
+
+
