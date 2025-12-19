@@ -4,7 +4,7 @@
 // {
 
 //     // logic
-//     await page.route("**/products", async function(info)
+//     await page.route("/products", async function(info)
 //     {
 //         // logic to give back the response
 //         await info.fulfill({
@@ -18,3 +18,443 @@
 //     await page.waitForTimeout(10000)
 
 // })
+=================================================================================
+
+
+
+ 🧵 1️⃣ Parallel Execution Commands
+
+| Purpose                         | CLI Syntax                                   |
+| ------------------------------- | -------------------------------------------- |
+| Run tests in parallel (default) | npx playwright test                        |
+| Set number of workers           | npx playwright test --workers=4            |
+| Run tests sequentially          | npx playwright test --workers=1            |
+| Disable parallel fully          | npx playwright test --fully-parallel=false |
+| Override workers from config    | npx playwright test --workers=2            |
+
+---
+
+ 📂 2️⃣ Control Tests Across Multiple Spec Files
+
+| Purpose                          | CLI Syntax                                                   |
+| -------------------------------- | ------------------------------------------------------------ |
+| Run all spec files               | npx playwright test                                        |
+| Run multiple specific spec files | npx playwright test tests/login.spec.ts tests/cart.spec.ts |
+| Run all specs inside folder      | npx playwright test tests/auth                             |
+| Run specs matching pattern       | npx playwright test tests//login.spec.ts                |
+
+---
+
+🎯 Run Particular Test in Particular Spec File
+
+| Purpose                     | Command Syntax                                            |          |
+| --------------------------- | --------------------------------------------------------- | -------- |
+| Run test by name in spec    | npx playwright test tests/login.spec.ts -g "login test" |          |
+| Run test using partial name | npx playwright test tests/login.spec.ts -g "login"      |          |
+| Run multiple tests (regex)  | npx playwright test tests/login.spec.ts -g "login        | logout" |
+
+---
+
+ 📄 3️⃣ Run Tests in a Particular Spec File
+
+| Purpose                      | CLI Syntax                                            |
+| ---------------------------- | ----------------------------------------------------- |
+| Run one spec file            | npx playwright test tests/login.spec.ts             |
+| Run spec file in headed mode | npx playwright test tests/login.spec.ts --headed    |
+| Run spec with single worker  | npx playwright test tests/login.spec.ts --workers=1 |
+
+---
+
+ 🧪 4️⃣ Headless vs Headed Execution
+
+| Purpose                        | CLI Syntax                                   |
+| ------------------------------ | -------------------------------------------- |
+| Run in headless mode (default) | npx playwright test                        |
+| Run in headed mode             | npx playwright test --headed               |
+| Headed for single spec         | npx playwright test login.spec.ts --headed |
+| Headed + single worker         | npx playwright test --headed --workers=1   |
+
+---
+
+ 🔁 5️⃣ Retries Control
+
+| Purpose                  | CLI Syntax                                      |
+| ------------------------ | ----------------------------------------------- |
+| Use retries from config  | npx playwright test                           |
+| Override retries via CLI | npx playwright test --retries=2               |
+| Disable retries          | npx playwright test --retries=0               |
+| Retries for one spec     | npx playwright test login.spec.ts --retries=1 |
+
+---
+
+ ❌ 6️⃣ Failed Tests Handling
+
+| Purpose                          | CLI Syntax                                      |
+| -------------------------------- | ----------------------------------------------- |
+| Run only failed tests            | npx playwright test --last-failed             |
+| Re-run failed tests sequentially | npx playwright test --last-failed --workers=1 |
+| Re-run failed tests headed       | npx playwright test --last-failed --headed    |
+| Run with retries for failures    | npx playwright test --retries=2               |
+
+---
+
+ 🎯 7️⃣ Combine Multiple Controls (Real-World Usage)
+
+| Scenario                    | CLI Syntax                                             |
+| --------------------------- | ------------------------------------------------------ |
+| Run failed tests headed     | npx playwright test --last-failed --headed           |
+| Run login spec sequentially | npx playwright test login.spec.ts --workers=1        |
+
+================================================================================
+
+ 1️⃣ page.goto() — Open a page
+
+ 🔹 What it does
+
+Opens a new URL in the current browser tab.
+
+ 🔹 When to use (Real use cases)
+
+ Open application URL
+ Navigate to a specific page directly
+ Start point of almost every test
+
+ ✅ Example
+
+ts
+await page.goto('https://example.com');
+
+
+ 🧠 Real scenario
+
+➡️ Open login page before testing login
+
+ts
+await page.goto('https://example.com/login');
+
+
+---
+
+ 2️⃣ page.goBack() — Go to previous page
+
+ 🔹 What it does
+
+Simulates browser Back button.
+
+ 🔹 When to use
+
+ User clicks a link and returns back
+ Testing browser navigation behavior
+ Verify state is preserved after back
+
+ ✅ Example
+
+ts
+await page.goto('https://example.com');
+await page.click('a[href="/products"]');
+
+await page.goBack();
+
+
+ 🧠 Real scenario
+
+➡️ User opens product page → clicks Back → returns to home page
+
+ts
+await page.goto('https://shop.com');
+await page.click('product1');
+
+await page.goBack();
+await expect(page).toHaveURL('https://shop.com');
+
+
+---
+
+ 3️⃣ page.goForward() — Go to next page
+
+ 🔹 What it does
+
+Simulates browser Forward button.
+
+ 🔹 When to use
+
+ After goBack(), user clicks Forward
+ Test browser navigation stack
+
+ ✅ Example
+
+ts
+await page.goForward();
+
+
+ 🧠 Real scenario
+
+➡️ Home → Product → Back → Forward
+
+ts
+await page.goto('https://shop.com');
+await page.click('product1');
+
+await page.goBack();
+await page.goForward();
+
+await expect(page).toHaveURL(/product/);
+
+
+---
+
+ 4️⃣ page.reload() — Refresh the page
+
+ 🔹 What it does
+
+Reloads current page (like browser refresh 🔄)
+
+ 🔹 When to use
+
+ Verify page survives refresh
+ Test persistence (session, cookies, data)
+ Re-fetch data after actions
+
+ ✅ Example
+
+ts
+await page.reload();
+
+
+ 🧠 Real scenario
+
+➡️ After login, refresh page and verify user still logged in
+
+ts
+await page.goto('https://app.com/dashboard');
+await page.reload();
+
+await expect(page.locator('username')).toBeVisible();
+
+
+---
+
+ 🔁 Complete Real-World Flow Example
+
+ts
+import { test, expect } from '@playwright/test';
+
+test('browser navigation example', async ({ page }) => {
+
+  // Open home page
+  await page.goto('https://shop.com');
+
+  // Navigate to product page
+  await page.click('product1');
+
+  // Go back to home
+  await page.goBack();
+  await expect(page).toHaveURL('https://shop.com');
+
+  // Go forward again
+  await page.goForward();
+  await expect(page).toHaveURL(/product/);
+
+  // Refresh product page
+  await page.reload();
+});
+
+
+---
+
+ 🧠 Important Notes (Very Important)
+
+ ❗ Navigation commands auto-wait
+
+Playwright waits for page load automatically, no need for waitForTimeout().
+
+ ❗ goBack() / goForward() return null
+
+If there’s no history, they return null.
+
+ts
+const response = await page.goBack();
+if (response === null) {
+  console.log('No previous page');
+}
+
+
+=================================================
+ 🧠 Playwright Architecture
+
+Think of Playwright like this:
+
+> You write instructions → Playwright manages browser → Browser does the work
+
+---
+
+ 🔷 Big Picture (One Look)
+
+
+Your Test Code
+     ↓
+Playwright Test Runner
+     ↓
+Browser (Chrome / Firefox / Safari)
+
+
+---
+
+ 1️⃣ Your Test Code (What YOU write)
+
+Example:
+
+ts
+test('login test', async ({ page }) => {
+  await page.goto('https://site.com');
+  await page.fill('user', 'admin');
+  await page.click('login');
+});
+
+
+ What this means
+
+ You do not open browser manually
+ You do not create tabs
+ You just tell WHAT to do
+
+👉 You are NOT controlling browser directly
+
+---
+
+ 2️⃣ Playwright Test Runner (Main Brain 🧠)
+
+This is the MOST IMPORTANT PART.
+
+ What Test Runner does for you
+
+ Starts tests
+ Opens browser
+ Creates new session
+ Gives you page
+ Runs tests in parallel
+ Closes everything
+ Generates report
+
+ Example
+
+ts
+test('example', async ({ page }) => {
+  // page is already ready!
+});
+
+
+❓ Who created page?
+👉 Test Runner created it and handed it to your test
+
+---
+
+ 3️⃣ Browser (Real Browser)
+
+Playwright controls REAL browsers, not fake ones.
+
+| Playwright | Browser      |
+| ---------- | ------------ |
+| Chromium   | Chrome, Edge |
+| Firefox    | Firefox      |
+| WebKit     | Safari       |
+
+⚠️ No Selenium
+⚠️ No WebDriver
+⚠️ Direct control (fast & stable)
+
+---
+
+ 4️⃣ Very Important Internal Objects (Core Architecture)
+
+ 🔹 Browser
+
+ One browser instance
+ Heavy object
+
+ts
+browser = chromium.launch()
+
+
+---
+
+ 🔹 Browser Context (MOST IMPORTANT 🔥)
+
+Think of Browser Context = Incognito Window
+
+ Separate session
+ No cookies shared
+ No cache shared
+ Each test gets a new context
+
+ts
+context = browser.newContext()
+
+
+👉 This is why tests don’t affect each other.
+
+---
+
+ 🔹 Page
+
+Think of Page = Browser Tab
+
+ All actions happen here
+ Click, fill, scroll, etc.
+
+ts
+page = context.newPage()
+
+
+---
+
+ 🔗 Relationship (Remember This)
+
+
+Browser
+  └── Context (Incognito)
+        └── Page (Tab)
+
+
+---
+
+ 🔄 What Happens When You Run a Test
+
+When you run:
+
+bash
+npx playwright test
+
+
+ Internally:
+
+
+1. Test Runner starts
+2. Browser opens
+3. New Context created
+4. New Page (tab) created
+5. Test steps executed
+6. Screenshot / trace saved (if failed)
+7. Page closed
+8. Context closed
+9. Browser closed
+
+
+---
+
+ 🧪 Real Example with Architecture Mapping
+
+ts
+test('add to cart', async ({ page }) => {
+  await page.goto('/products'); // Page
+  await page.click('item1');   // Page
+});
+
+
+Behind the scenes:
+
+ page → belongs to a context
+ context → belongs to a browser
+ browser → controlled by Playwright
+
+---
