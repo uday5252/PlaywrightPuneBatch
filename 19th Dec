@@ -1,0 +1,20 @@
+// import { test} from '@playwright/test';
+
+// test("mocking", async function({ page })
+// {
+
+//     // logic
+//     await page.route("**/products", async function(info)
+//     {
+//         // logic to give back the response
+//         await info.fulfill({
+//             body: JSON.stringify([ { id: 1, name: "Mobile" }, { id: 1, name: "Laptop" } ])
+//         })
+
+//     })
+
+//     await page.goto("https://fakestoreapi.com/products")
+
+//     await page.waitForTimeout(10000)
+
+// })
