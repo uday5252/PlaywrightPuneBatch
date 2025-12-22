@@ -1,0 +1,1432 @@
+
+GROUP 1
+
+1. Property Search & Filters
+
+ TestScenarioID: TS_PropertySearch_01
+  Requirement ID: REQ_PropertySearch_01
+  Test Scenario Description: Verification of property search by city.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that searching by city (e.g., Bangalore) shows only relevant properties.
+
+ TestScenarioID: TS_PropertySearch_02
+  Requirement ID: REQ_PropertySearch_02
+  Test Scenario Description: Verification of property search by budget filter.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that properties shown fall between ₹30L–₹50L when filter applied.
+
+ TestScenarioID: TS_PropertySearch_03
+  Requirement ID: REQ_PropertySearch_03
+  Test Scenario Description: Verification of property search by multiple filters.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that only 2BHK furnished properties in Hyderabad are displayed.
+
+ TestScenarioID: TS_PropertySearch_04
+  Requirement ID: REQ_PropertySearch_04
+  Test Scenario Description: Verification of sorting by price.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that sorting Low→High displays lowest priced property first.
+
+ TestScenarioID: TS_PropertySearch_05
+  Requirement ID: REQ_PropertySearch_05
+  Test Scenario Description: Verification of invalid search handling.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that entering “@@@” displays “No results found.”
+
+---
+
+2. Property Details Page
+
+ TestScenarioID: TS_PropertyDetails_01
+  Requirement ID: REQ_PropertyDetails_01
+  Test Scenario Description: Verification of property details page navigation.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that clicking a property opens its details page correctly.
+
+ TestScenarioID: TS_PropertyDetails_02
+  Requirement ID: REQ_PropertyDetails_02
+  Test Scenario Description: Verification of property images display.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that users can view multiple property images using navigation arrows.
+
+ TestScenarioID: TS_PropertyDetails_03
+  Requirement ID: REQ_PropertyDetails_03
+  Test Scenario Description: Verification of contact options visibility.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that Call Now, Get Contact Details, and Send Message are visible.
+
+ TestScenarioID: TS_PropertyDetails_04
+  Requirement ID: REQ_PropertyDetails_04
+  Test Scenario Description: Verification of property description fields.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that Location, Area, and Amenities are displayed and correct.
+
+ TestScenarioID: TS_PropertyDetails_05
+  Requirement ID: REQ_PropertyDetails_05
+  Test Scenario Description: Verification of recommendations section.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that “Similar Properties” shows relevant recommendations.
+
+---
+
+3. Property Posting (Owner/Agent)
+
+ TestScenarioID: TS_PropertyPosting_01
+  Requirement ID: REQ_PropertyPosting_01
+  Test Scenario Description: Verification of property posting by owner.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that owner can post a property successfully.
+
+ TestScenarioID: TS_PropertyPosting_02
+  Requirement ID: REQ_PropertyPosting_02
+  Test Scenario Description: Verification of missing mandatory fields in posting.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that posting without price shows error message.
+
+ TestScenarioID: TS_PropertyPosting_03
+  Requirement ID: REQ_PropertyPosting_03
+  Test Scenario Description: Verification of property image upload.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that uploaded images are displayed as thumbnails.
+
+ TestScenarioID: TS_PropertyPosting_04
+  Requirement ID: REQ_PropertyPosting_04
+  Test Scenario Description: Verification of My Listings after posting.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that newly posted property appears in My Listings.
+
+ TestScenarioID: TS_PropertyPosting_05
+  Requirement ID: REQ_PropertyPosting_05
+  Test Scenario Description: Verification of edit option in property posting.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that editing a property updates details successfully.
+
+---
+
+4. Contacting Seller/Agent
+
+ TestScenarioID: TS_ContactSeller_01
+  Requirement ID: REQ_ContactSeller_01
+  Test Scenario Description: Verification of inquiry sending.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that logged-in user can send inquiry successfully.
+
+ TestScenarioID: TS_ContactSeller_02
+  Requirement ID: REQ_ContactSeller_02
+  Test Scenario Description: Verification of inquiry attempt by non-logged-in user.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that non-logged-in user is redirected to login page.
+
+ TestScenarioID: TS_ContactSeller_03
+  Requirement ID: REQ_ContactSeller_03
+  Test Scenario Description: Verification of Call Now functionality.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that seller’s phone number is displayed after clicking Call Now.
+
+ TestScenarioID: TS_ContactSeller_04
+  Requirement ID: REQ_ContactSeller_04
+  Test Scenario Description: Verification of inquiry confirmation messages.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that both UI and email confirmation are received after inquiry.
+
+ TestScenarioID: TS_ContactSeller_05
+  Requirement ID: REQ_ContactSeller_05
+  Test Scenario Description: Verification of multiple inquiries handling.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that system allows multiple inquiries without duplicate backend data.
+
+---
+
+5. Premium Plans & Payments
+
+ TestScenarioID: TS_PremiumPlans_01
+  Requirement ID: REQ_PremiumPlans_01
+  Test Scenario Description: Verification of viewing available plans.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that premium plans with price and features are displayed.
+
+ TestScenarioID: TS_PremiumPlans_02
+  Requirement ID: REQ_PremiumPlans_02
+  Test Scenario Description: Verification of successful payment process.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that payment success activates selected plan.
+
+ TestScenarioID: TS_PremiumPlans_03
+  Requirement ID: REQ_PremiumPlans_03
+  Test Scenario Description: Verification of failed payment handling.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that invalid payment details display error message.
+
+ TestScenarioID: TS_PremiumPlans_04
+  Requirement ID: REQ_PremiumPlans_04
+  Test Scenario Description: Verification of invoice generation.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that invoice is generated and downloadable as PDF.
+
+ TestScenarioID: TS_PremiumPlans_05
+  Requirement ID: REQ_PremiumPlans_05
+  Test Scenario Description: Verification of subscribed feature activation.
+  Type of Testing: Functional Testing
+  Possible No. of TestCases: 1
+  Test Case Details:
+
+  1. To validate that “Top Listing” plan marks property as top listing in results.
+
+================================================================================================
+GROUP 2 
+---
+
+ 1. Property Search & Filters
+
+ TestScenarioID: TS_Search_01
+  Requirement ID: REQ_Search_City
+  Test Scenario Description: Verify searching by city (Delhi).
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Enter “Delhi” → select suggestion → click Search → expect properties only from Delhi.
+
+ TestScenarioID: TS_Search_02
+  Requirement ID: REQ_Search_Budget
+  Test Scenario Description: Verify budget filter works (₹40L–₹60L).
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Noida → set min 40L, max 60L → expect results in range.
+
+ TestScenarioID: TS_Search_03
+  Requirement ID: REQ_Search_BHK
+  Test Scenario Description: Verify BHK filter works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Gurgaon → select 3BHK → only 3BHK flats appear.
+
+ TestScenarioID: TS_Search_04
+  Requirement ID: REQ_Search_Sort
+  Test Scenario Description: Verify sorting by price works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Hyderabad → sort by Price Low to High → results sorted correctly.
+
+ TestScenarioID: TS_Search_05
+  Requirement ID: REQ_Search_Invalid
+  Test Scenario Description: Verify invalid input handling.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Enter “%%%@@@” → click Search → “No results found” shown.
+
+---
+
+ 2. Property Details Page
+
+ TestScenarioID: TS_Details_01
+  Requirement ID: REQ_Details_Open
+  Test Scenario Description: Verify property detail page opens.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search → click property → details page loads fully.
+
+ TestScenarioID: TS_Details_02
+  Requirement ID: REQ_Details_Gallery
+  Test Scenario Description: Verify image gallery works.
+  Type of Testing: UI / Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Open property → view gallery → images load & navigable.
+
+ TestScenarioID: TS_Details_03
+  Requirement ID: REQ_Details_Contact
+  Test Scenario Description: Verify seller contact options shown.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Scroll → Contact Owner/Get Phone visible.
+
+ TestScenarioID: TS_Details_04
+  Requirement ID: REQ_Details_Info
+  Test Scenario Description: Verify mandatory property details shown.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Open property → check Location, Size, Price, Amenities → all present.
+
+ TestScenarioID: TS_Details_05
+  Requirement ID: REQ_Details_Similar
+  Test Scenario Description: Verify similar listings displayed.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Scroll bottom → similar properties appear.
+
+---
+
+ 3. Property Posting
+
+ TestScenarioID: TS_Post_01
+  Requirement ID: REQ_Post_New
+  Test Scenario Description: Verify posting a new property.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Login → Post Property Free → fill Title, Price, Location → Submit → success confirmation.
+
+ TestScenarioID: TS_Post_02
+  Requirement ID: REQ_Post_Validation
+  Test Scenario Description: Verify mandatory field validation.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Try posting without Price → “Price is required.”
+
+ TestScenarioID: TS_Post_03
+  Requirement ID: REQ_Post_Photos
+  Test Scenario Description: Verify photo upload in posting form.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Upload 3 valid images → appear as thumbnails.
+
+ TestScenarioID: TS_Post_04
+  Requirement ID: REQ_Post_Listings
+  Test Scenario Description: Verify posted property appears in My Listings.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Post property → go to My Listings → property visible.
+
+ TestScenarioID: TS_Post_05
+  Requirement ID: REQ_Post_Edit
+  Test Scenario Description: Verify editing posted property.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Edit property → change Price → save → updated details visible.
+
+---
+
+ 4. Contacting Sellers/Agents
+
+ TestScenarioID: TS_Contact_01
+  Requirement ID: REQ_Contact_Message
+  Test Scenario Description: Verify logged-in user can send inquiry.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Open property → Contact Owner → enter message → submit → inquiry sent.
+
+ TestScenarioID: TS_Contact_02
+  Requirement ID: REQ_Contact_Guest
+  Test Scenario Description: Verify guest user is redirected to login.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Log out → try contacting seller → redirected to login/signup.
+
+ TestScenarioID: TS_Contact_03
+  Requirement ID: REQ_Contact_Phone
+  Test Scenario Description: Verify phone number retrieval.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Click Get Phone → seller’s number shown.
+
+ TestScenarioID: TS_Contact_04
+  Requirement ID: REQ_Contact_Confirmation
+  Test Scenario Description: Verify inquiry confirmation shown.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Send inquiry → success popup → email confirmation received.
+
+ TestScenarioID: TS_Contact_05
+  Requirement ID: REQ_Contact_Duplicate
+  Test Scenario Description: Verify multiple inquiries handling.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Send 2 inquiries for same property → recorded without duplicates.
+
+---
+
+ 5. Premium Plans & Payments
+
+ TestScenarioID: TS_Payment_01
+  Requirement ID: REQ_Payment_ViewPlans
+  Test Scenario Description: Verify premium plans are displayed.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Go to Premium section → all plans with prices/features visible.
+
+ TestScenarioID: TS_Payment_02
+  Requirement ID: REQ_Payment_Success
+  Test Scenario Description: Verify successful payment activates plan.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Select plan → valid payment → success message → plan active.
+
+ TestScenarioID: TS_Payment_03
+  Requirement ID: REQ_Payment_Failure
+  Test Scenario Description: Verify failed payment handling.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Enter invalid card → “Transaction failed” shown.
+
+ TestScenarioID: TS_Payment_04
+  Requirement ID: REQ_Payment_Invoice
+  Test Scenario Description: Verify invoice generation.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: After successful payment → go to Transaction History → download invoice PDF.
+
+ TestScenarioID: TS_Payment_05
+  Requirement ID: REQ_Payment_Features
+  Test Scenario Description: Verify activated plan benefits applied.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Activate Featured Ad plan → post property → property shows Featured tag.
+
+
+GROUP 3
+
+ 1. Hotel Search & Filters
+
+ TestScenarioID: TS_HotelSearch_01
+  Requirement ID: REQ_HotelSearch_City
+  Test Scenario Description: Verify searching hotels in a city.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Enter “Goa” → select dates → click Search → hotels in Goa displayed.
+
+ TestScenarioID: TS_HotelSearch_02
+  Requirement ID: REQ_HotelSearch_Price
+  Test Scenario Description: Verify price filter works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Dubai → apply ₹5,000–₹10,000 filter → results in range only.
+
+ TestScenarioID: TS_HotelSearch_03
+  Requirement ID: REQ_HotelSearch_Star
+  Test Scenario Description: Verify filtering by star rating.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search London → apply 4-star filter → only 4-star hotels shown.
+
+ TestScenarioID: TS_HotelSearch_04
+  Requirement ID: REQ_HotelSearch_Sort
+  Test Scenario Description: Verify sorting by traveler rating works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Paris → sort by Traveler Rating → top-rated hotels first.
+
+ TestScenarioID: TS_HotelSearch_05
+  Requirement ID: REQ_HotelSearch_Invalid
+  Test Scenario Description: Verify invalid input handling.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Enter “@@@” → click Search → “No results found” or suggestions shown.
+
+---
+
+ 2. Hotel Details Page
+
+ TestScenarioID: TS_HotelDetails_01
+  Requirement ID: REQ_HotelDetails_Open
+  Test Scenario Description: Verify hotel details page opens.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Bangkok → click hotel → correct details page opens.
+
+ TestScenarioID: TS_HotelDetails_02
+  Requirement ID: REQ_HotelDetails_Photos
+  Test Scenario Description: Verify hotel photos can be viewed.
+  Type of Testing: UI / Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Open hotel → click Photos → images load & browsable.
+
+ TestScenarioID: TS_HotelDetails_03
+  Requirement ID: REQ_HotelDetails_Amenities
+  Test Scenario Description: Verify amenities list is visible.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Scroll amenities section → Wi-Fi, Pool, Parking listed.
+
+ TestScenarioID: TS_HotelDetails_04
+  Requirement ID: REQ_HotelDetails_Availability
+  Test Scenario Description: Verify availability checker works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Enter dates → click Check Availability → price & availability shown.
+
+ TestScenarioID: TS_HotelDetails_05
+  Requirement ID: REQ_HotelDetails_Similar
+  Test Scenario Description: Verify similar hotels are recommended.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Scroll down → relevant hotels in same city displayed.
+
+---
+
+ 3. Reviews & Ratings
+
+ TestScenarioID: TS_Reviews_01
+  Requirement ID: REQ_Reviews_View
+  Test Scenario Description: Verify hotel reviews can be viewed.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Open hotel → go to Reviews → traveler reviews displayed.
+
+ TestScenarioID: TS_Reviews_02
+  Requirement ID: REQ_Reviews_Write
+  Test Scenario Description: Verify logged-in user can write review.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Login → open hotel → click Write Review → submit → success.
+
+ TestScenarioID: TS_Reviews_03
+  Requirement ID: REQ_Reviews_Guest
+  Test Scenario Description: Verify guest users cannot write review.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Log out → try Write Review → redirected to login/signup.
+
+ TestScenarioID: TS_Reviews_04
+  Requirement ID: REQ_Reviews_Filter
+  Test Scenario Description: Verify review filters work.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Reviews section → select 5-star → only 5-star reviews shown.
+
+ TestScenarioID: TS_Reviews_05
+  Requirement ID: REQ_Reviews_Helpful
+  Test Scenario Description: Verify helpful voting works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Scroll review → click Helpful → vote count increases by 1.
+
+---
+
+ 4. Restaurant & Attraction Search
+
+ TestScenarioID: TS_Restaurant_01
+  Requirement ID: REQ_Restaurant_Search
+  Test Scenario Description: Verify restaurant search works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Select Restaurants tab → search Mumbai → restaurants listed.
+
+ TestScenarioID: TS_Restaurant_02
+  Requirement ID: REQ_Restaurant_Cuisine
+  Test Scenario Description: Verify cuisine filter works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Delhi → apply Italian filter → only Italian restaurants shown.
+
+ TestScenarioID: TS_Attraction_01
+  Requirement ID: REQ_Attraction_Search
+  Test Scenario Description: Verify attraction search works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Go to Attractions tab → search Singapore → attractions listed.
+
+ TestScenarioID: TS_Attraction_02
+  Requirement ID: REQ_Attraction_Filter
+  Test Scenario Description: Verify filtering attractions by category.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search Dubai → filter Theme Parks → only theme parks shown.
+
+ TestScenarioID: TS_Attraction_03
+  Requirement ID: REQ_Attraction_Details
+  Test Scenario Description: Verify attraction details open.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search → click attraction → details with description, timings, reviews shown.
+
+---
+
+ 5. Booking & Payments
+
+ TestScenarioID: TS_Booking_01
+  Requirement ID: REQ_Booking_HotelRedirect
+  Test Scenario Description: Verify hotel booking redirection works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: On hotel page → click View Deal → redirected to partner site with hotel info.
+
+ TestScenarioID: TS_Booking_02
+  Requirement ID: REQ_Booking_Comparison
+  Test Scenario Description: Verify price comparison is shown.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Hotel details → booking partners section → multiple prices displayed.
+
+ TestScenarioID: TS_Booking_03
+  Requirement ID: REQ_Booking_Flights
+  Test Scenario Description: Verify flight search works.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Go to Flights tab → enter Delhi→London + dates → search → flights shown.
+
+ TestScenarioID: TS_Booking_04
+  Requirement ID: REQ_Booking_FlightFilters
+  Test Scenario Description: Verify flight filters work.
+  Type of Testing: Functional
+  Possible No. of TestCases: 1
+  Test Case Details: Search flights → filter Non-stop → only nonstop flights shown.
+
+ TestScenarioID: TS_Booking_05
+  Requirement ID: REQ_Booking_PaymentError
+  Test Scenario Description: Verify booking payment error handling.
+  Type of Testing: Negative
+  Possible No. of TestCases: 1
+  Test Case Details: Enter invalid card → transaction fails with “Invalid payment details.”
+
+
+
+GROUP 4
+
+ 1. Product Search & Filters
+
+ TestScenarioID: TS_Search_01
+  RequirementID: REQ_Search_ProductName
+  Test Scenario Description: Verify product search by name.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter “iPhone 15” → click Search → only iPhone 15 displayed.
+
+ TestScenarioID: TS_Search_02
+  RequirementID: REQ_Search_Category
+  Test Scenario Description: Verify category-based search.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select “Laptops” category → only laptops shown.
+
+ TestScenarioID: TS_Search_03
+  RequirementID: REQ_Search_Price
+  Test Scenario Description: Verify price filter.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search TV → apply $500–$1000 filter → only TVs in range displayed.
+
+ TestScenarioID: TS_Search_04
+  RequirementID: REQ_Search_Brand
+  Test Scenario Description: Verify brand filter.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search Headphones → filter Sony → only Sony headphones shown.
+
+ TestScenarioID: TS_Search_05
+  RequirementID: REQ_Search_Invalid
+  Test Scenario Description: Verify invalid input handling.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Search “XYZ123” → shows “No results found.”
+
+---
+
+ 2. Product Details Page
+
+ TestScenarioID: TS_Details_01
+  RequirementID: REQ_Details_Open
+  Test Scenario Description: Verify product details page opens.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search iPad → click → details page opens.
+
+ TestScenarioID: TS_Details_02
+  RequirementID: REQ_Details_Images
+  Test Scenario Description: Verify product images load.
+  Type of Testing: UI/Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open gallery → zoom & scroll → images work.
+
+ TestScenarioID: TS_Details_03
+  RequirementID: REQ_Details_Specs
+  Test Scenario Description: Verify product specifications displayed.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Scroll specs → RAM, storage, features visible.
+
+ TestScenarioID: TS_Details_04
+  RequirementID: REQ_Details_Reviews
+  Test Scenario Description: Verify customer reviews visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Reviews section → ratings & comments shown.
+
+ TestScenarioID: TS_Details_05
+  RequirementID: REQ_Details_AddToCart
+  Test Scenario Description: Verify Add to Cart & Buy Now.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Add to Cart → item in cart; Buy Now → checkout starts.
+
+---
+
+ 3. Cart & Wishlist
+
+ TestScenarioID: TS_Cart_01
+  RequirementID: REQ_Cart_Add
+  Test Scenario Description: Verify adding product to cart.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Product → Add to Cart → appears in cart.
+
+ TestScenarioID: TS_Cart_02
+  RequirementID: REQ_Cart_Multiple
+  Test Scenario Description: Verify adding multiple products.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Add 2 products → both visible in cart.
+
+ TestScenarioID: TS_Cart_03
+  RequirementID: REQ_Cart_Quantity
+  Test Scenario Description: Verify updating quantity.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Change 1→2 → price updates correctly.
+
+ TestScenarioID: TS_Cart_04
+  RequirementID: REQ_Cart_Remove
+  Test Scenario Description: Verify removing product.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Remove → item disappears.
+
+ TestScenarioID: TS_Cart_05
+  RequirementID: REQ_Wishlist_Add
+  Test Scenario Description: Verify Add to Wishlist works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Product → Add to Wishlist → item saved.
+
+---
+
+ 4. Checkout & Payment
+
+ TestScenarioID: TS_Checkout_01
+  RequirementID: REQ_Checkout_LoggedIn
+  Test Scenario Description: Verify checkout for logged-in user.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Add product → Checkout → shipping/payment page shown.
+
+ TestScenarioID: TS_Checkout_02
+  RequirementID: REQ_Checkout_Guest
+  Test Scenario Description: Verify guest checkout requires login.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Log out → Checkout → prompt login/signup.
+
+ TestScenarioID: TS_Checkout_03
+  RequirementID: REQ_Payment_Success
+  Test Scenario Description: Verify payment with valid card.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter valid card → confirm → order success.
+
+ TestScenarioID: TS_Checkout_04
+  RequirementID: REQ_Payment_Failure
+  Test Scenario Description: Verify failed payment.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Invalid card → transaction fails with error.
+
+ TestScenarioID: TS_Checkout_05
+  RequirementID: REQ_Checkout_Confirmation
+  Test Scenario Description: Verify order confirmation details.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Complete order → confirmation page + email received.
+
+---
+
+ 5. Order Tracking & Returns
+
+ TestScenarioID: TS_Order_01
+  RequirementID: REQ_Order_History
+  Test Scenario Description: Verify order history visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Login → My Orders → past orders shown.
+
+ TestScenarioID: TS_Order_02
+  RequirementID: REQ_Order_Tracking
+  Test Scenario Description: Verify shipment tracking.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open active order → tracking info visible.
+
+ TestScenarioID: TS_Order_03
+  RequirementID: REQ_Order_Cancel
+  Test Scenario Description: Verify cancellation before shipping.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: My Orders → cancel order → success.
+
+ TestScenarioID: TS_Order_04
+  RequirementID: REQ_Order_Return
+  Test Scenario Description: Verify return request.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Delivered order → Return → request submitted.
+
+ TestScenarioID: TS_Order_05
+  RequirementID: REQ_Order_Refund
+  Test Scenario Description: Verify refund after return.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Return completed → refund credited to payment method.
+
+
+GROUP 5
+
+---
+
+ 1. Medicine Search & Ordering
+
+ TestScenarioID: TS_MedSearch_01
+  RequirementID: REQ_MedSearch_Name
+  Test Scenario Description: Verify searching a medicine by name.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter “Paracetamol” → click Search → only Paracetamol products displayed.
+
+ TestScenarioID: TS_MedSearch_02
+  RequirementID: REQ_MedSearch_Category
+  Test Scenario Description: Verify searching medicines by category.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select “Vitamins” category → only vitamin medicines displayed.
+
+ TestScenarioID: TS_MedSearch_03
+  RequirementID: REQ_MedSearch_Brand
+  Test Scenario Description: Verify searching medicines by brand.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search “Dolo” → filter by brand → only Dolo medicines shown.
+
+ TestScenarioID: TS_MedSearch_04
+  RequirementID: REQ_MedSearch_Price
+  Test Scenario Description: Verify price filter for medicines.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search “Paracetamol” → apply ₹50–₹100 filter → only medicines in range displayed.
+
+ TestScenarioID: TS_MedSearch_05
+  RequirementID: REQ_MedSearch_Invalid
+  Test Scenario Description: Verify handling of invalid medicine search input.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Search “XYZ123” → shows “No results found.”
+
+---
+
+ 2. Medicine Details Page
+
+ TestScenarioID: TS_MedDetails_01
+  RequirementID: REQ_MedDetails_Open
+  Test Scenario Description: Verify medicine details page opens.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search “Paracetamol” → click → details page opens.
+
+ TestScenarioID: TS_MedDetails_02
+  RequirementID: REQ_MedDetails_Images
+  Test Scenario Description: Verify medicine images load properly.
+  Type of Testing: UI/Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open image gallery → zoom & scroll → images work.
+
+ TestScenarioID: TS_MedDetails_03
+  RequirementID: REQ_MedDetails_Specs
+  Test Scenario Description: Verify medicine specifications displayed.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Scroll specs → dosage, composition, expiry visible.
+
+ TestScenarioID: TS_MedDetails_04
+  RequirementID: REQ_MedDetails_Reviews
+  Test Scenario Description: Verify customer reviews visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Reviews section → ratings & comments shown.
+
+ TestScenarioID: TS_MedDetails_05
+  RequirementID: REQ_MedDetails_AddToCart
+  Test Scenario Description: Verify Add to Cart & Buy Now functionality.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Add to Cart → item in cart; Buy Now → checkout starts.
+
+---
+
+ 3. Cart & Wishlist
+
+ TestScenarioID: TS_Cart_01
+  RequirementID: REQ_Cart_Add
+  Test Scenario Description: Verify adding medicine to cart.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select medicine → Add to Cart → appears in cart.
+
+ TestScenarioID: TS_Cart_02
+  RequirementID: REQ_Cart_Multiple
+  Test Scenario Description: Verify adding multiple medicines to cart.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Add 2 medicines → both visible in cart.
+
+ TestScenarioID: TS_Cart_03
+  RequirementID: REQ_Cart_Quantity
+  Test Scenario Description: Verify updating quantity in cart.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Change quantity 1→2 → price updates correctly.
+
+ TestScenarioID: TS_Cart_04
+  RequirementID: REQ_Cart_Remove
+  Test Scenario Description: Verify removing medicine from cart.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Remove → item disappears from cart.
+
+ TestScenarioID: TS_Cart_05
+  RequirementID: REQ_Wishlist_Add
+  Test Scenario Description: Verify Add to Wishlist works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Medicine → Add to Wishlist → item saved.
+
+---
+
+ 4. Checkout & Payment
+
+ TestScenarioID: TS_Checkout_01
+  RequirementID: REQ_Checkout_LoggedIn
+  Test Scenario Description: Verify checkout for logged-in user.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Add medicine → Checkout → shipping/payment page shown.
+
+ TestScenarioID: TS_Checkout_02
+  RequirementID: REQ_Checkout_Guest
+  Test Scenario Description: Verify guest checkout prompts login.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Log out → Checkout → prompt login/signup.
+
+ TestScenarioID: TS_Checkout_03
+  RequirementID: REQ_Payment_Success
+  Test Scenario Description: Verify payment with valid card.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter valid card → confirm → order success.
+
+ TestScenarioID: TS_Checkout_04
+  RequirementID: REQ_Payment_Failure
+  Test Scenario Description: Verify failed payment handling.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Invalid card → transaction fails with error.
+
+ TestScenarioID: TS_Checkout_05
+  RequirementID: REQ_Checkout_Confirmation
+  Test Scenario Description: Verify order confirmation details.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Complete order → confirmation page + email received.
+
+---
+
+ 5. Order Tracking & Returns
+
+ TestScenarioID: TS_Order_01
+  RequirementID: REQ_Order_History
+  Test Scenario Description: Verify order history visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Login → My Orders → past orders shown.
+
+ TestScenarioID: TS_Order_02
+  RequirementID: REQ_Order_Tracking
+  Test Scenario Description: Verify shipment tracking.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open active order → tracking info visible.
+
+ TestScenarioID: TS_Order_03
+  RequirementID: REQ_Order_Cancel
+  Test Scenario Description: Verify cancellation before shipping.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: My Orders → cancel order → success.
+
+ TestScenarioID: TS_Order_04
+  RequirementID: REQ_Order_Return
+  Test Scenario Description: Verify return request.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Delivered order → Return → request submitted.
+
+ TestScenarioID: TS_Order_05
+  RequirementID: REQ_Order_Refund
+  Test Scenario Description: Verify refund after return.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Return completed → refund credited to payment method.
+
+---
+
+
+GROUP 6
+ 1. Flight Search & Booking
+
+ TestScenarioID: TS_Flight_01
+  RequirementID: REQ_Flight_Search
+  Test Scenario Description: Verify flights are listed for valid source & destination.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter source city “Delhi” and destination “Mumbai” → select date → click Search Flights → flights list displayed.
+
+ TestScenarioID: TS_Flight_02
+  RequirementID: REQ_Flight_PriceFilter
+  Test Scenario Description: Verify filtering flights by price works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Search flights → apply price filter ₹5000–₹10000 → only flights in range displayed.
+
+ TestScenarioID: TS_Flight_03
+  RequirementID: REQ_Flight_AirlinesFilter
+  Test Scenario Description: Verify filtering flights by airlines works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply airline filter “IndiGo” → only IndiGo flights displayed.
+
+ TestScenarioID: TS_Flight_04
+  RequirementID: REQ_Flight_SortTime
+  Test Scenario Description: Verify sorting by departure/arrival time works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Click sort by departure time → flights listed in ascending order of departure.
+
+ TestScenarioID: TS_Flight_05
+  RequirementID: REQ_Flight_Booking
+  Test Scenario Description: Verify flight booking works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select a flight → enter passenger details → complete payment → booking confirmed with PNR.
+
+---
+
+ 2. Hotel Search & Booking
+
+ TestScenarioID: TS_Hotel_01
+  RequirementID: REQ_Hotel_SearchCity
+  Test Scenario Description: Verify hotels are displayed for a given city.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter “Bangalore” → click Search Hotels → hotels list displayed.
+
+ TestScenarioID: TS_Hotel_02
+  RequirementID: REQ_Hotel_StarFilter
+  Test Scenario Description: Verify hotels can be filtered by star rating.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply 4-star filter → only 4-star hotels displayed.
+
+ TestScenarioID: TS_Hotel_03
+  RequirementID: REQ_Hotel_PriceFilter
+  Test Scenario Description: Verify hotels can be filtered by price range.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply ₹2000–₹5000 per night filter → only hotels in range displayed.
+
+ TestScenarioID: TS_Hotel_04
+  RequirementID: REQ_Hotel_Booking
+  Test Scenario Description: Verify hotel booking works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select hotel → choose dates & room type → complete payment → booking confirmed with invoice.
+
+ TestScenarioID: TS_Hotel_05
+  RequirementID: REQ_Hotel_Details
+  Test Scenario Description: Verify hotel details are correct.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open hotel page → check amenities, photos, cancellation policy → details displayed correctly.
+
+---
+
+ 3. Train Search & Booking
+
+ TestScenarioID: TS_Train_01
+  RequirementID: REQ_Train_Search
+  Test Scenario Description: Verify trains are listed for source & destination.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter “Chennai” → “Hyderabad” → select date → click Search Trains → train list displayed.
+
+ TestScenarioID: TS_Train_02
+  RequirementID: REQ_Train_TypeFilter
+  Test Scenario Description: Verify filtering by AC/Non-AC class works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply AC filter → only AC trains displayed.
+
+ TestScenarioID: TS_Train_03
+  RequirementID: REQ_Train_Availability
+  Test Scenario Description: Verify seat availability can be checked.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select train → click Check Availability → seats displayed for selected date.
+
+ TestScenarioID: TS_Train_04
+  RequirementID: REQ_Train_Booking
+  Test Scenario Description: Verify train ticket booking works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select train → enter passenger details → complete payment → ticket booked with PNR.
+
+ TestScenarioID: TS_Train_05
+  RequirementID: REQ_Train_CancelModify
+  Test Scenario Description: Verify cancellation or modification works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to booked ticket → click Cancel or Modify → booking updated/cancelled with confirmation.
+
+---
+
+ 4. Cab/Bus Booking
+
+ TestScenarioID: TS_Cab_01
+  RequirementID: REQ_Cab_Search
+  Test Scenario Description: Verify cab search works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter pickup “Delhi” & drop “Gurgaon” → click Search Cabs → available cabs displayed.
+
+ TestScenarioID: TS_Cab_02
+  RequirementID: REQ_Cab_PriceFilter
+  Test Scenario Description: Verify price filtering works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply ₹500–₹1000 filter → only cabs in range displayed.
+
+ TestScenarioID: TS_Cab_03
+  RequirementID: REQ_Cab_Booking
+  Test Scenario Description: Verify cab booking works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select cab → enter passenger details → complete booking → booking confirmed.
+
+ TestScenarioID: TS_Bus_01
+  RequirementID: REQ_Bus_Search
+  Test Scenario Description: Verify bus search works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter source & destination → select date → click Search → bus options displayed.
+
+ TestScenarioID: TS_Bus_02
+  RequirementID: REQ_Bus_Booking
+  Test Scenario Description: Verify bus ticket booking works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select bus → choose seat → pay → ticket booked successfully.
+
+---
+
+ 5. User Profile & Bookings
+
+ TestScenarioID: TS_Profile_01
+  RequirementID: REQ_View_Bookings
+  Test Scenario Description: Verify all past and active bookings are visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to My Bookings → all bookings listed with details.
+
+ TestScenarioID: TS_Profile_02
+  RequirementID: REQ_Cancel_Booking
+  Test Scenario Description: Verify bookings can be cancelled if eligible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open active booking → click Cancel → booking cancelled with confirmation.
+
+ TestScenarioID: TS_Profile_03
+  RequirementID: REQ_Modify_Booking
+  Test Scenario Description: Verify modification of bookings works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open booking → modify date/seat → booking updated successfully.
+
+ TestScenarioID: TS_Profile_04
+  RequirementID: REQ_Payment_History
+  Test Scenario Description: Verify all transactions are visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to Payment History → all completed payments listed.
+
+ TestScenarioID: TS_Profile_05
+  RequirementID: REQ_Profile_Update
+  Test Scenario Description: Verify user can update personal details.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Go to Profile → update name, email, or phone → changes saved successfully.
+
+---
+
+---
+
+GROUP 7
+---
+
+ 1. Course Search & Filters
+
+ TestScenarioID: TS_CourseSearch_01
+  RequirementID: REQ_Course_SearchName
+  Test Scenario Description: Verify searching for a course returns correct results.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter “Python” in search bar → click Search → relevant Python courses displayed.
+
+ TestScenarioID: TS_CourseSearch_02
+  RequirementID: REQ_Course_FilterCategory
+  Test Scenario Description: Verify category filtering works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select “Development” category → only development courses displayed.
+
+ TestScenarioID: TS_CourseSearch_03
+  RequirementID: REQ_Course_FilterPrice
+  Test Scenario Description: Verify filtering by free/paid courses works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply filter Free Courses → only free courses displayed.
+
+ TestScenarioID: TS_CourseSearch_04
+  RequirementID: REQ_Course_FilterRating
+  Test Scenario Description: Verify filtering courses by rating works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply 4+ star filter → only courses with 4+ ratings displayed.
+
+ TestScenarioID: TS_CourseSearch_05
+  RequirementID: REQ_Course_SortPopularity
+  Test Scenario Description: Verify sorting courses by popularity works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Click Sort by Popularity → courses sorted from most to least popular.
+
+---
+
+ 2. Course Enrollment & Payment
+
+ TestScenarioID: TS_CourseEnroll_01
+  RequirementID: REQ_Course_EnrollPaid
+  Test Scenario Description: Verify enrollment for paid courses works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select paid course → complete payment → enrollment successful.
+
+ TestScenarioID: TS_CourseEnroll_02
+  RequirementID: REQ_Course_EnrollFree
+  Test Scenario Description: Verify free course enrollment works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Select free course → click Enroll Now → enrollment confirmed.
+
+ TestScenarioID: TS_CourseEnroll_03
+  RequirementID: REQ_Course_PaymentFail
+  Test Scenario Description: Verify invalid payment fails.
+  Type of Testing: Negative
+  Possible No. of Test Cases: 1
+  Test Case Details: Attempt payment with invalid card → transaction fails with error message.
+
+ TestScenarioID: TS_CourseEnroll_04
+  RequirementID: REQ_Course_ApplyCoupon
+  Test Scenario Description: Verify discount codes are applied correctly.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Enter valid coupon during payment → discount applied → final price updated.
+
+ TestScenarioID: TS_CourseEnroll_05
+  RequirementID: REQ_Course_RefundRequest
+  Test Scenario Description: Verify refund request works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to My Courses → click Request Refund → refund request submitted.
+
+---
+
+ 3. Course Content Access
+
+ TestScenarioID: TS_CourseContent_01
+  RequirementID: REQ_Course_PlayVideo
+  Test Scenario Description: Verify video lectures play correctly.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open enrolled course → play a lecture → video plays without error.
+
+ TestScenarioID: TS_CourseContent_02
+  RequirementID: REQ_Course_DownloadResources
+  Test Scenario Description: Verify downloadable resources are accessible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open course → download attached PDFs or exercises → files downloaded successfully.
+
+ TestScenarioID: TS_CourseContent_03
+  RequirementID: REQ_Course_ProgressTracking
+  Test Scenario Description: Verify course progress updates after lecture completion.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Complete a lecture → progress bar updated.
+
+ TestScenarioID: TS_CourseContent_04
+  RequirementID: REQ_Course_AccessQuiz
+  Test Scenario Description: Verify course quizzes are accessible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open course → attempt a quiz → quiz loads and can be submitted.
+
+ TestScenarioID: TS_CourseContent_05
+  RequirementID: REQ_Course_DownloadCertificate
+  Test Scenario Description: Verify certificate available after course completion.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Complete all lectures → download certificate → certificate generated and downloadable.
+
+---
+
+ 4. Reviews & Ratings
+
+ TestScenarioID: TS_Reviews_01
+  RequirementID: REQ_Reviews_Submit
+  Test Scenario Description: Verify users can submit reviews.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open course → submit rating and comment → review submitted successfully.
+
+ TestScenarioID: TS_Reviews_02
+  RequirementID: REQ_Reviews_Edit
+  Test Scenario Description: Verify users can edit reviews.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to submitted review → update content and save → review updated.
+
+ TestScenarioID: TS_Reviews_03
+  RequirementID: REQ_Reviews_View
+  Test Scenario Description: Verify reviews are visible to all users.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open course → scroll to reviews section → reviews and ratings visible.
+
+ TestScenarioID: TS_Reviews_04
+  RequirementID: REQ_Reviews_FilterRating
+  Test Scenario Description: Verify filtering reviews by rating works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Apply 5-star filter → only 5-star reviews displayed.
+
+ TestScenarioID: TS_Reviews_05
+  RequirementID: REQ_Reviews_HelpfulVote
+  Test Scenario Description: Verify marking a review as helpful works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Click Helpful on a review → count increments.
+
+---
+
+ 5. User Profile & Dashboard
+
+ TestScenarioID: TS_Profile_01
+  RequirementID: REQ_Profile_Update
+  Test Scenario Description: Verify profile info can be updated.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to Profile → update name, email, or password → changes saved successfully.
+
+ TestScenarioID: TS_Profile_02
+  RequirementID: REQ_Profile_EnrolledCourses
+  Test Scenario Description: Verify enrolled courses are listed.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open My Courses → all enrolled courses displayed.
+
+ TestScenarioID: TS_Profile_03
+  RequirementID: REQ_Profile_ProgressTracking
+  Test Scenario Description: Verify course completion progress displayed.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Open My Courses → progress bars visible per course.
+
+ TestScenarioID: TS_Profile_04
+  RequirementID: REQ_Profile_Notifications
+  Test Scenario Description: Verify notification for new lectures or updates works.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Check dashboard notifications → notifications displayed correctly.
+
+ TestScenarioID: TS_Profile_05
+  RequirementID: REQ_Profile_PaymentHistory
+  Test Scenario Description: Verify all transactions are visible.
+  Type of Testing: Functional
+  Possible No. of Test Cases: 1
+  Test Case Details: Navigate to Payment History → all paid courses listed with details.
+
+---
